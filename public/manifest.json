@@ -1,0 +1,31 @@
+{
+  "name": "St. Mark's Flora - Field Guide",
+  "short_name": "Flora Guide",
+  "description": "A Field Guide to Plants Within 1km of St. Mark's School, Southborough, MA",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FEFCF3",
+  "theme_color": "#2D5016",
+  "categories": ["education", "reference"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

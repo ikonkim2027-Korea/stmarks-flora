@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-primary: #2D5016;
+  --color-secondary: #8B6914;
+  --color-accent: #D4A017;
+  --color-background: #FEFCF3;
+  --color-card: #ffffff;
+  --color-text: #3C2415;
+  --color-text-muted: #7a6040;
+  --color-border: #e8dfc8;
+  --color-primary-light: #4a7a26;
+  --color-primary-pale: #e8f0df;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-text);
+  --font-sans: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-inter), Georgia, serif;
+}
+
+/* Herbarium sheet aesthetic */
+.herbarium-border {
+  border: 2px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(60, 36, 21, 0.08);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
 }
