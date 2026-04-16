@@ -11,7 +11,7 @@ import {
   getAbundanceLabel,
   getCurrentMonthWeek,
 } from "@/lib/utils";
-import { ArrowLeft, AlertTriangle, Info, Leaf, MapPin } from "lucide-react";
+import { ArrowLeft, AlertTriangle, Info, Leaf, MapPin, ExternalLink } from "lucide-react";
 
 export async function generateStaticParams() {
   return plants.map((p) => ({ id: p.id }));
@@ -290,6 +290,32 @@ export default async function PlantDetailPage({
           currentWeek={week}
         />
       </div>
+
+      {/* Sources */}
+      {plant.sources && plant.sources.length > 0 && (
+        <div className="rounded-2xl border p-6 mb-6" style={{ background: "var(--color-card)", borderColor: "var(--color-border)" }}>
+          <h2 className="text-xl font-bold mb-4 flex items-center gap-2" style={{ color: "var(--color-text)" }}>
+            <ExternalLink size={18} style={{ color: "var(--color-primary)" }} />
+            Sources &amp; References
+          </h2>
+          <ul className="space-y-2">
+            {plant.sources.map((source, i) => (
+              <li key={i}>
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm hover:underline inline-flex items-center gap-1.5"
+                  style={{ color: "var(--color-primary)" }}
+                >
+                  <span className="font-medium">{source.label}</span>
+                  <ExternalLink size={12} />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* Footer nav */}
       <div className="flex gap-3">

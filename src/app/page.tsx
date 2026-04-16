@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { plants } from "@/data/plants";
+import { habitatLocations, SCHOOL_CENTER, SURVEY_RADIUS } from "@/data/habitatLocations";
 import PlantCard from "@/components/PlantCard";
+import HabitatMapLoader from "@/components/HabitatMapLoader";
 import { getCurrentMonthWeek, getAvailablePlants, getHabitatIcon, getHabitatLabel } from "@/lib/utils";
-import { BookOpen, Calendar, MapPin, Search, TreePine, Flower2, Leaf, FileDown } from "lucide-react";
+import { BookOpen, Calendar, MapPin, Search, TreePine, Flower2, Leaf, FileDown, Map } from "lucide-react";
 import PDFExport from "@/components/PDFExport";
 
 export default function HomePage() {
@@ -193,6 +195,13 @@ export default function HomePage() {
               color: "var(--color-accent)",
             },
             {
+              href: "/map",
+              icon: <Map size={28} />,
+              title: "Interactive Map",
+              desc: "Explore habitat zones and find plants on an interactive map of the campus area.",
+              color: "#2E86AB",
+            },
+            {
               href: "/field-guide",
               icon: <FileDown size={28} />,
               title: "Field Guide",
@@ -269,33 +278,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Map placeholder */}
+      {/* Survey Area Map */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--color-text)" }}>
-          Survey Area
-        </h2>
+        <div className="flex items-center justify-between mb-2">
+          <h2 className="text-2xl font-bold" style={{ color: "var(--color-text)" }}>
+            Survey Area
+          </h2>
+          <Link
+            href="/map"
+            className="text-sm font-medium hover:underline"
+            style={{ color: "var(--color-primary)" }}
+          >
+            View Full Map →
+          </Link>
+        </div>
         <p className="text-sm mb-6" style={{ color: "var(--color-text-muted)" }}>
           All plants documented within 1km of St. Mark&apos;s School, Southborough, MA
         </p>
         <div
-          className="rounded-xl border overflow-hidden flex items-center justify-center"
-          style={{
-            background: "#e8f0e0",
-            borderColor: "var(--color-border)",
-            height: "280px",
-          }}
+          className="rounded-xl border overflow-hidden"
+          style={{ borderColor: "var(--color-border)" }}
         >
-          <div className="text-center px-8">
-            <div className="text-6xl mb-3">🗺️</div>
-            <p className="font-semibold text-lg mb-1" style={{ color: "var(--color-primary)" }}>
-              St. Mark&apos;s School Campus &amp; Surrounds
-            </p>
-            <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
-              Southborough, MA &bull; 1km radius survey area
-            </p>
-            <p className="text-xs mt-2 italic" style={{ color: "var(--color-text-muted)" }}>
-              Habitats include forest, wetland, meadow, streambanks &amp; rocky outcrops
-            </p>
+          <div className="p-3">
+            <HabitatMapLoader
+              habitatLocations={habitatLocations}
+              plants={plants}
+              schoolCenter={SCHOOL_CENTER}
+              surveyRadius={SURVEY_RADIUS}
+              height={300}
+              showLegend={false}
+            />
           </div>
         </div>
       </section>

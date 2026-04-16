@@ -10,6 +10,7 @@ const navLinks = [
   { href: "/plants", label: "Browse" },
   { href: "/calendar", label: "Calendar" },
   { href: "/habitats", label: "Habitats" },
+  { href: "/map", label: "Map" },
 ];
 
 export default function Navigation() {

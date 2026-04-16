@@ -32,6 +32,7 @@ export interface Plant {
   nativeStatus: "native" | "naturalized" | "invasive";
   conservationNote?: string;
   imageUrl?: string;
+  sources?: { label: string; url: string }[];
 }
 
 export const plants: Plant[] = [
@@ -64,6 +65,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press spring flowering branches with flowers attached. Collect autumn leaves at peak color. Samaras press well and add interest to herbarium sheets. Allow 2–3 weeks for full drying under weight.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Acer rubrum", url: "https://gobotany.nativeplanttrust.org/species/acer/rubrum/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=ACRU" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Acer%20rubrum" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Acer_rubrum" },
+    ],
   },
   {
     id: "eastern-white-pine",
@@ -91,6 +98,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Collect needle fascicles with sheath intact. Press cone scales separately; full cones may be dried unwrapped. Young twigs with needles press well if needles are spread flat.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Pinus strobus", url: "https://gobotany.nativeplanttrust.org/species/pinus/strobus/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=PIST" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Pinus%20strobus" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pinus_strobus" },
+    ],
   },
   {
     id: "trout-lily",
@@ -116,6 +129,12 @@ export const plants: Plant[] = [
       "Collect with root intact to show the corm. Press quickly as flowers wilt rapidly. Place petals face-down and spread leaves flat. These are spring ephemerals — extremely time-sensitive collection window.",
     nativeStatus: "native",
     conservationNote: "Collect minimally — only from large colonies with many blooming plants. Never collect all plants in a patch.",
+    sources: [
+      { label: "Go Botany — Erythronium americanum", url: "https://gobotany.nativeplanttrust.org/species/erythronium/americanum/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=ERAM5" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Erythronium%20americanum" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Erythronium_americanum" },
+    ],
   },
   {
     id: "garlic-mustard",
@@ -142,6 +161,12 @@ export const plants: Plant[] = [
       "Collect freely — removal is encouraged. Press full flowering stem with roots. Good specimen for showing invasive species.",
     nativeStatus: "invasive",
     conservationNote: "Invasive species — collection and removal encouraged. Do not leave uprooted plants where seeds can disperse.",
+    sources: [
+      { label: "Massachusetts Invasive Plant List", url: "https://www.mass.gov/info-details/plant-species-listed-by-the-massachusetts-invasive-plant-advisory-group" },
+      { label: "Go Botany — Alliaria petiolata", url: "https://gobotany.nativeplanttrust.org/species/alliaria/petiolata/" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Alliaria%20petiolata" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Alliaria_petiolata" },
+    ],
   },
   {
     id: "cinnamon-fern",
@@ -168,6 +193,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press individual pinnae rather than full fronds (too large). Include a fertile pinna if available. Fronds may require extra weight and time (3 weeks) for full pressing. Collect from established clumps only.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Osmundastrum cinnamomeum", url: "https://gobotany.nativeplanttrust.org/species/osmundastrum/cinnamomeum/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=OSCI" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Osmundastrum%20cinnamomeum" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Osmundastrum_cinnamomeum" },
+    ],
   },
   {
     id: "japanese-barberry",
@@ -195,6 +226,12 @@ export const plants: Plant[] = [
       "Collect with gloves — spines are sharp. Press leafy branches with berries when available. Good for showing invasive shrub characteristics.",
     nativeStatus: "invasive",
     conservationNote: "Invasive species — collection encouraged. Known to increase habitat suitability for Lyme disease-carrying ticks.",
+    sources: [
+      { label: "Massachusetts Invasive Plant List", url: "https://www.mass.gov/info-details/plant-species-listed-by-the-massachusetts-invasive-plant-advisory-group" },
+      { label: "Go Botany — Berberis thunbergii", url: "https://gobotany.nativeplanttrust.org/species/berberis/thunbergii/" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Berberis%20thunbergii" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Berberis_thunbergii" },
+    ],
   },
 
   // ───────────────────────────────────────────
@@ -224,6 +261,12 @@ export const plants: Plant[] = [
       "Collect entire plant including rhizome to show the diagnostic red sap. Press flower immediately — petals drop within hours of picking. Place petals face-down on paper and arrange the lobed leaf flat. Photograph the fresh sap color as it darkens to brown when dried.",
     nativeStatus: "native",
     conservationNote: "Collect sparingly — populations can be slow to recover. Take only from large, vigorous colonies.",
+    sources: [
+      { label: "Go Botany — Sanguinaria canadensis", url: "https://gobotany.nativeplanttrust.org/species/sanguinaria/canadensis/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=SACA13" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Sanguinaria%20canadensis" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Sanguinaria_canadensis" },
+    ],
   },
   {
     id: "hepatica",
@@ -250,6 +293,11 @@ export const plants: Plant[] = [
       "Collect the entire rosette with old leaves attached for comparison to new growth. Press flowers face-down and note the color on the label, as pigments fade during drying. Handle gently — stems are delicate and snap easily.",
     nativeStatus: "native",
     conservationNote: "Uncommon in Worcester County — collect only one specimen per population. Never dig up rhizomes.",
+    sources: [
+      { label: "Go Botany — Hepatica americana", url: "https://gobotany.nativeplanttrust.org/species/anemone/americana/" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Hepatica%20americana" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hepatica_nobilis" },
+    ],
   },
   {
     id: "spring-beauty",
@@ -275,6 +323,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Dig carefully to include the corm, which is small and deep. Press the entire plant with flowers open — collect on a sunny afternoon for best results. Petals become translucent when dried, so press between sheets of waxed paper to preserve color detail.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Claytonia virginica", url: "https://gobotany.nativeplanttrust.org/species/claytonia/virginica/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=CLVI3" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Claytonia%20virginica" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Claytonia_virginica" },
+    ],
   },
   {
     id: "red-trillium",
@@ -300,6 +354,12 @@ export const plants: Plant[] = [
       "Press the entire above-ground plant including the leaf whorl. Arrange leaves flat in a triangular pattern. The dark flower color preserves reasonably well when dried. Do not collect the rhizome — the plant takes years to mature and will not regenerate.",
     nativeStatus: "native",
     conservationNote: "Slow to reproduce — collect only the above-ground stem from large colonies. Never uproot the rhizome.",
+    sources: [
+      { label: "Go Botany — Trillium erectum", url: "https://gobotany.nativeplanttrust.org/species/trillium/erectum/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=TRER4" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Trillium%20erectum" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Trillium_erectum" },
+    ],
   },
   {
     id: "dutchmans-breeches",
@@ -324,6 +384,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press the entire plant including a few bulblets for the herbarium sheet. Arrange flowers along the raceme so the distinctive spur shape is visible. Dry quickly to preserve the delicate foliage. Collect from the center of large colonies only.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Dicentra cucullaria", url: "https://gobotany.nativeplanttrust.org/species/dicentra/cucullaria/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=DICU" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Dicentra%20cucullaria" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dicentra_cucullaria" },
+    ],
   },
   {
     id: "jack-in-the-pulpit",
@@ -350,6 +416,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Slice the spathe lengthwise and flatten to show the spadix for pressing. Press leaves and spathe separately if the whole plant is too bulky. Berries can be preserved by slicing the cluster in half. Wear gloves — all parts contain calcium oxalate crystals that irritate skin.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Arisaema triphyllum", url: "https://gobotany.nativeplanttrust.org/species/arisaema/triphyllum/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=ARTR" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Arisaema%20triphyllum" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Arisaema_triphyllum" },
+    ],
   },
   {
     id: "wild-columbine",
@@ -375,6 +447,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press flowering stems with flowers in profile so the characteristic spurs are visible. Include basal leaves. Flowers retain color fairly well when dried. Collect seed pods at maturity for an additional herbarium sheet.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Aquilegia canadensis", url: "https://gobotany.nativeplanttrust.org/species/aquilegia/canadensis/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=AQCA" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Aquilegia%20canadensis" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Aquilegia_canadensis" },
+    ],
   },
   {
     id: "marsh-marigold",
@@ -399,6 +477,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Collect a stem with flowers, buds, and a basal leaf. Blot excess water thoroughly before pressing — the succulent stems hold moisture and are prone to mold. Press between extra layers of absorbent paper and change paper daily for the first 3 days.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Caltha palustris", url: "https://gobotany.nativeplanttrust.org/species/caltha/palustris/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=CAPA5" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Caltha%20palustris" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Caltha_palustris" },
+    ],
   },
   {
     id: "foamflower",
@@ -423,6 +507,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Collect a flowering stem with attached basal leaves and, if possible, a stolon showing vegetative spread. Press flowers quickly — they turn brown within hours of wilting. The delicate white flowers dry well if pressed within 30 minutes of collection.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Tiarella cordifolia", url: "https://gobotany.nativeplanttrust.org/species/tiarella/cordifolia/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=TICO" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Tiarella%20cordifolia" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tiarella_cordifolia" },
+    ],
   },
   {
     id: "pink-ladys-slipper",
@@ -449,6 +539,12 @@ export const plants: Plant[] = [
       "DO NOT COLLECT. Photograph only. This species is protected or of conservation concern in many states and depends on mycorrhizal fungi that cannot survive collection. If a found-dead specimen is available (e.g., trampled), press the flower carefully by slicing the pouch open to flatten it.",
     nativeStatus: "native",
     conservationNote: "Do not collect — photograph only. Populations are declining and plants depend on specific mycorrhizal fungi. Listed as a species of Special Concern in Massachusetts.",
+    sources: [
+      { label: "Go Botany — Cypripedium acaule", url: "https://gobotany.nativeplanttrust.org/species/cypripedium/acaule/" },
+      { label: "Mass Audubon — Pink Lady's Slipper", url: "https://www.massaudubon.org/nature-wildlife/plants/pink-ladys-slipper" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=CYAC3" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Cypripedium%20acaule" },
+    ],
   },
 
   // ───────────────────────────────────────────
@@ -477,6 +573,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a flowering branch with a few flower clusters and several leaves. Flowers are thick and fleshy — slice some in half longitudinally to show the stamen catapult mechanism. Allow extra drying time (3–4 weeks) for the leathery leaves.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Kalmia latifolia", url: "https://gobotany.nativeplanttrust.org/species/kalmia/latifolia/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=KALA" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Kalmia%20latifolia" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kalmia_latifolia" },
+    ],
   },
   {
     id: "wild-geranium",
@@ -502,6 +604,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Collect flowering stems with both flowers and developing seed capsules if possible. Press flowers face-down. Include a basal leaf to show the full leaf shape. The 'crane's bill' fruit is an excellent feature — collect mature fruits that have not yet split.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Geranium maculatum", url: "https://gobotany.nativeplanttrust.org/species/geranium/maculatum/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=GEMA" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Geranium%20maculatum" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Geranium_maculatum" },
+    ],
   },
   {
     id: "trailing-arbutus",
@@ -527,6 +635,12 @@ export const plants: Plant[] = [
       "DO NOT COLLECT — this is the Massachusetts state flower and is protected. Photograph only. If a naturally detached fragment is found, it may be pressed, but never uproot or cut living plants. The plant has a fragile root system and rarely survives disturbance.",
     nativeStatus: "native",
     conservationNote: "State flower of Massachusetts. Protected by state law — do not collect. Photograph only. Populations have declined dramatically from historical over-picking.",
+    sources: [
+      { label: "Go Botany — Epigaea repens", url: "https://gobotany.nativeplanttrust.org/species/epigaea/repens/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=EPRE2" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Epigaea%20repens" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Epigaea_repens" },
+    ],
   },
   {
     id: "common-milkweed",
@@ -554,6 +668,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press flowering stems — blot the milky sap with paper towels immediately as it stains and creates sticky patches. Press a seed pod halved lengthwise to show seed arrangement. Collect silk-bearing seeds separately in an envelope. Allow extra drying time for the thick stems.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Asclepias syriaca", url: "https://gobotany.nativeplanttrust.org/species/asclepias/syriaca/" },
+      { label: "Xerces Society Milkweed Guide", url: "https://xerces.org/milkweed" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=ASSY" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Asclepias%20syriaca" },
+    ],
   },
   {
     id: "butterfly-weed",
@@ -578,6 +698,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press flowering stems with open flowers. Orange color preserves well when dried. Include developing seed pods if available. No milky sap to deal with, making pressing easier than other milkweeds.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Asclepias tuberosa", url: "https://gobotany.nativeplanttrust.org/species/asclepias/tuberosa/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=ASTU" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Asclepias%20tuberosa" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Asclepias_tuberosa" },
+    ],
   },
   {
     id: "multiflora-rose",
@@ -604,6 +730,12 @@ export const plants: Plant[] = [
       "Collect freely — removal is beneficial. Press a flowering branch with thorns visible and stipules intact (these fringed stipules are the key diagnostic feature). Wear heavy gloves. Press rose hips separately in autumn.",
     nativeStatus: "invasive",
     conservationNote: "Highly invasive — collection and removal strongly encouraged. Produces up to 500,000 seeds per plant annually.",
+    sources: [
+      { label: "Massachusetts Invasive Plant List", url: "https://www.mass.gov/info-details/plant-species-listed-by-the-massachusetts-invasive-plant-advisory-group" },
+      { label: "Go Botany — Rosa multiflora", url: "https://gobotany.nativeplanttrust.org/species/rosa/multiflora/" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Rosa%20multiflora" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rosa_multiflora" },
+    ],
   },
 
   // ───────────────────────────────────────────
@@ -632,6 +764,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a flowering stem with the terminal flower head intact. Slice thick flower heads in half for better pressing. The scarlet color darkens to deep red-brown when dried. Include a note about the aromatic scent on the label, as this is lost in drying.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Monarda didyma", url: "https://gobotany.nativeplanttrust.org/species/monarda/didyma/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=MODI" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Monarda%20didyma" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Monarda_didyma" },
+    ],
   },
   {
     id: "joe-pye-weed",
@@ -657,6 +795,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Collect a section of stem showing a leaf whorl plus the terminal flower cluster. The full plant is too tall to press whole — cut a 40–50 cm section from the top. Press flower clusters between extra layers of blotting paper as they hold moisture. Note the vanilla scent on the label.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Eutrochium purpureum", url: "https://gobotany.nativeplanttrust.org/species/eutrochium/purpureum/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=EUPU21" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Eutrochium%20purpureum" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Eutrochium_purpureum" },
+    ],
   },
   {
     id: "cardinal-flower",
@@ -683,6 +827,12 @@ export const plants: Plant[] = [
       "Collect sparingly — take a mid-stem section with several flowers from a large colony only. Press flowers in profile to show the distinctive shape. Red color darkens to deep maroon when dried. Blot any milky sap before pressing.",
     nativeStatus: "native",
     conservationNote: "Collect minimally — populations are often small. Leave the basal rosette intact so the plant can regenerate.",
+    sources: [
+      { label: "Go Botany — Lobelia cardinalis", url: "https://gobotany.nativeplanttrust.org/species/lobelia/cardinalis/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=LOCA2" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Lobelia%20cardinalis" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Lobelia_cardinalis" },
+    ],
   },
   {
     id: "boneset",
@@ -708,6 +858,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Collect a stem section clearly showing the perfoliate leaf arrangement — this is the key diagnostic feature. Press the flower cluster between extra blotting paper. Label the perfoliate leaf character prominently on the herbarium sheet.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Eupatorium perfoliatum", url: "https://gobotany.nativeplanttrust.org/species/eupatorium/perfoliatum/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=EUPE3" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Eupatorium%20perfoliatum" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Eupatorium_perfoliatum" },
+    ],
   },
   {
     id: "black-eyed-susan",
@@ -733,6 +889,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press flower heads face-down with rays spread flat. The yellow color preserves well. Include basal and stem leaves to show the difference. Collect multiple flower heads at different stages (bud, open, seeding) for a complete specimen.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Rudbeckia hirta", url: "https://gobotany.nativeplanttrust.org/species/rudbeckia/hirta/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=RUHI2" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Rudbeckia%20hirta" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rudbeckia_hirta" },
+    ],
   },
   {
     id: "queen-annes-lace",
@@ -759,6 +921,12 @@ export const plants: Plant[] = [
       "Press an open umbel face-down with flowers spread flat, plus a 'bird's nest' fruiting umbel for comparison. Include the finely divided leaves. Excellent teaching specimen for distinguishing from toxic look-alikes — label the hairy stem character clearly.",
     nativeStatus: "naturalized",
     conservationNote: "Naturalized from Europe — the wild ancestor of cultivated carrots. Collect freely. Caution: distinguish from toxic poison hemlock (Conium maculatum), which has smooth purple-spotted stems.",
+    sources: [
+      { label: "Go Botany — Daucus carota", url: "https://gobotany.nativeplanttrust.org/species/daucus/carota/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=DACA6" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Daucus%20carota" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Daucus_carota" },
+    ],
   },
   {
     id: "sweet-pepperbush",
@@ -784,6 +952,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a branch with a flowering spike and several leaves. Note the fragrance on the label — it is entirely lost during drying. Collect winter specimens with persistent seed capsules for a second herbarium sheet.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Clethra alnifolia", url: "https://gobotany.nativeplanttrust.org/species/clethra/alnifolia/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=CLAL3" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Clethra%20alnifolia" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Clethra_alnifolia" },
+    ],
   },
   {
     id: "blue-vervain",
@@ -809,6 +983,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a stem showing the candelabra branching pattern with flower spikes. The small flowers are individually unremarkable, but the ascending ring-bloom pattern is the key feature — note this on the label. Include a section showing the opposite leaves.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Verbena hastata", url: "https://gobotany.nativeplanttrust.org/species/verbena/hastata/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=VEHA2" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Verbena%20hastata" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Verbena_hastata" },
+    ],
   },
   {
     id: "turtlehead",
@@ -834,6 +1014,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a stem with the terminal flower cluster. Slice one or two flowers lengthwise to show the interior structure, which is useful for identification. The white color is preserved well in pressing. Include a pair of opposite leaves with the serrated margin visible.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Chelone glabra", url: "https://gobotany.nativeplanttrust.org/species/chelone/glabra/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=CHGL2" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Chelone%20glabra" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Chelone_glabra" },
+    ],
   },
   {
     id: "pokeweed",
@@ -861,6 +1047,12 @@ export const plants: Plant[] = [
       "Wear gloves — all parts are toxic, and berry juice stains permanently. Press a stem section with flowers or berries and a few leaves. Berry juice will stain pressing paper — place waxed paper between the specimen and blotting sheets. Label as toxic on the herbarium sheet.",
     nativeStatus: "native",
     conservationNote: "All parts are toxic to humans. Handle with gloves. Label clearly as poisonous on all herbarium specimens.",
+    sources: [
+      { label: "Go Botany — Phytolacca americana", url: "https://gobotany.nativeplanttrust.org/species/phytolacca/americana/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=PHAM4" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Phytolacca%20americana" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Phytolacca_americana" },
+    ],
   },
   {
     id: "st-johns-wort",
@@ -885,6 +1077,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press flowering stems — the yellow color preserves well. Point out the black petal dots on the label. Hold a fresh leaf to light and photograph the translucent glands before pressing, as this feature is hard to see on dried specimens.",
     nativeStatus: "naturalized",
+    sources: [
+      { label: "Go Botany — Hypericum perforatum", url: "https://gobotany.nativeplanttrust.org/species/hypericum/perforatum/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=HYPE" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Hypericum%20perforatum" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hypericum_perforatum" },
+    ],
   },
 
   // ───────────────────────────────────────────
@@ -914,6 +1112,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a flowering stem tip with several flower heads and clasping leaves. Purple ray color fades to pale lavender-blue when dried — note the fresh color on the label. The sticky stems will adhere to pressing paper; use waxed paper as a barrier.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Symphyotrichum novae-angliae", url: "https://gobotany.nativeplanttrust.org/species/symphyotrichum/novae-angliae/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=SYNO2" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Symphyotrichum%20novae-angliae" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Symphyotrichum_novae-angliae" },
+    ],
   },
   {
     id: "white-wood-aster",
@@ -938,6 +1142,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a stem with the flat-topped flower cluster and at least one heart-shaped basal leaf. The wiry zigzag stem is diagnostic — arrange it to show this feature. White rays preserve well. Include both fresh (yellow disk) and older (purple disk) flower heads if possible.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Eurybia divaricata", url: "https://gobotany.nativeplanttrust.org/species/eurybia/divaricata/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=EUDI16" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Eurybia%20divaricata" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Eurybia_divaricata" },
+    ],
   },
   {
     id: "wrinkle-leaf-goldenrod",
@@ -964,6 +1174,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a stem showing the arching flower plume and several wrinkled leaves. Yellow color preserves reasonably well. Include a close-up of the rugose leaf surface detail. Goldenrod is very common — collect freely for teaching collections.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Solidago rugosa", url: "https://gobotany.nativeplanttrust.org/species/solidago/rugosa/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=SORU2" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Solidago%20rugosa" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Solidago_rugosa" },
+    ],
   },
   {
     id: "winterberry-holly",
@@ -989,6 +1205,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Collect berry-laden branches after leaf drop for the most striking specimens. Press berries between extra padding — they are juicy and can stain. Include a summer-collected branch with leaves for comparison. Berries shrivel but retain red color when dried.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Ilex verticillata", url: "https://gobotany.nativeplanttrust.org/species/ilex/verticillata/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=ILVE" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Ilex%20verticillata" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ilex_verticillata" },
+    ],
   },
   {
     id: "virginia-creeper",
@@ -1014,6 +1236,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a vine section with a full leaf (5 leaflets arranged flat) and tendrils showing adhesive disks. Collect at peak fall color for the most attractive specimen. Include a berry cluster if available. Red foliage color fades to brown — note the original color on the label.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Parthenocissus quinquefolia", url: "https://gobotany.nativeplanttrust.org/species/parthenocissus/quinquefolia/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=PAQU2" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Parthenocissus%20quinquefolia" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Parthenocissus_quinquefolia" },
+    ],
   },
 
   // ───────────────────────────────────────────
@@ -1043,6 +1271,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Collect autumn leaves at peak color showing the range of shades. Press spring flowering branches with developing leaves. Compare pressed specimens side-by-side with red maple to highlight the diagnostic differences in sinus shape and samaras.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Acer saccharum", url: "https://gobotany.nativeplanttrust.org/species/acer/saccharum/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=ACSA3" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Acer%20saccharum" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Acer_saccharum" },
+    ],
   },
   {
     id: "white-oak",
@@ -1069,6 +1303,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press leaves showing the full outline of rounded lobes. Collect acorns with caps attached — dry them separately (do not press, as they are too thick). Include a bark photograph or rubbing for the herbarium sheet. White oak leaves are large — use full-size herbarium paper.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Quercus alba", url: "https://gobotany.nativeplanttrust.org/species/quercus/alba/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=QUAL" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Quercus%20alba" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Quercus_alba" },
+    ],
   },
   {
     id: "red-oak",
@@ -1095,6 +1335,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press leaves arranged to show the pointed, bristle-tipped lobes clearly. Collect acorns at maturity with caps attached. Include a first-year immature acorn alongside a mature one to show the two-year cycle. Bark rubbings are a useful addition to the herbarium sheet.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Quercus rubra", url: "https://gobotany.nativeplanttrust.org/species/quercus/rubra/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=QURU" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Quercus%20rubra" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Quercus_rubra" },
+    ],
   },
   {
     id: "american-beech",
@@ -1121,6 +1367,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press leaves that show the parallel venation and toothed margin clearly. Collect the spiny bur with nuts inside — halve it to show the triangular nut shape. A winter twig showing the long pointed buds makes an excellent supplementary specimen. Bark photographs are useful since the smooth bark cannot be rubbed.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Fagus grandifolia", url: "https://gobotany.nativeplanttrust.org/species/fagus/grandifolia/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=FAGR" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Fagus%20grandifolia" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Fagus_grandifolia" },
+    ],
   },
   {
     id: "paper-birch",
@@ -1148,6 +1400,12 @@ export const plants: Plant[] = [
       "Press leafy branches with catkins if in season. Include a small piece of peeling bark — but never strip bark from living trees, as this can kill them. Collect naturally shed bark from the ground. Yellow fall foliage presses well and retains color.",
     nativeStatus: "native",
     conservationNote: "Near the southern edge of its primary range in Worcester County. Do not peel bark from living trees — it causes permanent scarring and can be fatal.",
+    sources: [
+      { label: "Go Botany — Betula papyrifera", url: "https://gobotany.nativeplanttrust.org/species/betula/papyrifera/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=BEPA" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Betula%20papyrifera" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Betula_papyrifera" },
+    ],
   },
   {
     id: "eastern-hemlock",
@@ -1175,6 +1433,12 @@ export const plants: Plant[] = [
       "Press branchlets with needles and cones attached. The flat needles press easily. Include a close-up photo of the two white bands on the needle underside. If woolly adelgid is present, note this on the label but do not transport infested material to new areas.",
     nativeStatus: "native",
     conservationNote: "Severely threatened by hemlock woolly adelgid (Adelges tsugae). Report infestations to the Massachusetts DCR. Do not transport branches from infested trees.",
+    sources: [
+      { label: "Go Botany — Tsuga canadensis", url: "https://gobotany.nativeplanttrust.org/species/tsuga/canadensis/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=TSCA" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Tsuga%20canadensis" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tsuga_canadensis" },
+    ],
   },
   {
     id: "shagbark-hickory",
@@ -1200,6 +1464,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a single compound leaf spread flat — these are large, so use full-size paper. Photograph the shaggy bark in the field. Collect nuts with husks — halve the husk to show the nut inside. Include a twig with the large terminal bud for winter identification.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Carya ovata", url: "https://gobotany.nativeplanttrust.org/species/carya/ovata/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=CAOV2" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Carya%20ovata" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Carya_ovata" },
+    ],
   },
   {
     id: "black-cherry",
@@ -1226,6 +1496,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a flowering raceme and a fruiting raceme as separate specimens. Include leaves showing the petiolar glands (use a hand lens to verify). Note the bitter almond scent of crushed bark on the label — this is lost when dried. Ripe berries stain pressing paper.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Prunus serotina", url: "https://gobotany.nativeplanttrust.org/species/prunus/serotina/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=PRSE2" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Prunus%20serotina" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Prunus_serotina" },
+    ],
   },
   {
     id: "flowering-dogwood",
@@ -1252,6 +1528,12 @@ export const plants: Plant[] = [
       "Press a flowering branch with all four bracts spread flat. The bracts dry well and retain their shape. Collect a fruiting branch in autumn as a separate specimen. Photograph the distinctive bark. Note any anthracnose symptoms (brown leaf blotches, cankers) if present.",
     nativeStatus: "native",
     conservationNote: "Populations declining due to dogwood anthracnose (Discula destructiva). Note disease symptoms on specimens if observed.",
+    sources: [
+      { label: "Go Botany — Cornus florida", url: "https://gobotany.nativeplanttrust.org/species/cornus/florida/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=COFL2" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Cornus%20florida" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cornus_florida" },
+    ],
   },
   {
     id: "american-elm",
@@ -1279,6 +1561,12 @@ export const plants: Plant[] = [
       "Collect spring flowering twigs before leaves emerge. Press leaves showing the diagnostic asymmetric base clearly. Include the papery samaras — they press perfectly flat. Photograph the vase-shaped crown from a distance for the herbarium sheet.",
     nativeStatus: "native",
     conservationNote: "Populations reduced by Dutch elm disease (Ophiostoma novo-ulmi). Surviving trees may be resistant — note the tree's health on the label.",
+    sources: [
+      { label: "Go Botany — Ulmus americana", url: "https://gobotany.nativeplanttrust.org/species/ulmus/americana/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=ULAM" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Ulmus%20americana" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ulmus_americana" },
+    ],
   },
   {
     id: "black-tupelo",
@@ -1305,6 +1593,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Collect autumn foliage at peak scarlet color — the brilliant red darkens to brown-red during drying, so note the fresh color. Press the glossy summer leaves as well. Include a cluster of dark fruits if available. Photograph the deeply furrowed bark.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Nyssa sylvatica", url: "https://gobotany.nativeplanttrust.org/species/nyssa/sylvatica/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=NYSY" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Nyssa%20sylvatica" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nyssa_sylvatica" },
+    ],
   },
 
   // ───────────────────────────────────────────
@@ -1335,6 +1629,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press flowering branches in May and fruiting branches in July as separate specimens. Berries are juicy and will stain — place between waxed paper sheets. Autumn foliage color preserves fairly well. Include multiple stages for a complete life-cycle display.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Vaccinium corymbosum", url: "https://gobotany.nativeplanttrust.org/species/vaccinium/corymbosum/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=VACO" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Vaccinium%20corymbosum" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Vaccinium_corymbosum" },
+    ],
   },
   {
     id: "northern-arrowwood",
@@ -1361,6 +1661,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a flowering branch showing the flat-topped cyme and opposite leaves. The straight parallel veining is a key character — arrange leaves to show this clearly. Collect a fruiting branch separately. Berries shrivel when dried but retain their dark color.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Viburnum dentatum", url: "https://gobotany.nativeplanttrust.org/species/viburnum/dentatum/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=VIDE" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Viburnum%20dentatum" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Viburnum_dentatum" },
+    ],
   },
   {
     id: "staghorn-sumac",
@@ -1387,6 +1693,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press individual leaflets rather than whole compound leaves (too large). Include a section of the fuzzy stem and a portion of the fruit cluster. The velvety stem hairs and red fruit preserve well. Clearly label this as NOT poison sumac to avoid confusion.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Rhus typhina", url: "https://gobotany.nativeplanttrust.org/species/rhus/typhina/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=RHTY" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Rhus%20typhina" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rhus_typhina" },
+    ],
   },
   {
     id: "spicebush",
@@ -1412,6 +1724,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Collect flowering twigs in early April before leaves appear. The tiny flowers are inconspicuous — press them carefully so they remain attached. Collect a fruiting branch in September as a separate specimen. Note the aromatic scent on the label — it is lost in drying.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Lindera benzoin", url: "https://gobotany.nativeplanttrust.org/species/lindera/benzoin/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=LIBE3" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Lindera%20benzoin" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Lindera_benzoin" },
+    ],
   },
   {
     id: "witch-hazel",
@@ -1437,6 +1755,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Collect flowering branches showing both flowers and any remaining autumn leaves. Press the ribbon-like petals carefully — they curl easily. Include a mature seed capsule showing the open valves. This is one of very few specimens collectible in November.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Hamamelis virginiana", url: "https://gobotany.nativeplanttrust.org/species/hamamelis/virginiana/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=HAVI4" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Hamamelis%20virginiana" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hamamelis_virginiana" },
+    ],
   },
   {
     id: "virginia-rose",
@@ -1463,6 +1787,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press flowering stems showing the paired thorns and narrow stipules — these features distinguish it from invasive multiflora rose. Include the stipule close-up on the herbarium sheet. Collect rose hips in autumn. Pink petal color fades to pale lavender when dried.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Rosa virginiana", url: "https://gobotany.nativeplanttrust.org/species/rosa/virginiana/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=ROVI" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Rosa%20virginiana" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rosa_virginiana" },
+    ],
   },
   {
     id: "sweet-fern",
@@ -1489,6 +1819,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a branch with several leaves spread flat to show the fern-like lobing. The aromatic oils persist somewhat in dried specimens. Include catkins or burr-like fruits if in season. Note the fragrance on the label — it is the plant's most memorable characteristic.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Comptonia peregrina", url: "https://gobotany.nativeplanttrust.org/species/comptonia/peregrina/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=COPE80" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Comptonia%20peregrina" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Comptonia_peregrina" },
+    ],
   },
 
   // ───────────────────────────────────────────
@@ -1519,6 +1855,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a full frond — they are the right size for standard herbarium paper. Include a fertile frond showing the smaller upper pinnae with sori. Evergreen fronds collected in winter show the persistent character. These are abundant — excellent for student practice pressing.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Polystichum acrostichoides", url: "https://gobotany.nativeplanttrust.org/species/polystichum/acrostichoides/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=POAC4" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Polystichum%20acrostichoides" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Polystichum_acrostichoides" },
+    ],
   },
   {
     id: "ostrich-fern",
@@ -1546,6 +1888,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press individual pinnae or a section of the upper half of a frond — full fronds are too large. Include a separate fertile frond section (they press flat easily). Photograph the fiddlehead stage in April and the full vase-shaped clump in June for the herbarium file.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Matteuccia struthiopteris", url: "https://gobotany.nativeplanttrust.org/species/matteuccia/struthiopteris/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=MAST" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Matteuccia%20struthiopteris" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Matteuccia_struthiopteris" },
+    ],
   },
   {
     id: "hay-scented-fern",
@@ -1572,6 +1920,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a full frond — they are manageable-sized and press beautifully flat. The sweet scent persists faintly in dried specimens. Note the hay fragrance on the label. Extremely abundant — ideal for student collections and pressing practice.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Dennstaedtia punctilobula", url: "https://gobotany.nativeplanttrust.org/species/dennstaedtia/punctilobula/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=DEPU" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Dennstaedtia%20punctilobula" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dennstaedtia_punctilobula" },
+    ],
   },
   {
     id: "sensitive-fern",
@@ -1598,6 +1952,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a vegetative frond showing the net-like venation (unusual for ferns — highlight on the label). Collect a bead-like fertile frond separately — they press flat and are excellent diagnostic specimens. Both types can be mounted on a single herbarium sheet for comparison.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Onoclea sensibilis", url: "https://gobotany.nativeplanttrust.org/species/onoclea/sensibilis/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=ONSE" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Onoclea%20sensibilis" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Onoclea_sensibilis" },
+    ],
   },
   {
     id: "royal-fern",
@@ -1624,6 +1984,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a section of frond including both vegetative pinnae and the fertile tip. The widely spaced pinnules make pressing easy. Include a close-up of the sporangial cluster at the frond tip. Royal fern is large — select a frond section that fits standard herbarium paper.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Osmunda regalis", url: "https://gobotany.nativeplanttrust.org/species/osmunda/regalis/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=OSRE2" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Osmunda%20regalis" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Osmunda_regalis" },
+    ],
   },
   {
     id: "rock-polypody",
@@ -1649,6 +2015,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Peel a section of frond with attached rhizome from the rock surface. The evergreen fronds press flat easily. Show the sori on the underside — mount one frond face-up and one face-down on the herbarium sheet. Collect at any time of year since the fronds are persistent.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Polypodium virginianum", url: "https://gobotany.nativeplanttrust.org/species/polypodium/virginianum/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=POVI5" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Polypodium%20virginianum" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Polypodium_virginianum" },
+    ],
   },
 
   // ───────────────────────────────────────────
@@ -1679,6 +2051,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a stem section with the panicle and a leaf blade showing the hairy ligule area (use a hand lens). Grasses are best pressed when the panicle is freshly open. Include a separate leaf showing the collar region detail. Label the ligule character on the herbarium sheet.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Panicum virgatum", url: "https://gobotany.nativeplanttrust.org/species/panicum/virgatum/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=PAVI2" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Panicum%20virgatum" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Panicum_virgatum" },
+    ],
   },
   {
     id: "little-bluestem",
@@ -1705,6 +2083,12 @@ export const plants: Plant[] = [
     specimenNotes:
       "Collect in early autumn when the bronze color and fluffy seed heads are both present. Press the entire upper portion of a culm with seed head attached. The fluffy seeds shed easily — handle gently. Include a summer stem to show the blue-green color for comparison.",
     nativeStatus: "native",
+    sources: [
+      { label: "Go Botany — Schizachyrium scoparium", url: "https://gobotany.nativeplanttrust.org/species/schizachyrium/scoparium/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=SCSC" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Schizachyrium%20scoparium" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Schizachyrium_scoparium" },
+    ],
   },
   {
     id: "common-dandelion",
@@ -1731,5 +2115,11 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press a complete rosette with root, leaves, flower, and seed head for a comprehensive specimen. Blot the milky sap from the stalk before pressing. The yellow flower color preserves well. Dandelions are ubiquitous — excellent for student practice and for demonstrating composite flower structure.",
     nativeStatus: "naturalized",
+    sources: [
+      { label: "Go Botany — Taraxacum officinale", url: "https://gobotany.nativeplanttrust.org/species/taraxacum/officinale/" },
+      { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=TAOF" },
+      { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Taraxacum%20officinale" },
+      { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Taraxacum_officinale" },
+    ],
   },
 ];
