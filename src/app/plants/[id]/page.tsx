@@ -26,7 +26,7 @@ export async function generateMetadata({
   const plant = plants.find((p) => p.id === id);
   if (!plant) return { title: "Plant Not Found" };
   return {
-    title: `${plant.commonName} | St. Mark's Flora`,
+    title: `${plant.commonName} | Tiny Worlds Collectibles`,
     description: `${plant.scientificName} — ${plant.description.slice(0, 120)}...`,
   };
 }

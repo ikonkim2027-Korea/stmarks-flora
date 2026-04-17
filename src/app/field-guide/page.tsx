@@ -73,7 +73,7 @@ export default function FieldGuidePage() {
           @page {
             margin: 0.75in;
             @bottom-center {
-              content: "St. Mark's Flora Field Guide";
+              content: "Tiny Worlds Collectibles Field Guide";
               font-size: 8pt;
               color: #666;
             }
@@ -90,7 +90,7 @@ export default function FieldGuidePage() {
       {/* Print-only cover page */}
       <div className="print-cover">
         <h1 style={{ fontSize: "28pt", color: "#2D5016", marginBottom: "8pt" }}>
-          St. Mark&apos;s Flora
+          Tiny Worlds Collectibles
         </h1>
         <p style={{ fontSize: "16pt", color: "#8B6914", marginBottom: "12pt" }}>
           A Field Guide

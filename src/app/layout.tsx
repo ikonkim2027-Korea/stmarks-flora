@@ -12,14 +12,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "St. Mark's Flora | Field Guide",
+  title: "Tiny Worlds Collectibles | Field Guide",
   description:
     "A Field Guide to Plants Within 1km of St. Mark's School, Southborough, MA. Discover native trees, wildflowers, ferns, and more.",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "St. Mark's Flora",
+    title: "Tiny Worlds Collectibles",
   },
 };
 
@@ -40,7 +40,7 @@ export default function RootLayout({
         <InstallPrompt />
         <ServiceWorkerRegistration />
         <footer className="border-t py-6 text-center text-sm" style={{ borderColor: "var(--color-border)", color: "var(--color-text-muted)" }}>
-          <p>St. Mark&apos;s Flora &mdash; A Field Guide to Plants Within 1km of St. Mark&apos;s School, Southborough, MA</p>
+          <p>Tiny Worlds Collectibles &mdash; A Field Guide to Plants Within 1km of St. Mark&apos;s School, Southborough, MA</p>
           <p className="mt-1">For educational and scientific specimen collection purposes only.</p>
         </footer>
       </body>

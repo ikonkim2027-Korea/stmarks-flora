@@ -116,7 +116,7 @@ async function networkFirst(request, cacheName) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Offline - St. Mark's Flora</title>
+  <title>Offline - Tiny Worlds Collectibles</title>
   <style>
     body { font-family: Georgia, serif; background: #FEFCF3; color: #3C2415; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 1rem; text-align: center; }
     .container { max-width: 400px; }

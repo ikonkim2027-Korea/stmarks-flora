@@ -42,11 +42,11 @@ export default function HomePage() {
             <div className="flex items-center gap-2 mb-4">
               <Leaf className="text-green-300" size={20} />
               <span className="text-green-300 text-sm font-medium tracking-wider uppercase">
-                Botanical Field Guide
+                Tiny Worlds Club &middot; Botanical Field Guide
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold text-white leading-tight mb-4">
-              St. Mark&apos;s Flora
+              Tiny Worlds Collectibles
             </h1>
             <p className="text-xl text-green-100 leading-relaxed mb-8">
               A Field Guide to Plants Within 1km of St. Mark&apos;s School,{" "}

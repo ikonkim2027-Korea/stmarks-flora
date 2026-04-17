@@ -11,7 +11,7 @@ import { ArrowLeft, MapPin } from "lucide-react";
 import HabitatMapLoader from "@/components/HabitatMapLoader";
 
 export const metadata: Metadata = {
-  title: "Interactive Map | St. Mark's Flora",
+  title: "Interactive Map | Tiny Worlds Collectibles",
   description:
     "Explore habitat zones and find plants on an interactive map of the St. Mark's School campus area.",
 };

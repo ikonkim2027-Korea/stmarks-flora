@@ -79,7 +79,7 @@ export default function InstallPrompt() {
             className="text-xs mt-0.5 leading-relaxed"
             style={{ color: "var(--color-text-muted)" }}
           >
-            Install St. Mark&apos;s Flora for offline access to the field guide.
+            Install Tiny Worlds Collectibles for offline access to the field guide.
           </p>
           <button
             onClick={handleInstall}

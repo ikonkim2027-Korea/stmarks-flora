@@ -45,7 +45,7 @@ export default function Navigation() {
               size={22}
             />
             <span className="font-semibold text-white text-lg tracking-tight leading-none">
-              St. Mark&apos;s Flora
+              Tiny Worlds Collectibles
             </span>
           </Link>
 

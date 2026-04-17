@@ -65,7 +65,7 @@ export default function PDFExport({ variant = "primary", className = "" }: PDFEx
       doc.setFont("helvetica", "bold");
       doc.setFontSize(32);
       doc.setTextColor(...PRIMARY);
-      doc.text("St. Mark's Flora", pageWidth / 2, 70, { align: "center" });
+      doc.text("Tiny Worlds Collectibles", pageWidth / 2, 70, { align: "center" });
 
       doc.setFont("helvetica", "normal");
       doc.setFontSize(16);
@@ -370,7 +370,7 @@ export default function PDFExport({ variant = "primary", className = "" }: PDFEx
           doc.setFontSize(7);
           doc.setTextColor(...MUTED);
           doc.text(
-            `St. Mark's Flora Field Guide`,
+            `Tiny Worlds Collectibles Field Guide`,
             margin,
             pageHeight - 10
           );
