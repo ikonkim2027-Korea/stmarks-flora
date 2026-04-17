@@ -71,6 +71,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Acer%20rubrum" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Acer_rubrum" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Acer_rubrum_15-p.bot-a.rubrum-114.jpg/960px-Acer_rubrum_15-p.bot-a.rubrum-114.jpg",
   },
   {
     id: "eastern-white-pine",
@@ -104,6 +105,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Pinus%20strobus" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Pinus_strobus" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/48/Pinus_strobus_trees.jpg",
   },
   {
     id: "trout-lily",
@@ -135,6 +137,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Erythronium%20americanum" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Erythronium_americanum" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Erythronium_americanum_-_anterior.jpg/960px-Erythronium_americanum_-_anterior.jpg",
   },
   {
     id: "garlic-mustard",
@@ -167,6 +170,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Alliaria%20petiolata" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Alliaria_petiolata" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alliaria_petiolata_marais-belloy-sur-somme_80_26042007_3.jpg/960px-Alliaria_petiolata_marais-belloy-sur-somme_80_26042007_3.jpg",
   },
   {
     id: "cinnamon-fern",
@@ -199,6 +203,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Osmundastrum%20cinnamomeum" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Osmundastrum_cinnamomeum" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Osmundastrum_cinnamomeum_May2015.jpg/960px-Osmundastrum_cinnamomeum_May2015.jpg",
   },
   {
     id: "japanese-barberry",
@@ -232,6 +237,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Berberis%20thunbergii" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Berberis_thunbergii" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/e/ef/Berberis_thunb_frt.jpg",
   },
 
   // ───────────────────────────────────────────
@@ -267,6 +273,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Sanguinaria%20canadensis" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Sanguinaria_canadensis" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Sanguinaria_canadensis_Arkansas.jpg/960px-Sanguinaria_canadensis_Arkansas.jpg",
   },
   {
     id: "hepatica",
@@ -298,6 +305,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Hepatica%20americana" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hepatica_nobilis" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Hepatica_nobilis_plant.JPG/960px-Hepatica_nobilis_plant.JPG",
   },
   {
     id: "spring-beauty",
@@ -329,6 +337,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Claytonia%20virginica" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Claytonia_virginica" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Claytonia_virginica_2_Radnor_Lake.jpg/960px-Claytonia_virginica_2_Radnor_Lake.jpg",
   },
   {
     id: "red-trillium",
@@ -360,6 +369,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Trillium%20erectum" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Trillium_erectum" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Trillium_erectum_-_Stephen%27s_Gulch_CA.jpg/960px-Trillium_erectum_-_Stephen%27s_Gulch_CA.jpg",
   },
   {
     id: "dutchmans-breeches",
@@ -390,6 +400,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Dicentra%20cucullaria" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dicentra_cucullaria" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Dicentra_cucullaria_-_Dutchmans_Breeches_2.jpg/960px-Dicentra_cucullaria_-_Dutchmans_Breeches_2.jpg",
   },
   {
     id: "jack-in-the-pulpit",
@@ -422,6 +433,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Arisaema%20triphyllum" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Arisaema_triphyllum" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Arisaema_triphyllum_Bob_Hunter_Memorial_Park.jpg/960px-Arisaema_triphyllum_Bob_Hunter_Memorial_Park.jpg",
   },
   {
     id: "wild-columbine",
@@ -453,6 +465,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Aquilegia%20canadensis" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Aquilegia_canadensis" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Wild_Columbine.jpg/960px-Wild_Columbine.jpg",
   },
   {
     id: "marsh-marigold",
@@ -483,6 +496,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Caltha%20palustris" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Caltha_palustris" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Caltha_palustris_plant.JPG/960px-Caltha_palustris_plant.JPG",
   },
   {
     id: "foamflower",
@@ -513,6 +527,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Tiarella%20cordifolia" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tiarella_cordifolia" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Heartleaved_foamflower_%28Tiarella_cordifolia%29.jpg/960px-Heartleaved_foamflower_%28Tiarella_cordifolia%29.jpg",
   },
   {
     id: "pink-ladys-slipper",
@@ -545,6 +560,7 @@ export const plants: Plant[] = [
       { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=CYAC3" },
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Cypripedium%20acaule" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Cypripedium_acaule_-_Sasata_edit1.jpg/960px-Cypripedium_acaule_-_Sasata_edit1.jpg",
   },
 
   // ───────────────────────────────────────────
@@ -579,6 +595,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Kalmia%20latifolia" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Kalmia_latifolia" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Kalmia_Latifolia.jpg",
   },
   {
     id: "wild-geranium",
@@ -610,6 +627,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Geranium%20maculatum" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Geranium_maculatum" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Geranium_maculatum_Leatherwood_Lake.jpg/960px-Geranium_maculatum_Leatherwood_Lake.jpg",
   },
   {
     id: "trailing-arbutus",
@@ -641,6 +659,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Epigaea%20repens" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Epigaea_repens" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Trailing_arbutus_2006.jpg/960px-Trailing_arbutus_2006.jpg",
   },
   {
     id: "common-milkweed",
@@ -674,6 +693,7 @@ export const plants: Plant[] = [
       { label: "USDA PLANTS Database", url: "https://plants.usda.gov/home/plantProfile?symbol=ASSY" },
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Asclepias%20syriaca" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Asclepias_syriacus.tif/lossy-page1-960px-Asclepias_syriacus.tif.jpg",
   },
   {
     id: "butterfly-weed",
@@ -704,6 +724,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Asclepias%20tuberosa" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Asclepias_tuberosa" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Asclepias_tuberosa_interior.jpg/960px-Asclepias_tuberosa_interior.jpg",
   },
   {
     id: "multiflora-rose",
@@ -736,6 +757,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Rosa%20multiflora" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rosa_multiflora" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/2020-05-20_08_05_42_Multiflora_Rose_flowers_along_a_walking_path_within_Horsepen_Run_Stream_Valley_Park_in_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg/960px-2020-05-20_08_05_42_Multiflora_Rose_flowers_along_a_walking_path_within_Horsepen_Run_Stream_Valley_Park_in_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg",
   },
 
   // ───────────────────────────────────────────
@@ -770,6 +792,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Monarda%20didyma" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Monarda_didyma" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Monarda_didyma_inflorescence_and_upper_cauline_leaves.jpg/960px-Monarda_didyma_inflorescence_and_upper_cauline_leaves.jpg",
   },
   {
     id: "joe-pye-weed",
@@ -801,6 +824,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Eutrochium%20purpureum" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Eutrochium_purpureum" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Eutrochium_purpureum.jpg/960px-Eutrochium_purpureum.jpg",
   },
   {
     id: "cardinal-flower",
@@ -833,6 +857,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Lobelia%20cardinalis" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Lobelia_cardinalis" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Lobelia_cardinalis_-_Cardinal_Flower.jpg/960px-Lobelia_cardinalis_-_Cardinal_Flower.jpg",
   },
   {
     id: "boneset",
@@ -864,6 +889,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Eupatorium%20perfoliatum" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Eupatorium_perfoliatum" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Eupatorium_perfoliatum_001.JPG/960px-Eupatorium_perfoliatum_001.JPG",
   },
   {
     id: "black-eyed-susan",
@@ -895,6 +921,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Rudbeckia%20hirta" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rudbeckia_hirta" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Rudbeckia_hirta_kz03.jpg/960px-Rudbeckia_hirta_kz03.jpg",
   },
   {
     id: "queen-annes-lace",
@@ -927,6 +954,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Daucus%20carota" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Daucus_carota" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Daucus_carota_May_2008-1_edit.jpg/960px-Daucus_carota_May_2008-1_edit.jpg",
   },
   {
     id: "sweet-pepperbush",
@@ -958,6 +986,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Clethra%20alnifolia" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Clethra_alnifolia" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Clethra-alnifolia-flowers.JPG/960px-Clethra-alnifolia-flowers.JPG",
   },
   {
     id: "blue-vervain",
@@ -989,6 +1018,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Verbena%20hastata" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Verbena_hastata" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Verbena_hastata.JPG/960px-Verbena_hastata.JPG",
   },
   {
     id: "turtlehead",
@@ -1020,6 +1050,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Chelone%20glabra" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Chelone_glabra" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Chelone_glabra_Red_River_Gorge.JPG/960px-Chelone_glabra_Red_River_Gorge.JPG",
   },
   {
     id: "pokeweed",
@@ -1053,6 +1084,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Phytolacca%20americana" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Phytolacca_americana" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pokeweed_bush_in_Northumberland_County%2C_Pennsylvania.JPG/960px-Pokeweed_bush_in_Northumberland_County%2C_Pennsylvania.JPG",
   },
   {
     id: "st-johns-wort",
@@ -1083,6 +1115,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Hypericum%20perforatum" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hypericum_perforatum" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/%28MHNT%29_Hypericum_perforatum_flower_and_buttons.jpg/960px-%28MHNT%29_Hypericum_perforatum_flower_and_buttons.jpg",
   },
 
   // ───────────────────────────────────────────
@@ -1118,6 +1151,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Symphyotrichum%20novae-angliae" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Symphyotrichum_novae-angliae" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Symphyotrichum_novae-angliae3.jpg/960px-Symphyotrichum_novae-angliae3.jpg",
   },
   {
     id: "white-wood-aster",
@@ -1148,6 +1182,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Eurybia%20divaricata" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Eurybia_divaricata" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Eurybia_divaricata_in_CT.jpg/960px-Eurybia_divaricata_in_CT.jpg",
   },
   {
     id: "wrinkle-leaf-goldenrod",
@@ -1180,6 +1215,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Solidago%20rugosa" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Solidago_rugosa" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Solidago_rugosa_var_aspera.jpg/960px-Solidago_rugosa_var_aspera.jpg",
   },
   {
     id: "winterberry-holly",
@@ -1211,6 +1247,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Ilex%20verticillata" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ilex_verticillata" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Ilex_verticillata_fruits_and_foliage_1.JPG/960px-Ilex_verticillata_fruits_and_foliage_1.JPG",
   },
   {
     id: "virginia-creeper",
@@ -1242,6 +1279,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Parthenocissus%20quinquefolia" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Parthenocissus_quinquefolia" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Virginia_creeper_Parthenocissus_quinquifolia_169.JPG/960px-Virginia_creeper_Parthenocissus_quinquifolia_169.JPG",
   },
 
   // ───────────────────────────────────────────
@@ -1277,6 +1315,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Acer%20saccharum" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Acer_saccharum" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Acer_saccharum_1-jgreenlee_%285098070608%29.jpg/960px-Acer_saccharum_1-jgreenlee_%285098070608%29.jpg",
   },
   {
     id: "white-oak",
@@ -1309,6 +1348,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Quercus%20alba" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Quercus_alba" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Keeler_Oak_Tree_-_distance_photo%2C_May_2013.jpg/960px-Keeler_Oak_Tree_-_distance_photo%2C_May_2013.jpg",
   },
   {
     id: "red-oak",
@@ -1341,6 +1381,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Quercus%20rubra" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Quercus_rubra" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Quercus_rubra_%40_Tortworth_Court.jpg/960px-Quercus_rubra_%40_Tortworth_Court.jpg",
   },
   {
     id: "american-beech",
@@ -1373,6 +1414,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Fagus%20grandifolia" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Fagus_grandifolia" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Beech_with_Branches.jpg/960px-Beech_with_Branches.jpg",
   },
   {
     id: "paper-birch",
@@ -1406,6 +1448,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Betula%20papyrifera" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Betula_papyrifera" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/13._The_Fall_of_Acadia_%284039110079%29.jpg/960px-13._The_Fall_of_Acadia_%284039110079%29.jpg",
   },
   {
     id: "eastern-hemlock",
@@ -1439,6 +1482,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Tsuga%20canadensis" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Tsuga_canadensis" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/2/24/Tsuga_canadensis_morton.jpg",
   },
   {
     id: "shagbark-hickory",
@@ -1470,6 +1514,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Carya%20ovata" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Carya_ovata" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/2021-03-03_10_34_58_Shagbark_Hickory_trunk_within_the_woodlands_along_the_West_Branch_Shabakunk_Creek_in_Ewing_Township%2C_Mercer_County%2C_New_Jersey.jpg/960px-2021-03-03_10_34_58_Shagbark_Hickory_trunk_within_the_woodlands_along_the_West_Branch_Shabakunk_Creek_in_Ewing_Township%2C_Mercer_County%2C_New_Jersey.jpg",
   },
   {
     id: "black-cherry",
@@ -1502,6 +1547,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Prunus%20serotina" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Prunus_serotina" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Amerikaanse_vogelkers_Prunus_serotina_closeup.jpg/960px-Amerikaanse_vogelkers_Prunus_serotina_closeup.jpg",
   },
   {
     id: "flowering-dogwood",
@@ -1534,6 +1580,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Cornus%20florida" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Cornus_florida" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Cornus_florida_Arkansas.jpg/960px-Cornus_florida_Arkansas.jpg",
   },
   {
     id: "american-elm",
@@ -1567,6 +1614,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Ulmus%20americana" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Ulmus_americana" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/American_Elm_Tree%2C_Old_South_Street%2C_Northampton%2C_MA_-_October_2019.jpg/960px-American_Elm_Tree%2C_Old_South_Street%2C_Northampton%2C_MA_-_October_2019.jpg",
   },
   {
     id: "black-tupelo",
@@ -1599,6 +1647,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Nyssa%20sylvatica" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Nyssa_sylvatica" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Nyssa_sylvatica_v_sylvatica.jpg/960px-Nyssa_sylvatica_v_sylvatica.jpg",
   },
 
   // ───────────────────────────────────────────
@@ -1635,6 +1684,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Vaccinium%20corymbosum" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Vaccinium_corymbosum" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/17/Vaccinium_corymbosum%2801%29.jpg",
   },
   {
     id: "northern-arrowwood",
@@ -1667,6 +1717,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Viburnum%20dentatum" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Viburnum_dentatum" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Viburnum_dentatum_flowers.jpg/960px-Viburnum_dentatum_flowers.jpg",
   },
   {
     id: "staghorn-sumac",
@@ -1699,6 +1750,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Rhus%20typhina" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rhus_typhina" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/%D0%A1%D1%83%D0%BC%D0%B0%D1%85_%D0%BE%D0%BB%D0%B5%D0%BD%D0%B5%D1%80%D0%BE%D0%B3%D0%B8%D0%B9_%28%D0%A1%D1%83%D0%BC%D0%B0%D1%85_%D0%BF%D1%83%D1%88%D0%B8%D1%81%D1%82%D1%8B%D0%B9%2C_%D0%A3%D0%BA%D1%81%D1%83%D1%81%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%29_-_Rhus_typhina_-_Staghorn_sumac_-_%D0%92%D0%BB%D0%B0%D0%BA%D0%BD%D0%B5%D1%81%D1%82_%D1%88%D0%BC%D0%B0%D0%BA_-_Essigbaum_%2823408707041%29.jpg/960px-thumbnail.jpg",
   },
   {
     id: "spicebush",
@@ -1730,6 +1782,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Lindera%20benzoin" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Lindera_benzoin" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/6/69/Spicebush_%284506720062%29.jpg",
   },
   {
     id: "witch-hazel",
@@ -1761,6 +1814,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Hamamelis%20virginiana" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Hamamelis_virginiana" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Hamamelis_virginiana_FlowersLeaves_BotGardBln0906.JPG/960px-Hamamelis_virginiana_FlowersLeaves_BotGardBln0906.JPG",
   },
   {
     id: "virginia-rose",
@@ -1793,6 +1847,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Rosa%20virginiana" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Rosa_virginiana" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Rosa_Helsinki_July_2013-2.jpg/960px-Rosa_Helsinki_July_2013-2.jpg",
   },
   {
     id: "sweet-fern",
@@ -1825,6 +1880,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Comptonia%20peregrina" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Comptonia_peregrina" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Sweet-fern_%28Huron_Shores%29.JPG/960px-Sweet-fern_%28Huron_Shores%29.JPG",
   },
 
   // ───────────────────────────────────────────
@@ -1861,6 +1917,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Polystichum%20acrostichoides" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Polystichum_acrostichoides" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Christmas_fern.jpg/960px-Christmas_fern.jpg",
   },
   {
     id: "ostrich-fern",
@@ -1894,6 +1951,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Matteuccia%20struthiopteris" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Matteuccia_struthiopteris" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Matteuccia_struthiopteris_fiddleheads.jpg/960px-Matteuccia_struthiopteris_fiddleheads.jpg",
   },
   {
     id: "hay-scented-fern",
@@ -1926,6 +1984,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Dennstaedtia%20punctilobula" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Dennstaedtia_punctilobula" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Dennstaedtia_punctilobula1.jpg/960px-Dennstaedtia_punctilobula1.jpg",
   },
   {
     id: "sensitive-fern",
@@ -1958,6 +2017,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Onoclea%20sensibilis" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Onoclea_sensibilis" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Onoclea_sensibilis_3.jpg/960px-Onoclea_sensibilis_3.jpg",
   },
   {
     id: "royal-fern",
@@ -1990,6 +2050,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Osmunda%20regalis" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Osmunda_regalis" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Osmunda_regalis_Mimizan.jpg/960px-Osmunda_regalis_Mimizan.jpg",
   },
   {
     id: "rock-polypody",
@@ -2021,6 +2082,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Polypodium%20virginianum" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Polypodium_virginianum" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Polypodium_virginianum3.jpg/960px-Polypodium_virginianum3.jpg",
   },
 
   // ───────────────────────────────────────────
@@ -2057,6 +2119,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Panicum%20virgatum" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Panicum_virgatum" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/7/7a/Panicum_virgatum.jpg",
   },
   {
     id: "little-bluestem",
@@ -2089,6 +2152,7 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Schizachyrium%20scoparium" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Schizachyrium_scoparium" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/45/Andropogon_scoparius.jpg",
   },
   {
     id: "common-dandelion",
@@ -2121,5 +2185,6 @@ export const plants: Plant[] = [
       { label: "iNaturalist Observations", url: "https://www.inaturalist.org/taxa/search?q=Taraxacum%20officinale" },
       { label: "Wikipedia", url: "https://en.wikipedia.org/wiki/Taraxacum_officinale" },
     ],
+    imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Taraxacum_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-135.jpg/960px-Taraxacum_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-135.jpg",
   },
 ];

@@ -41,6 +41,19 @@ export default function PlantCard({ plant, currentMonth }: PlantCardProps) {
         {/* Top color strip by category */}
         <div className={`h-1.5 ${dotColor}`} />
 
+        {/* Image */}
+        {plant.imageUrl && (
+          <div className="aspect-[4/3] overflow-hidden bg-gray-100">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={plant.imageUrl}
+              alt={plant.commonName}
+              loading="lazy"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        )}
+
         {/* Card body */}
         <div className="p-4 flex flex-col gap-3 flex-1">
           {/* Header row */}
