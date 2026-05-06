@@ -8,7 +8,7 @@ import SearchBar from "@/components/SearchBar";
 import FilterPanel, { FilterState } from "@/components/FilterPanel";
 import { getCurrentMonthWeek } from "@/lib/utils";
 import { filterPlants, PlantSortKey } from "@/lib/plantDiscovery";
-import { SlidersHorizontal, X, ArrowUpDown } from "lucide-react";
+import { SlidersHorizontal, X, ArrowUpDown, Search } from "lucide-react";
 import PDFExport from "@/components/PDFExport";
 
 const EMPTY_FILTERS: FilterState = {
@@ -52,20 +52,21 @@ export default function BrowseContent() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="mb-6">
-        <h1 className="text-3xl font-bold" style={{ color: "var(--color-text)" }}>
-          Plant Index
+    <div className="atlas-shell py-10">
+      <div className="mb-8 border-b pb-6" style={{ borderColor: "var(--color-border)" }}>
+        <p className="atlas-kicker">Specimen database</p>
+        <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl" style={{ color: "var(--color-text)" }}>
+          Plant index
         </h1>
-        <div className="mt-2 flex items-center gap-3">
+        <div className="mt-3 flex flex-wrap items-center gap-3">
           <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
-            {plants.length} species documented within 1km of St. Mark&apos;s School
+            {`${plants.length} species documented within 1km of St. Mark's School`}
           </p>
           <PDFExport variant="subtle" />
         </div>
       </div>
 
-      <div className="flex flex-col sm:flex-row gap-3 mb-6">
+      <div className="mb-7 flex flex-col gap-3 sm:flex-row">
         <div className="flex-1">
           <SearchBar value={query} onChange={setQuery} />
         </div>
@@ -74,7 +75,7 @@ export default function BrowseContent() {
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value as PlantSortKey)}
-              className="appearance-none pl-8 pr-4 py-2.5 rounded-lg border text-sm font-medium cursor-pointer focus:outline-none"
+              className="cursor-pointer appearance-none rounded-lg border py-3 pl-8 pr-4 text-sm font-bold focus:outline-none"
               style={{
                 background: "var(--color-card)",
                 borderColor: "var(--color-border)",
@@ -95,9 +96,9 @@ export default function BrowseContent() {
           </div>
           <button
             onClick={() => setShowFilters((v) => !v)}
-            className={`flex items-center gap-2 px-4 py-2.5 rounded-lg border text-sm font-medium transition-colors ${
+            className={`flex items-center gap-2 rounded-lg border px-4 py-3 text-sm font-bold transition-colors ${
               showFilters || activeFilterCount > 0
-                ? "bg-green-700 text-white border-green-700"
+                ? "bg-[var(--color-ink)] text-white border-[var(--color-ink)]"
                 : ""
             }`}
             style={
@@ -123,7 +124,7 @@ export default function BrowseContent() {
 
       <div className="flex gap-6 items-start">
         {showFilters && (
-          <aside className="w-60 flex-shrink-0 hidden lg:block">
+          <aside className="hidden w-64 flex-shrink-0 lg:block">
             <FilterPanel
               filters={filters}
               onChange={setFilters}
@@ -164,7 +165,7 @@ export default function BrowseContent() {
             <div className="flex flex-wrap gap-2 mb-4">
               {query && (
                 <span
-                  className="inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full border"
+              className="inline-flex items-center gap-1.5 rounded-md border px-3 py-1 text-xs font-bold"
                   style={{
                     background: "var(--color-primary-pale)",
                     borderColor: "var(--color-primary)",
@@ -180,7 +181,7 @@ export default function BrowseContent() {
               {activeFilterCount > 0 && (
                 <button
                   onClick={resetFilters}
-                  className="inline-flex items-center gap-1 text-xs px-3 py-1 rounded-full border hover:opacity-70 transition-opacity"
+                  className="inline-flex items-center gap-1 rounded-md border px-3 py-1 text-xs font-bold transition-opacity hover:opacity-70"
                   style={{ borderColor: "var(--color-border)", color: "var(--color-text-muted)" }}
                 >
                   <X size={12} />
@@ -190,7 +191,7 @@ export default function BrowseContent() {
             </div>
           )}
 
-          <p className="text-sm mb-4" style={{ color: "var(--color-text-muted)" }}>
+          <p className="mb-4 text-sm" style={{ color: "var(--color-text-muted)" }}>
             Showing{" "}
             <span className="font-semibold" style={{ color: "var(--color-text)" }}>
               {filtered.length}
@@ -199,18 +200,18 @@ export default function BrowseContent() {
           </p>
 
           {filtered.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {filtered.map((plant) => (
                 <PlantCard key={plant.id} plant={plant} currentMonth={currentMonth} />
               ))}
             </div>
           ) : (
             <div
-              className="rounded-xl border p-12 text-center"
+              className="atlas-panel p-12 text-center"
               style={{ borderColor: "var(--color-border)", background: "var(--color-card)" }}
             >
-              <div className="text-4xl mb-3">🔍</div>
-              <p className="font-semibold text-lg mb-1" style={{ color: "var(--color-text)" }}>
+              <Search className="mx-auto mb-4" size={34} strokeWidth={1.4} style={{ color: "var(--color-primary)" }} />
+              <p className="mb-1 text-lg font-black" style={{ color: "var(--color-text)" }}>
                 No plants found
               </p>
               <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>

@@ -14,6 +14,8 @@ export default function InstallPrompt() {
   const [showBanner, setShowBanner] = useState(false);
 
   useEffect(() => {
+    if (process.env.NODE_ENV !== "production") return;
+
     // Check if already dismissed
     const dismissed = localStorage.getItem("pwa-install-dismissed");
     if (dismissed) {
@@ -53,38 +55,38 @@ export default function InstallPrompt() {
 
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-50 p-4 sm:p-0 sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-sm"
+      className="fixed bottom-0 left-0 right-0 z-50 p-4 sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-sm sm:p-0"
     >
       <div
-        className="rounded-xl border shadow-lg p-4 flex items-start gap-3"
+        className="flex items-start gap-3 rounded-lg border p-4 shadow-lg"
         style={{
           background: "var(--color-card)",
           borderColor: "var(--color-border)",
         }}
       >
         <div
-          className="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center"
-          style={{ background: "var(--color-primary-pale)" }}
+          className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg"
+          style={{ background: "var(--color-ink)" }}
         >
-          <Download size={20} style={{ color: "var(--color-primary)" }} />
+          <Download size={19} style={{ color: "var(--color-card)" }} />
         </div>
         <div className="flex-1 min-w-0">
           <p
-            className="font-semibold text-sm"
+            className="text-sm font-black"
             style={{ color: "var(--color-text)" }}
           >
-            Add to Home Screen
+            Install field atlas
           </p>
           <p
             className="text-xs mt-0.5 leading-relaxed"
             style={{ color: "var(--color-text-muted)" }}
           >
-            Install Tiny Worlds Collectibles for offline access to the field guide.
+            Offline access for campus fieldwork.
           </p>
           <button
             onClick={handleInstall}
-            className="mt-2 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-white transition-colors"
-            style={{ background: "var(--color-primary)" }}
+            className="mt-2 inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold text-white transition-colors"
+            style={{ background: "var(--color-ink)" }}
           >
             <Download size={14} />
             Install

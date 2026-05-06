@@ -12,7 +12,7 @@ interface SearchBarProps {
 export default function SearchBar({
   value,
   onChange,
-  placeholder = "Search by common name, scientific name, or family...",
+  placeholder = "Search by name, family, habitat, trait, or ecological role...",
 }: SearchBarProps) {
   const [localValue, setLocalValue] = useState(value);
   const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -50,7 +50,7 @@ export default function SearchBar({
         value={localValue}
         onChange={handleChange}
         placeholder={placeholder}
-        className="w-full pl-9 pr-9 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-2 transition-all"
+        className="w-full rounded-lg border py-3 pl-9 pr-9 text-sm font-medium transition-all focus:outline-none focus:ring-2"
         style={{
           background: "var(--color-card)",
           borderColor: "var(--color-border)",
@@ -61,7 +61,7 @@ export default function SearchBar({
       {localValue && (
         <button
           onClick={handleClear}
-          className="absolute inset-y-0 right-0 pr-3 flex items-center hover:opacity-70 transition-opacity"
+          className="absolute inset-y-0 right-0 flex items-center pr-3 transition-opacity hover:opacity-70"
           aria-label="Clear search"
         >
           <X size={16} style={{ color: "var(--color-text-muted)" }} />

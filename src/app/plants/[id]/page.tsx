@@ -6,7 +6,6 @@ import {
   getCategoryColor,
   getNativeStatusColor,
   getNativeStatusLabel,
-  getHabitatIcon,
   getHabitatLabel,
   getAbundanceLabel,
   getCurrentMonthWeek,
@@ -55,11 +54,11 @@ export default async function PlantDetailPage({
   const collectionPolicy = getCollectionPolicy(plant);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="atlas-shell max-w-5xl py-10">
       {/* Back link */}
       <Link
         href="/plants"
-        className="inline-flex items-center gap-1.5 text-sm hover:underline mb-6"
+        className="mb-6 inline-flex items-center gap-1.5 text-sm font-bold hover:underline"
         style={{ color: "var(--color-text-muted)" }}
       >
         <ArrowLeft size={14} />
@@ -68,27 +67,30 @@ export default async function PlantDetailPage({
 
       {/* Herbarium sheet header */}
       <div
-        className="rounded-2xl border overflow-hidden mb-6"
+        className="atlas-panel mb-6 overflow-hidden"
         style={{ borderColor: "var(--color-border)", background: "var(--color-card)" }}
       >
         {/* Top band */}
         <div
-          className="px-6 py-4 border-b"
+          className="border-b px-6 py-5"
           style={{
-            background: "var(--color-primary)",
-            borderColor: "var(--color-primary-light)",
+            background: "var(--color-ink)",
+            borderColor: "rgba(255,255,255,0.12)",
           }}
         >
           <div className="flex items-start justify-between gap-4">
             <div>
-              <h1 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
+              <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.22em] text-white/48">
+                Specimen record
+              </p>
+              <h1 className="text-3xl font-black leading-tight tracking-tight text-white sm:text-5xl">
                 {plant.commonName}
               </h1>
-              <p className="text-lg italic text-green-200 mt-1">{plant.scientificName}</p>
+              <p className="mt-2 text-lg italic text-white/64">{plant.scientificName}</p>
             </div>
             {isAvailableNow && (
               <span
-                className={`flex-shrink-0 mt-1 px-3 py-1 text-sm font-bold rounded-full ${
+                className={`mt-1 flex-shrink-0 rounded-md px-3 py-2 text-[10px] font-black uppercase tracking-[0.14em] ${
                   collectionPolicy.type === "photograph-only"
                     ? "bg-sky-200 text-sky-950"
                     : "bg-green-300 text-green-900"
@@ -103,25 +105,25 @@ export default async function PlantDetailPage({
         </div>
 
         {/* Badges and meta */}
-        <div className="px-6 py-4 flex flex-wrap gap-3 items-center border-b" style={{ borderColor: "var(--color-border)" }}>
-          <span className={`text-sm px-3 py-1 rounded-full border font-medium capitalize ${categoryColor}`}>
+        <div className="flex flex-wrap items-center gap-2 border-b px-6 py-4" style={{ borderColor: "var(--color-border)" }}>
+          <span className={`rounded-md border px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.14em] ${categoryColor}`}>
             {plant.category}
           </span>
-          <span className={`text-sm px-3 py-1 rounded-full border font-medium ${nativeColor}`}>
+          <span className={`rounded-md border px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.14em] ${nativeColor}`}>
             {nativeLabel}
           </span>
           <span
-            className="text-sm px-3 py-1 rounded-full border font-medium"
+            className="rounded-md border px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.14em]"
             style={{
               background: "var(--color-primary-pale)",
               borderColor: "var(--color-border)",
               color: "var(--color-text-muted)",
             }}
           >
-            Family: <span className="italic font-semibold" style={{ color: "var(--color-text)" }}>{plant.family}</span>
+            Family <span className="italic" style={{ color: "var(--color-text)" }}>{plant.family}</span>
           </span>
           <span
-            className="text-sm px-3 py-1 rounded-full border"
+            className="rounded-md border px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.14em]"
             style={{
               background: "var(--color-primary-pale)",
               borderColor: "var(--color-border)",
@@ -131,7 +133,7 @@ export default async function PlantDetailPage({
             {getAbundanceLabel(plant.abundance)}
           </span>
           <span
-            className="text-sm px-3 py-1 rounded-full border font-medium"
+            className="rounded-md border px-3 py-1.5 text-[10px] font-black uppercase tracking-[0.14em]"
             style={{
               background:
                 collectionPolicy.type === "photograph-only"
@@ -152,12 +154,12 @@ export default async function PlantDetailPage({
         </div>
 
         {/* Main content grid */}
-        <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 gap-6 p-6 lg:grid-cols-3">
           {/* Left: photo + habitats */}
           <div className="lg:col-span-1 flex flex-col gap-4">
             {/* Photo placeholder */}
             <div
-              className="rounded-xl border aspect-[4/5] flex flex-col items-center justify-center text-center p-4"
+              className="flex aspect-[4/5] flex-col items-center justify-center overflow-hidden rounded-lg border p-4 text-center"
               style={{
                 background: "var(--color-primary-pale)",
                 borderColor: "var(--color-border)",
@@ -168,11 +170,11 @@ export default async function PlantDetailPage({
                 <img
                   src={plant.imageUrl}
                   alt={plant.commonName}
-                  className="w-full h-full object-cover rounded-xl"
+                  className="h-full w-full rounded-lg object-cover saturate-[0.92]"
                 />
               ) : (
                 <>
-                  <div className="text-5xl mb-3">🌿</div>
+                  <Leaf className="mb-3" size={42} strokeWidth={1.4} style={{ color: "var(--color-primary)" }} />
                   <p className="text-sm font-medium italic" style={{ color: "var(--color-primary)" }}>
                     {plant.scientificName}
                   </p>
@@ -185,7 +187,7 @@ export default async function PlantDetailPage({
 
             {/* Habitats */}
             <div
-              className="rounded-xl border p-4"
+              className="rounded-lg border p-4"
               style={{ borderColor: "var(--color-border)" }}
             >
               <h3 className="text-sm font-semibold uppercase tracking-wide mb-3 flex items-center gap-1.5" style={{ color: "var(--color-text-muted)" }}>
@@ -197,11 +199,11 @@ export default async function PlantDetailPage({
                   <Link
                     key={h}
                     href={`/habitats#${h}`}
-                    className="flex items-center gap-2 text-sm hover:underline"
+                    className="flex items-center justify-between gap-2 rounded-md border px-3 py-2 text-sm font-bold hover:bg-white"
                     style={{ color: "var(--color-text)" }}
                   >
-                    <span>{getHabitatIcon(h)}</span>
                     <span>{getHabitatLabel(h)}</span>
+                    <MapPin size={13} style={{ color: "var(--color-primary)" }} />
                   </Link>
                 ))}
               </div>
@@ -213,7 +215,7 @@ export default async function PlantDetailPage({
             {/* Current collection note */}
             {isAvailableNow && currentWindow && (
               <div
-                className="rounded-xl border p-4 flex gap-3"
+                className="flex gap-3 rounded-lg border p-4"
                 style={
                   collectionPolicy.type === "photograph-only"
                     ? { background: "#e0f2fe", borderColor: "#7dd3fc" }
@@ -256,7 +258,7 @@ export default async function PlantDetailPage({
             {/* Conservation note */}
             {plant.conservationNote && (
               <div
-                className="rounded-xl border p-4 flex gap-3"
+                className="flex gap-3 rounded-lg border p-4"
                 style={{ background: "#fff8e1", borderColor: "#f0c84c" }}
               >
                 <AlertTriangle size={18} className="text-amber-600 flex-shrink-0 mt-0.5" />
@@ -270,7 +272,7 @@ export default async function PlantDetailPage({
             {/* Invasive warning */}
             {plant.nativeStatus === "invasive" && (
               <div
-                className="rounded-xl border p-4 flex gap-3"
+                className="flex gap-3 rounded-lg border p-4"
                 style={{ background: "#fef2f2", borderColor: "#f9a8a8" }}
               >
                 <AlertTriangle size={18} className="text-red-600 flex-shrink-0 mt-0.5" />
@@ -286,7 +288,7 @@ export default async function PlantDetailPage({
 
             {/* Description */}
             <div>
-              <h2 className="text-lg font-bold mb-2 flex items-center gap-2" style={{ color: "var(--color-text)" }}>
+              <h2 className="mb-2 flex items-center gap-2 text-lg font-black" style={{ color: "var(--color-text)" }}>
                 <Leaf size={16} style={{ color: "var(--color-primary)" }} />
                 Description
               </h2>
@@ -297,14 +299,14 @@ export default async function PlantDetailPage({
 
             {/* Identification Tips */}
             <div>
-              <h2 className="text-lg font-bold mb-3" style={{ color: "var(--color-text)" }}>
+              <h2 className="mb-3 text-lg font-black" style={{ color: "var(--color-text)" }}>
                 Identification Tips
               </h2>
               <ul className="space-y-2">
                 {plant.identificationTips.map((tip, i) => (
                   <li key={i} className="flex gap-2.5 text-sm" style={{ color: "var(--color-text)" }}>
                     <span
-                      className="flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold mt-0.5"
+                      className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-md text-xs font-black"
                       style={{ background: "var(--color-primary-pale)", color: "var(--color-primary)" }}
                     >
                       {i + 1}
@@ -317,13 +319,13 @@ export default async function PlantDetailPage({
 
             {/* Specimen Preservation Notes */}
             <div
-              className="rounded-xl border p-5"
+              className="rounded-lg border p-5"
               style={{
                 background: "var(--color-primary-pale)",
                 borderColor: "var(--color-border)",
               }}
             >
-              <h2 className="text-base font-bold mb-2" style={{ color: "var(--color-text)" }}>
+              <h2 className="mb-2 text-base font-black" style={{ color: "var(--color-text)" }}>
                 Specimen &amp; Preservation Notes
               </h2>
               <p className="text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
@@ -336,10 +338,10 @@ export default async function PlantDetailPage({
 
       {/* Collection Calendar */}
       <div
-        className="rounded-2xl border p-6 mb-6"
+        className="atlas-panel mb-6 p-6"
         style={{ background: "var(--color-card)", borderColor: "var(--color-border)" }}
       >
-        <h2 className="text-xl font-bold mb-4" style={{ color: "var(--color-text)" }}>
+        <h2 className="mb-4 text-xl font-black" style={{ color: "var(--color-text)" }}>
           Collection Calendar
         </h2>
         <CollectionCalendar
@@ -351,8 +353,8 @@ export default async function PlantDetailPage({
 
       {/* Sources */}
       {plant.sources && plant.sources.length > 0 && (
-        <div className="rounded-2xl border p-6 mb-6" style={{ background: "var(--color-card)", borderColor: "var(--color-border)" }}>
-          <h2 className="text-xl font-bold mb-4 flex items-center gap-2" style={{ color: "var(--color-text)" }}>
+        <div className="atlas-panel mb-6 p-6" style={{ background: "var(--color-card)", borderColor: "var(--color-border)" }}>
+          <h2 className="mb-4 flex items-center gap-2 text-xl font-black" style={{ color: "var(--color-text)" }}>
             <ExternalLink size={18} style={{ color: "var(--color-primary)" }} />
             Sources &amp; References
           </h2>
@@ -379,7 +381,7 @@ export default async function PlantDetailPage({
       <div className="flex gap-3">
         <Link
           href="/plants"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border text-sm font-medium hover:shadow-sm transition-all"
+          className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-bold transition-all hover:shadow-sm"
           style={{
             borderColor: "var(--color-border)",
             color: "var(--color-text)",
@@ -391,7 +393,7 @@ export default async function PlantDetailPage({
         </Link>
         <Link
           href="/calendar"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border text-sm font-medium hover:shadow-sm transition-all"
+          className="inline-flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-bold transition-all hover:shadow-sm"
           style={{
             borderColor: "var(--color-border)",
             color: "var(--color-primary)",

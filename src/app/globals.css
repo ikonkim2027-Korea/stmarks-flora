@@ -1,16 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #2D5016;
-  --color-secondary: #8B6914;
-  --color-accent: #D4A017;
-  --color-background: #FEFCF3;
-  --color-card: #ffffff;
-  --color-text: #3C2415;
-  --color-text-muted: #7a6040;
-  --color-border: #e8dfc8;
-  --color-primary-light: #4a7a26;
-  --color-primary-pale: #e8f0df;
+  --color-primary: #174f38;
+  --color-secondary: #b35a2f;
+  --color-accent: #d9b44a;
+  --color-background: #f6f3eb;
+  --color-card: #fffdf7;
+  --color-text: #16201c;
+  --color-text-muted: #66736d;
+  --color-border: #d9d5c8;
+  --color-primary-light: #2f7a55;
+  --color-primary-pale: #dce9de;
+  --color-ink: #111816;
+  --color-sky: #5e9bb5;
+  --color-field: #ece7dc;
+  --shadow-soft: 0 18px 45px rgba(17, 24, 22, 0.08);
 }
 
 @theme inline {
@@ -20,15 +24,107 @@
 }
 
 body {
-  background: var(--color-background);
+  background:
+    linear-gradient(rgba(22, 32, 28, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 32, 28, 0.035) 1px, transparent 1px),
+    var(--color-background);
+  background-size: 48px 48px;
   color: var(--color-text);
-  font-family: var(--font-inter), Georgia, serif;
+  font-family: var(--font-inter), Arial, sans-serif;
 }
 
-/* Herbarium sheet aesthetic */
 .herbarium-border {
   border: 2px solid var(--color-border);
   box-shadow: 0 2px 8px rgba(60, 36, 21, 0.08);
+}
+
+.atlas-shell {
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@media (min-width: 640px) {
+  .atlas-shell {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .atlas-shell {
+    padding-inline: 2rem;
+  }
+}
+
+.atlas-kicker {
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  font-weight: 760;
+  letter-spacing: 0.16em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.atlas-panel {
+  background: color-mix(in srgb, var(--color-card) 88%, transparent);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+.atlas-button-primary,
+.atlas-button-secondary {
+  align-items: center;
+  border-radius: 8px;
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 760;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.7rem 1rem;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.atlas-button-primary {
+  background: var(--color-ink);
+  border: 1px solid var(--color-ink);
+  color: #fffdf7;
+}
+
+.atlas-button-primary:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}
+
+.atlas-button-secondary {
+  background: rgba(255, 253, 247, 0.08);
+  border: 1px solid rgba(255, 253, 247, 0.36);
+  color: #fffdf7;
+}
+
+.atlas-button-secondary:hover {
+  background: rgba(255, 253, 247, 0.16);
+  transform: translateY(-1px);
+}
+
+.specimen-grid {
+  background-image:
+    linear-gradient(rgba(255, 253, 247, 0.13) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 253, 247, 0.13) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.atlas-card {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(17, 24, 22, 0.05);
+}
+
+.atlas-card:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 48%, var(--color-border));
+  box-shadow: 0 18px 40px rgba(17, 24, 22, 0.1);
 }
 
 /* Scrollbar styling */

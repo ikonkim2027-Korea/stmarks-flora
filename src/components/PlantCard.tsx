@@ -3,7 +3,7 @@ import { Plant } from "@/data/plants";
 import {
   getCategoryColor,
   getCategoryDotColor,
-  getHabitatIcon,
+  getHabitatLabel,
   formatMonthShort,
   getNativeStatusColor,
   getNativeStatusLabel,
@@ -34,46 +34,42 @@ export default function PlantCard({ plant, currentMonth }: PlantCardProps) {
   return (
     <Link href={`/plants/${plant.id}`} className="block group">
       <div
-        className="rounded-xl border transition-all duration-200 hover:shadow-md hover:-translate-y-0.5 overflow-hidden h-full flex flex-col"
-        style={{
-          background: "var(--color-card)",
-          borderColor: "var(--color-border)",
-        }}
+        className="atlas-card flex h-full flex-col overflow-hidden transition-all duration-200 hover:-translate-y-1"
       >
         {/* Top color strip by category */}
-        <div className={`h-1.5 ${dotColor}`} />
+        <div className={`h-1 ${dotColor}`} />
 
         {/* Image */}
         {plant.imageUrl && (
-          <div className="aspect-[4/3] overflow-hidden bg-gray-100">
+          <div className="aspect-[4/3] overflow-hidden bg-[var(--color-field)]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={plant.imageUrl}
               alt={plant.commonName}
               loading="lazy"
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              className="h-full w-full object-cover saturate-[0.92] transition-transform duration-500 group-hover:scale-105"
             />
           </div>
         )}
 
         {/* Card body */}
-        <div className="p-4 flex flex-col gap-3 flex-1">
+        <div className="flex flex-1 flex-col gap-3 p-4">
           {/* Header row */}
           <div className="flex items-start justify-between gap-2">
             <div className="min-w-0">
               <h3
-                className="font-semibold text-base leading-tight truncate"
+                className="truncate text-base font-black leading-tight tracking-tight"
                 style={{ color: "var(--color-text)" }}
               >
                 {plant.commonName}
               </h3>
-              <p className="text-sm italic mt-0.5 truncate" style={{ color: "var(--color-text-muted)" }}>
+              <p className="mt-1 truncate text-xs italic" style={{ color: "var(--color-text-muted)" }}>
                 {plant.scientificName}
               </p>
             </div>
             {isCurrentlyAvailable && (
               <span
-                className={`flex-shrink-0 text-xs px-2 py-0.5 rounded-full font-medium border ${
+                className={`flex-shrink-0 rounded-md border px-2 py-1 text-[10px] font-black uppercase tracking-[0.12em] ${
                   collectionPolicy.type === "photograph-only"
                     ? "bg-sky-100 text-sky-800 border-sky-300"
                     : "bg-green-100 text-green-800 border-green-300"
@@ -87,43 +83,47 @@ export default function PlantCard({ plant, currentMonth }: PlantCardProps) {
           {/* Badges row */}
           <div className="flex flex-wrap gap-1.5">
             <span
-              className={`text-xs px-2 py-0.5 rounded-full border font-medium capitalize ${categoryColor}`}
+              className={`rounded-md border px-2 py-1 text-[10px] font-black uppercase tracking-[0.12em] ${categoryColor}`}
             >
               {plant.category}
             </span>
             <span
-              className={`text-xs px-2 py-0.5 rounded-full border font-medium ${nativeColor}`}
+              className={`rounded-md border px-2 py-1 text-[10px] font-black uppercase tracking-[0.12em] ${nativeColor}`}
             >
               {nativeLabel}
             </span>
             {collectionPolicy.type !== "collect" && (
-              <span className="text-xs px-2 py-0.5 rounded-full border font-medium bg-sky-100 text-sky-800 border-sky-300">
+              <span className="rounded-md border border-sky-300 bg-sky-100 px-2 py-1 text-[10px] font-black uppercase tracking-[0.12em] text-sky-800">
                 {collectionPolicy.shortLabel}
               </span>
             )}
           </div>
 
           {/* Family */}
-          <p className="text-xs" style={{ color: "var(--color-text-muted)" }}>
-            Family: <span className="font-medium italic">{plant.family}</span>
+          <p className="text-xs font-medium" style={{ color: "var(--color-text-muted)" }}>
+            Family <span className="font-bold italic text-[var(--color-text)]">{plant.family}</span>
           </p>
 
           {/* Habitats */}
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-1.5">
             {plant.habitat.map((h) => (
               <span
                 key={h}
-                className="text-xs"
-                title={h}
+                className="rounded-md border px-2 py-1 text-[10px] font-bold uppercase tracking-[0.12em]"
+                style={{
+                  borderColor: "var(--color-border)",
+                  color: "var(--color-text-muted)",
+                }}
+                title={getHabitatLabel(h)}
               >
-                {getHabitatIcon(h)}
+                {getHabitatLabel(h)}
               </span>
             ))}
           </div>
 
           {/* Collection month dots */}
-          <div className="mt-auto pt-2 border-t" style={{ borderColor: "var(--color-border)" }}>
-            <p className="text-xs mb-1.5 font-medium" style={{ color: "var(--color-text-muted)" }}>
+          <div className="mt-auto border-t pt-3" style={{ borderColor: "var(--color-border)" }}>
+            <p className="mb-2 text-[10px] font-black uppercase tracking-[0.16em]" style={{ color: "var(--color-text-muted)" }}>
               Collection months
             </p>
             <div className="flex gap-1 flex-wrap">
@@ -134,12 +134,12 @@ export default function PlantCard({ plant, currentMonth }: PlantCardProps) {
                   <span
                     key={month}
                     title={active ? `${formatMonthShort(month)}: collectible` : formatMonthShort(month)}
-                    className={`text-xs w-6 h-6 flex items-center justify-center rounded-full font-medium transition-colors ${
+                    className={`flex h-6 w-6 items-center justify-center rounded-md text-[10px] font-black transition-colors ${
                       active
                         ? isCurrent
-                          ? `${dotColor} text-white ring-2 ring-offset-1 ring-green-400`
+                          ? `${dotColor} text-white ring-2 ring-offset-1 ring-[var(--color-accent)]`
                           : `${dotColor} text-white opacity-80`
-                        : "bg-gray-100 text-gray-400"
+                        : "bg-[var(--color-field)] text-gray-400"
                     }`}
                   >
                     {formatMonthShort(month).charAt(0)}

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#2D5016",
+  themeColor: "#111816",
 };
 
 export default function RootLayout({
@@ -34,14 +34,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col" style={{ background: "var(--color-background)", color: "var(--color-text)" }}>
+      <body className="flex min-h-full flex-col" style={{ background: "var(--color-background)", color: "var(--color-text)" }}>
         <Navigation />
         <main className="flex-1">{children}</main>
         <InstallPrompt />
         <ServiceWorkerRegistration />
-        <footer className="border-t py-6 text-center text-sm" style={{ borderColor: "var(--color-border)", color: "var(--color-text-muted)" }}>
-          <p>Tiny Worlds Collectibles &mdash; A Field Guide to Plants Within 1km of St. Mark&apos;s School, Southborough, MA</p>
-          <p className="mt-1">For educational field observation, ethical collection, and conservation-aware study.</p>
+        <footer className="border-t py-8 text-sm" style={{ borderColor: "var(--color-border)", color: "var(--color-text-muted)" }}>
+          <div className="atlas-shell flex flex-col justify-between gap-3 sm:flex-row">
+            <p className="font-bold" style={{ color: "var(--color-text)" }}>
+              Tiny Worlds Field Atlas
+            </p>
+            <p>Educational observation, ethical collection, conservation-aware study.</p>
+          </div>
         </footer>
       </body>
     </html>

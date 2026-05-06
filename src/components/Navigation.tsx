@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Leaf, Search } from "lucide-react";
+import { Menu, X, Search, Sprout } from "lucide-react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -30,22 +30,33 @@ export default function Navigation() {
 
   return (
     <nav
-      className="sticky top-0 z-50 border-b shadow-sm"
+      className="sticky top-0 z-50 border-b backdrop-blur-xl"
       style={{
-        background: "var(--color-primary)",
-        borderColor: "var(--color-primary-light)",
+        background: "color-mix(in srgb, var(--color-card) 88%, transparent)",
+        borderColor: "var(--color-border)",
       }}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14">
+      <div className="atlas-shell">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            <Leaf
-              className="text-green-300 group-hover:text-green-200 transition-colors"
-              size={22}
-            />
-            <span className="font-semibold text-white text-lg tracking-tight leading-none">
-              Tiny Worlds Collectibles
+            <span
+              className="grid h-8 w-8 place-items-center rounded-lg border"
+              style={{
+                background: "var(--color-ink)",
+                borderColor: "var(--color-ink)",
+                color: "var(--color-card)",
+              }}
+            >
+              <Sprout size={17} strokeWidth={1.8} />
+            </span>
+            <span className="flex flex-col leading-none">
+              <span className="text-sm font-black tracking-tight" style={{ color: "var(--color-text)" }}>
+                Tiny Worlds
+              </span>
+              <span className="mt-1 text-[10px] font-bold uppercase tracking-[0.2em]" style={{ color: "var(--color-text-muted)" }}>
+                Field Atlas
+              </span>
             </span>
           </Link>
 
@@ -60,11 +71,16 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
+                  className={`rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
                     active
-                      ? "bg-white/20 text-white"
-                      : "text-green-100 hover:bg-white/10 hover:text-white"
+                      ? "text-white"
+                      : "hover:bg-black/[0.04]"
                   }`}
+                  style={
+                    active
+                      ? { background: "var(--color-ink)" }
+                      : { color: "var(--color-text-muted)" }
+                  }
                 >
                   {link.label}
                 </Link>
@@ -77,7 +93,8 @@ export default function Navigation() {
             {/* Search toggle */}
             <button
               onClick={() => setSearchOpen((v) => !v)}
-              className="p-2 rounded text-green-100 hover:bg-white/10 hover:text-white transition-colors"
+              className="rounded-lg border p-2 transition-colors hover:bg-black/[0.04]"
+              style={{ borderColor: "var(--color-border)", color: "var(--color-text)" }}
               aria-label="Search"
             >
               <Search size={18} />
@@ -85,7 +102,8 @@ export default function Navigation() {
 
             {/* Mobile hamburger */}
             <button
-              className="md:hidden p-2 rounded text-green-100 hover:bg-white/10 hover:text-white transition-colors"
+              className="rounded-lg border p-2 transition-colors hover:bg-black/[0.04] md:hidden"
+              style={{ borderColor: "var(--color-border)", color: "var(--color-text)" }}
               onClick={() => setMenuOpen((v) => !v)}
               aria-label="Toggle menu"
             >
@@ -96,19 +114,24 @@ export default function Navigation() {
 
         {/* Search bar */}
         {searchOpen && (
-          <div className="pb-3">
+          <div className="pb-4">
             <form onSubmit={handleSearchSubmit} className="flex gap-2">
               <input
                 autoFocus
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search plants by name, family..."
-                className="flex-1 px-3 py-2 rounded text-sm bg-white/10 text-white placeholder-green-200 border border-white/20 focus:outline-none focus:border-white/60"
+                placeholder="Search plants by name, family, habitat, or trait..."
+                className="flex-1 rounded-lg border px-3 py-2 text-sm focus:outline-none"
+                style={{
+                  background: "var(--color-card)",
+                  borderColor: "var(--color-border)",
+                  color: "var(--color-text)",
+                }}
               />
               <button
                 type="submit"
-                className="px-4 py-2 rounded text-sm bg-white/20 text-white hover:bg-white/30 transition-colors font-medium"
+                className="atlas-button-primary min-h-0 py-2"
               >
                 Search
               </button>
@@ -118,7 +141,7 @@ export default function Navigation() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden pb-3 border-t border-white/10 mt-1 pt-3 flex flex-col gap-1">
+          <div className="mt-1 flex flex-col gap-1 border-t pb-3 pt-3 md:hidden" style={{ borderColor: "var(--color-border)" }}>
             {navLinks.map((link) => {
               const active =
                 link.href === "/"
@@ -129,11 +152,16 @@ export default function Navigation() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className={`px-3 py-2 rounded text-sm font-medium transition-colors ${
+                  className={`rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
                     active
-                      ? "bg-white/20 text-white"
-                      : "text-green-100 hover:bg-white/10 hover:text-white"
+                      ? "text-white"
+                      : "hover:bg-black/[0.04]"
                   }`}
+                  style={
+                    active
+                      ? { background: "var(--color-ink)" }
+                      : { color: "var(--color-text-muted)" }
+                  }
                 >
                   {link.label}
                 </Link>

@@ -35,10 +35,10 @@ function Section({
 }) {
   const [open, setOpen] = useState(true);
   return (
-    <div className="border-b pb-3 mb-3" style={{ borderColor: "var(--color-border)" }}>
+    <div className="mb-3 border-b pb-3" style={{ borderColor: "var(--color-border)" }}>
       <button
         onClick={() => setOpen((v) => !v)}
-        className="flex items-center justify-between w-full text-sm font-semibold mb-2 hover:opacity-70 transition-opacity"
+        className="mb-2 flex w-full items-center justify-between text-sm font-black transition-opacity hover:opacity-70"
         style={{ color: "var(--color-text)" }}
       >
         {title}
@@ -61,15 +61,15 @@ function CheckItem({
   onChange: (checked: boolean) => void;
 }) {
   return (
-    <label className="flex items-center gap-2 cursor-pointer group">
+    <label className="group flex cursor-pointer items-center gap-2">
       <input
         type="checkbox"
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}
-        className="rounded border accent-green-700"
+        className="rounded border"
         style={{ accentColor: "var(--color-primary)" }}
       />
-      <span className="text-sm flex items-center gap-1.5 group-hover:opacity-80 transition-opacity" style={{ color: "var(--color-text)" }}>
+      <span className="flex items-center gap-1.5 text-sm font-medium transition-opacity group-hover:opacity-80" style={{ color: "var(--color-text)" }}>
         {badge}
         {label}
       </span>
@@ -122,7 +122,7 @@ export default function FilterPanel({ filters, onChange, onReset }: FilterPanelP
 
   return (
     <div
-      className="rounded-xl border p-4"
+      className="atlas-panel p-4 shadow-none"
       style={{ background: "var(--color-card)", borderColor: "var(--color-border)" }}
     >
       {/* Header */}
@@ -133,7 +133,7 @@ export default function FilterPanel({ filters, onChange, onReset }: FilterPanelP
             Filters
           </span>
           {activeCount > 0 && (
-            <span className="text-xs px-1.5 py-0.5 rounded-full bg-green-700 text-white font-medium">
+            <span className="rounded-md bg-[var(--color-ink)] px-1.5 py-0.5 text-xs font-bold text-white">
               {activeCount}
             </span>
           )}
@@ -141,7 +141,7 @@ export default function FilterPanel({ filters, onChange, onReset }: FilterPanelP
         {activeCount > 0 && (
           <button
             onClick={onReset}
-            className="text-xs hover:underline"
+            className="text-xs font-bold hover:underline"
             style={{ color: "var(--color-secondary)" }}
           >
             Reset all
@@ -158,7 +158,7 @@ export default function FilterPanel({ filters, onChange, onReset }: FilterPanelP
               checked={filters.categories.includes(cat)}
               label={cat.charAt(0).toUpperCase() + cat.slice(1)}
               badge={
-                <span className={`text-xs px-1.5 py-0 rounded border ${getCategoryColor(cat)}`}>
+                <span className={`rounded border px-1.5 py-0 text-xs ${getCategoryColor(cat)}`}>
                   &nbsp;
                 </span>
               }
@@ -208,7 +208,7 @@ export default function FilterPanel({ filters, onChange, onReset }: FilterPanelP
                 onClick={() => toggleMonth(month, !checked)}
                 className={`text-xs py-1.5 rounded-lg border font-medium transition-colors ${
                   checked
-                    ? "bg-green-700 text-white border-green-700"
+                    ? "bg-[var(--color-ink)] text-white border-[var(--color-ink)]"
                     : "border-gray-200 hover:border-green-300"
                 }`}
                 style={!checked ? { color: "var(--color-text-muted)" } : {}}

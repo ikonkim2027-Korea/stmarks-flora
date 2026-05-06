@@ -1,6 +1,6 @@
-const CACHE_NAME = "stmarks-flora-v1";
-const STATIC_CACHE = "stmarks-flora-static-v1";
-const DATA_CACHE = "stmarks-flora-data-v1";
+const CACHE_NAME = "stmarks-flora-v2";
+const STATIC_CACHE = "stmarks-flora-static-v2";
+const DATA_CACHE = "stmarks-flora-data-v2";
 
 const PRE_CACHE_URLS = [
   "/",
@@ -58,11 +58,14 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Static assets (_next/static, images, icons): cache-first
-  if (
-    url.pathname.startsWith("/_next/static/") ||
-    url.pathname.match(/\.(png|jpg|jpeg|svg|webp|ico|woff2?|ttf|css|js)$/)
-  ) {
+  // Build assets must revalidate to avoid serving stale Next.js chunks.
+  if (url.pathname.startsWith("/_next/static/")) {
+    event.respondWith(networkFirst(request, STATIC_CACHE));
+    return;
+  }
+
+  // Images, icons, and fonts are safe to cache aggressively.
+  if (url.pathname.match(/\.(png|jpg|jpeg|svg|webp|ico|woff2?|ttf)$/)) {
     event.respondWith(cacheFirst(request, STATIC_CACHE));
     return;
   }
@@ -118,18 +121,17 @@ async function networkFirst(request, cacheName) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Offline - Tiny Worlds Collectibles</title>
   <style>
-    body { font-family: Georgia, serif; background: #FEFCF3; color: #3C2415; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 1rem; text-align: center; }
+    body { font-family: Arial, sans-serif; background: #f6f3eb; color: #16201c; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; padding: 1rem; text-align: center; }
     .container { max-width: 400px; }
-    h1 { color: #2D5016; font-size: 1.5rem; }
-    p { color: #7a6040; line-height: 1.6; }
+    h1 { color: #111816; font-size: 1.5rem; }
+    p { color: #66736d; line-height: 1.6; }
   </style>
 </head>
 <body>
   <div class="container">
-    <div style="font-size: 4rem; margin-bottom: 1rem;">🌿</div>
     <h1>You're Offline</h1>
     <p>The page you requested isn't available offline yet. Try visiting it while connected to cache it for later use.</p>
-    <p style="margin-top: 1.5rem;"><a href="/" style="color: #2D5016; font-weight: bold;">Go to Home Page</a></p>
+    <p style="margin-top: 1.5rem;"><a href="/" style="color: #174f38; font-weight: bold;">Go to Home Page</a></p>
   </div>
 </body>
 </html>`,
