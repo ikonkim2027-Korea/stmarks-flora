@@ -41,7 +41,7 @@ export default function RootLayout({
         <ServiceWorkerRegistration />
         <footer className="border-t py-6 text-center text-sm" style={{ borderColor: "var(--color-border)", color: "var(--color-text-muted)" }}>
           <p>Tiny Worlds Collectibles &mdash; A Field Guide to Plants Within 1km of St. Mark&apos;s School, Southborough, MA</p>
-          <p className="mt-1">For educational and scientific specimen collection purposes only.</p>
+          <p className="mt-1">For educational field observation, ethical collection, and conservation-aware study.</p>
         </footer>
       </body>
     </html>

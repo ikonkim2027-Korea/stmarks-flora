@@ -8,6 +8,7 @@ import {
   getNativeStatusColor,
   getNativeStatusLabel,
 } from "@/lib/utils";
+import { getCollectionPolicy } from "@/lib/plantDiscovery";
 
 interface PlantCardProps {
   plant: Plant;
@@ -19,6 +20,7 @@ export default function PlantCard({ plant, currentMonth }: PlantCardProps) {
   const dotColor = getCategoryDotColor(plant.category);
   const nativeColor = getNativeStatusColor(plant.nativeStatus);
   const nativeLabel = getNativeStatusLabel(plant.nativeStatus);
+  const collectionPolicy = getCollectionPolicy(plant);
 
   // months that have collection windows
   const activeMonths = Array.from(
@@ -70,8 +72,14 @@ export default function PlantCard({ plant, currentMonth }: PlantCardProps) {
               </p>
             </div>
             {isCurrentlyAvailable && (
-              <span className="flex-shrink-0 text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 font-medium border border-green-300">
-                Now
+              <span
+                className={`flex-shrink-0 text-xs px-2 py-0.5 rounded-full font-medium border ${
+                  collectionPolicy.type === "photograph-only"
+                    ? "bg-sky-100 text-sky-800 border-sky-300"
+                    : "bg-green-100 text-green-800 border-green-300"
+                }`}
+              >
+                {collectionPolicy.type === "photograph-only" ? "Photo" : "Now"}
               </span>
             )}
           </div>
@@ -88,6 +96,11 @@ export default function PlantCard({ plant, currentMonth }: PlantCardProps) {
             >
               {nativeLabel}
             </span>
+            {collectionPolicy.type !== "collect" && (
+              <span className="text-xs px-2 py-0.5 rounded-full border font-medium bg-sky-100 text-sky-800 border-sky-300">
+                {collectionPolicy.shortLabel}
+              </span>
+            )}
           </div>
 
           {/* Family */}

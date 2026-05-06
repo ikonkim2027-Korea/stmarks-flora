@@ -11,6 +11,7 @@ import {
   getAbundanceLabel,
   getCurrentMonthWeek,
 } from "@/lib/utils";
+import { getCollectionPolicy } from "@/lib/plantDiscovery";
 import { ArrowLeft, AlertTriangle, Info, Leaf, MapPin, ExternalLink } from "lucide-react";
 
 export async function generateStaticParams() {
@@ -51,6 +52,7 @@ export default async function PlantDetailPage({
   const categoryColor = getCategoryColor(plant.category);
   const nativeColor = getNativeStatusColor(plant.nativeStatus);
   const nativeLabel = getNativeStatusLabel(plant.nativeStatus);
+  const collectionPolicy = getCollectionPolicy(plant);
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -85,8 +87,16 @@ export default async function PlantDetailPage({
               <p className="text-lg italic text-green-200 mt-1">{plant.scientificName}</p>
             </div>
             {isAvailableNow && (
-              <span className="flex-shrink-0 mt-1 px-3 py-1 bg-green-300 text-green-900 text-sm font-bold rounded-full">
-                Collectible Now
+              <span
+                className={`flex-shrink-0 mt-1 px-3 py-1 text-sm font-bold rounded-full ${
+                  collectionPolicy.type === "photograph-only"
+                    ? "bg-sky-200 text-sky-950"
+                    : "bg-green-300 text-green-900"
+                }`}
+              >
+                {collectionPolicy.type === "photograph-only"
+                  ? "Photograph Now"
+                  : "Collectible Now"}
               </span>
             )}
           </div>
@@ -119,6 +129,25 @@ export default async function PlantDetailPage({
             }}
           >
             {getAbundanceLabel(plant.abundance)}
+          </span>
+          <span
+            className="text-sm px-3 py-1 rounded-full border font-medium"
+            style={{
+              background:
+                collectionPolicy.type === "photograph-only"
+                  ? "#e0f2fe"
+                  : "var(--color-primary-pale)",
+              borderColor:
+                collectionPolicy.type === "photograph-only"
+                  ? "#7dd3fc"
+                  : "var(--color-border)",
+              color:
+                collectionPolicy.type === "photograph-only"
+                  ? "#075985"
+                  : "var(--color-primary)",
+            }}
+          >
+            {collectionPolicy.label}
           </span>
         </div>
 
@@ -185,12 +214,41 @@ export default async function PlantDetailPage({
             {isAvailableNow && currentWindow && (
               <div
                 className="rounded-xl border p-4 flex gap-3"
-                style={{ background: "#e8f5e2", borderColor: "#a8d58a" }}
+                style={
+                  collectionPolicy.type === "photograph-only"
+                    ? { background: "#e0f2fe", borderColor: "#7dd3fc" }
+                    : { background: "#e8f5e2", borderColor: "#a8d58a" }
+                }
               >
-                <Info size={18} className="text-green-700 flex-shrink-0 mt-0.5" />
+                <Info
+                  size={18}
+                  className={`flex-shrink-0 mt-0.5 ${
+                    collectionPolicy.type === "photograph-only"
+                      ? "text-sky-700"
+                      : "text-green-700"
+                  }`}
+                />
                 <div>
-                  <p className="font-semibold text-sm text-green-800">Collectible This Week</p>
-                  <p className="text-sm text-green-700 mt-0.5">{currentWindow.note}</p>
+                  <p
+                    className={`font-semibold text-sm ${
+                      collectionPolicy.type === "photograph-only"
+                        ? "text-sky-900"
+                        : "text-green-800"
+                    }`}
+                  >
+                    {collectionPolicy.type === "photograph-only"
+                      ? "Photograph This Week"
+                      : "Collectible This Week"}
+                  </p>
+                  <p
+                    className={`text-sm mt-0.5 ${
+                      collectionPolicy.type === "photograph-only"
+                        ? "text-sky-800"
+                        : "text-green-700"
+                    }`}
+                  >
+                    {currentWindow.note} {collectionPolicy.description}
+                  </p>
                 </div>
               </div>
             )}

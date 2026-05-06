@@ -3,16 +3,16 @@ import { plants } from "@/data/plants";
 import { habitatLocations, SCHOOL_CENTER, SURVEY_RADIUS } from "@/data/habitatLocations";
 import PlantCard from "@/components/PlantCard";
 import HabitatMapLoader from "@/components/HabitatMapLoader";
-import { getCurrentMonthWeek, getAvailablePlants, getHabitatIcon, getHabitatLabel } from "@/lib/utils";
+import { getCurrentMonthWeek, getHabitatIcon, getHabitatLabel } from "@/lib/utils";
+import { getDiscoverablePlantsForWeek } from "@/lib/plantDiscovery";
 import { BookOpen, Calendar, MapPin, Search, TreePine, Flower2, Leaf, FileDown, Map } from "lucide-react";
 import PDFExport from "@/components/PDFExport";
 
 export default function HomePage() {
   const { month, week } = getCurrentMonthWeek();
-  const availableNow = getAvailablePlants(month, week, plants);
+  const availableNow = getDiscoverablePlantsForWeek(month, week, plants);
 
   // Stats
-  const categories = Array.from(new Set(plants.map((p) => p.category)));
   const habitats = Array.from(new Set(plants.flatMap((p) => p.habitat)));
   const nativeCount = plants.filter((p) => p.nativeStatus === "native").length;
   const invasiveCount = plants.filter((p) => p.nativeStatus === "invasive").length;
@@ -77,15 +77,17 @@ export default function HomePage() {
       </section>
 
       {/* What's Available Now */}
-      {availableNow.length > 0 && (
+      {(availableNow.collectible.length > 0 || availableNow.observationOnly.length > 0) && (
         <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="flex items-center justify-between mb-6">
             <div>
               <h2 className="text-2xl font-bold" style={{ color: "var(--color-text)" }}>
-                Collectible Now
+                Field-Ready Now
               </h2>
               <p className="text-sm mt-1" style={{ color: "var(--color-text-muted)" }}>
-                {MONTH_NAMES[month]}, Week {week} &mdash; {availableNow.length} species available
+                {MONTH_NAMES[month]}, Week {week} &mdash;{" "}
+                {availableNow.collectible.length} collectible,{" "}
+                {availableNow.observationOnly.length} photograph-only
               </p>
             </div>
             <Link
@@ -97,11 +99,13 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {availableNow.slice(0, 8).map((plant) => (
+            {[...availableNow.collectible, ...availableNow.observationOnly]
+              .slice(0, 8)
+              .map((plant) => (
               <PlantCard key={plant.id} plant={plant} currentMonth={month} />
             ))}
           </div>
-          {availableNow.length > 8 && (
+          {availableNow.collectible.length + availableNow.observationOnly.length > 8 && (
             <div className="mt-6 text-center">
               <Link
                 href={`/plants?month=${month}`}
@@ -112,7 +116,7 @@ export default function HomePage() {
                   background: "var(--color-card)",
                 }}
               >
-                See all {availableNow.length} plants available in {MONTH_NAMES[month]} →
+                See all {availableNow.collectible.length + availableNow.observationOnly.length} plants active in {MONTH_NAMES[month]} →
               </Link>
             </div>
           )}

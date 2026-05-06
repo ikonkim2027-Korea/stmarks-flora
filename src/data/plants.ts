@@ -30,6 +30,8 @@ export interface Plant {
   identificationTips: string[];
   specimenNotes: string;
   nativeStatus: "native" | "naturalized" | "invasive";
+  collectionPolicy?: "collect" | "limited" | "photograph-only";
+  searchKeywords?: string[];
   conservationNote?: string;
   imageUrl?: string;
   sources?: { label: string; url: string }[];
@@ -553,6 +555,7 @@ export const plants: Plant[] = [
     specimenNotes:
       "DO NOT COLLECT. Photograph only. This species is protected or of conservation concern in many states and depends on mycorrhizal fungi that cannot survive collection. If a found-dead specimen is available (e.g., trampled), press the flower carefully by slicing the pouch open to flatten it.",
     nativeStatus: "native",
+    collectionPolicy: "photograph-only",
     conservationNote: "Do not collect — photograph only. Populations are declining and plants depend on specific mycorrhizal fungi. Listed as a species of Special Concern in Massachusetts.",
     sources: [
       { label: "Go Botany — Cypripedium acaule", url: "https://gobotany.nativeplanttrust.org/species/cypripedium/acaule/" },
@@ -652,6 +655,7 @@ export const plants: Plant[] = [
     specimenNotes:
       "DO NOT COLLECT — this is the Massachusetts state flower and is protected. Photograph only. If a naturally detached fragment is found, it may be pressed, but never uproot or cut living plants. The plant has a fragile root system and rarely survives disturbance.",
     nativeStatus: "native",
+    collectionPolicy: "photograph-only",
     conservationNote: "State flower of Massachusetts. Protected by state law — do not collect. Photograph only. Populations have declined dramatically from historical over-picking.",
     sources: [
       { label: "Go Botany — Epigaea repens", url: "https://gobotany.nativeplanttrust.org/species/epigaea/repens/" },
@@ -687,6 +691,11 @@ export const plants: Plant[] = [
     specimenNotes:
       "Press flowering stems — blot the milky sap with paper towels immediately as it stains and creates sticky patches. Press a seed pod halved lengthwise to show seed arrangement. Collect silk-bearing seeds separately in an envelope. Allow extra drying time for the thick stems.",
     nativeStatus: "native",
+    searchKeywords: [
+      "monarch butterfly primary host plant",
+      "milkweed pods silk parachute seeds",
+      "pollinator meadow plant",
+    ],
     sources: [
       { label: "Go Botany — Asclepias syriaca", url: "https://gobotany.nativeplanttrust.org/species/asclepias/syriaca/" },
       { label: "Xerces Society Milkweed Guide", url: "https://xerces.org/milkweed" },

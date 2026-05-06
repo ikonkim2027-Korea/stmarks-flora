@@ -1,16 +1,15 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
-import { plants, PlantCategory, Habitat } from "@/data/plants";
+import { plants, PlantCategory } from "@/data/plants";
 import PlantCard from "@/components/PlantCard";
 import SearchBar from "@/components/SearchBar";
 import FilterPanel, { FilterState } from "@/components/FilterPanel";
-import { getCurrentMonthWeek, plantHasWindowInMonth } from "@/lib/utils";
+import { getCurrentMonthWeek } from "@/lib/utils";
+import { filterPlants, PlantSortKey } from "@/lib/plantDiscovery";
 import { SlidersHorizontal, X, ArrowUpDown } from "lucide-react";
 import PDFExport from "@/components/PDFExport";
-
-type SortKey = "commonName" | "scientificName" | "family" | "category";
 
 const EMPTY_FILTERS: FilterState = {
   categories: [],
@@ -34,56 +33,11 @@ export default function BrowseContent() {
       months: mon ? [parseInt(mon)] : [],
     };
   });
-  const [sort, setSort] = useState<SortKey>("commonName");
+  const [sort, setSort] = useState<PlantSortKey>("relevance");
   const [showFilters, setShowFilters] = useState(false);
 
-  useEffect(() => {
-    const q = searchParams.get("q");
-    if (q !== null) setQuery(q);
-  }, [searchParams]);
-
   const filtered = useMemo(() => {
-    let result = plants;
-
-    if (query.trim()) {
-      const q = query.trim().toLowerCase();
-      result = result.filter(
-        (p) =>
-          p.commonName.toLowerCase().includes(q) ||
-          p.scientificName.toLowerCase().includes(q) ||
-          p.family.toLowerCase().includes(q)
-      );
-    }
-
-    if (filters.categories.length > 0) {
-      result = result.filter((p) => filters.categories.includes(p.category));
-    }
-
-    if (filters.habitats.length > 0) {
-      result = result.filter((p) =>
-        filters.habitats.some((h) => p.habitat.includes(h as Habitat))
-      );
-    }
-
-    if (filters.nativeStatuses.length > 0) {
-      result = result.filter((p) =>
-        filters.nativeStatuses.includes(p.nativeStatus)
-      );
-    }
-
-    if (filters.months.length > 0) {
-      result = result.filter((p) =>
-        filters.months.some((m) => plantHasWindowInMonth(p, m))
-      );
-    }
-
-    result = [...result].sort((a, b) => {
-      const av = a[sort] as string;
-      const bv = b[sort] as string;
-      return av.localeCompare(bv);
-    });
-
-    return result;
+    return filterPlants(plants, { query, filters, sort });
   }, [query, filters, sort]);
 
   const activeFilterCount =
@@ -119,7 +73,7 @@ export default function BrowseContent() {
           <div className="relative">
             <select
               value={sort}
-              onChange={(e) => setSort(e.target.value as SortKey)}
+              onChange={(e) => setSort(e.target.value as PlantSortKey)}
               className="appearance-none pl-8 pr-4 py-2.5 rounded-lg border text-sm font-medium cursor-pointer focus:outline-none"
               style={{
                 background: "var(--color-card)",
@@ -127,6 +81,7 @@ export default function BrowseContent() {
                 color: "var(--color-text)",
               }}
             >
+              <option value="relevance">Sort: Relevance</option>
               <option value="commonName">Sort: Common Name</option>
               <option value="scientificName">Sort: Scientific Name</option>
               <option value="family">Sort: Family</option>

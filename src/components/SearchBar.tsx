@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Search, X } from "lucide-react";
 
 interface SearchBarProps {
@@ -15,28 +15,24 @@ export default function SearchBar({
   placeholder = "Search by common name, scientific name, or family...",
 }: SearchBarProps) {
   const [localValue, setLocalValue] = useState(value);
+  const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Sync external value changes
   useEffect(() => {
     setLocalValue(value);
   }, [value]);
 
-  // Debounced propagation
-  const debouncedOnChange = useCallback(
-    (() => {
-      let timer: ReturnType<typeof setTimeout>;
-      return (val: string) => {
-        clearTimeout(timer);
-        timer = setTimeout(() => onChange(val), 250);
-      };
-    })(),
-    [onChange]
-  );
+  useEffect(() => {
+    return () => {
+      if (debounceTimer.current) clearTimeout(debounceTimer.current);
+    };
+  }, []);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     const val = e.target.value;
     setLocalValue(val);
-    debouncedOnChange(val);
+    if (debounceTimer.current) clearTimeout(debounceTimer.current);
+    debounceTimer.current = setTimeout(() => onChange(val), 250);
   }
 
   function handleClear() {

@@ -128,7 +128,7 @@ async function fetchAll() {
         try {
           const img = await fetchWikiImage(title);
           return [id, img];
-        } catch (err) {
+        } catch {
           return [id, null];
         }
       })

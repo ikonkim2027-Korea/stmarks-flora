@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { FileDown, Loader2 } from "lucide-react";
-import { plants, Plant, PlantCategory } from "@/data/plants";
+import { plants, PlantCategory } from "@/data/plants";
 import { formatMonthName, getHabitatLabel } from "@/lib/utils";
 
 const CATEGORY_ORDER: { key: PlantCategory; label: string }[] = [
@@ -14,23 +14,12 @@ const CATEGORY_ORDER: { key: PlantCategory; label: string }[] = [
   { key: "vine", label: "Vines" },
 ];
 
-const MONTH_NAMES = [
-  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
-];
-
 // Colors
 const PRIMARY = [45, 80, 22] as const; // #2D5016
 const SECONDARY = [139, 105, 20] as const; // #8B6914
 const TEXT = [60, 36, 21] as const; // #3C2415
 const MUTED = [122, 96, 64] as const; // #7a6040
 const BG = [254, 252, 243] as const; // #FEFCF3
-
-function formatCollectionWindows(plant: Plant): string {
-  return plant.collectionWindows
-    .map((w) => `${formatMonthName(w.month)} (Wk ${w.weeks.join(", ")}): ${w.note}`)
-    .join("\n");
-}
 
 interface PDFExportProps {
   variant?: "primary" | "secondary" | "subtle";
@@ -120,7 +109,7 @@ export default function PDFExport({ variant = "primary", className = "" }: PDFEx
       doc.setFont("helvetica", "normal");
       doc.setFontSize(8);
       doc.text(
-        "For educational and scientific specimen collection purposes only.",
+        "For educational field observation, ethical collection, and conservation-aware study.",
         pageWidth / 2,
         170,
         { align: "center" }
