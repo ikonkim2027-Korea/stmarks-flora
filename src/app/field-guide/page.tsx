@@ -2,6 +2,7 @@ import { plants, PlantCategory } from "@/data/plants";
 import { formatMonthName, getHabitatLabel } from "@/lib/utils";
 import PrintButton from "@/components/PrintButton";
 import PDFExport from "@/components/PDFExport";
+import GeneratedDate from "@/components/GeneratedDate";
 
 const CATEGORY_ORDER: { key: PlantCategory; label: string }[] = [
   { key: "tree", label: "Trees" },
@@ -102,11 +103,7 @@ export default function FieldGuidePage() {
           {plants.length} species documented
         </p>
         <p style={{ fontSize: "9pt", color: "#7a6040", marginTop: "12pt" }}>
-          Generated {new Date().toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}
+          <GeneratedDate />
         </p>
       </div>
 
