@@ -1,11 +1,9 @@
 import { Plant, PlantCategory, Habitat } from "@/data/plants";
+import { resolveMonthWeek } from "./monthWeek";
 
+// server/build-time only — client UI must use useCurrentMonthWeek()
 export function getCurrentMonthWeek(): { month: number; week: number } {
-  const now = new Date();
-  const month = now.getMonth() + 1; // 1-indexed
-  const day = now.getDate();
-  const week = Math.min(Math.ceil(day / 7), 4);
-  return { month, week };
+  return resolveMonthWeek(new Date());
 }
 
 export function getAvailablePlants(
