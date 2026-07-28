@@ -14,12 +14,12 @@ const CATEGORY_ORDER: { key: PlantCategory; label: string }[] = [
   { key: "vine", label: "Vines" },
 ];
 
-// Colors
-const PRIMARY = [45, 80, 22] as const; // #2D5016
-const SECONDARY = [139, 105, 20] as const; // #8B6914
-const TEXT = [60, 36, 21] as const; // #3C2415
-const MUTED = [122, 96, 64] as const; // #7a6040
-const BG = [254, 252, 243] as const; // #FEFCF3
+// Colors — mirrors the v2 token palette
+const PRIMARY = [61, 90, 68] as const; // moss #3d5a44
+const SECONDARY = [176, 96, 63] as const; // clay #b0603f
+const TEXT = [32, 36, 31] as const; // text #20241f
+const MUTED = [107, 114, 104] as const; // text-soft #6b7268
+const BG = [240, 241, 234] as const; // canvas #f0f1ea
 
 interface PDFExportProps {
   variant?: "primary" | "secondary" | "subtle";
@@ -381,34 +381,17 @@ export default function PDFExport({ variant = "primary", className = "" }: PDFEx
     }
   };
 
-  const baseClasses = "inline-flex items-center gap-2 font-semibold text-sm transition-colors rounded-lg disabled:opacity-50";
-
   const variantClasses = {
-    primary: "px-5 py-2.5 text-white shadow",
-    secondary: "px-5 py-2.5 border",
-    subtle: "px-3 py-2 text-sm",
-  };
-
-  const variantStyles = {
-    primary: {
-      background: "var(--color-primary)",
-    },
-    secondary: {
-      borderColor: "var(--color-border)",
-      color: "var(--color-primary)",
-      background: "var(--color-card)",
-    },
-    subtle: {
-      color: "var(--color-primary)",
-    },
+    primary: "btn-ink",
+    secondary: "btn-ghost",
+    subtle: "btn-ghost min-h-0 px-4 py-2 text-xs",
   };
 
   return (
     <button
       onClick={generatePDF}
       disabled={generating}
-      className={`${baseClasses} ${variantClasses[variant]} ${className}`}
-      style={variantStyles[variant]}
+      className={`${variantClasses[variant]} disabled:opacity-50 ${className}`}
     >
       {generating ? (
         <Loader2 size={16} className="animate-spin" />

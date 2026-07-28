@@ -1,6 +1,6 @@
-const CACHE_NAME = "stmarks-flora-v2";
-const STATIC_CACHE = "stmarks-flora-static-v2";
-const DATA_CACHE = "stmarks-flora-data-v2";
+const CACHE_NAME = "stmarks-flora-v3";
+const STATIC_CACHE = "stmarks-flora-static-v3";
+const DATA_CACHE = "stmarks-flora-data-v3";
 
 const PRE_CACHE_URLS = [
   "/",
