@@ -1,6 +1,12 @@
 import Link from "next/link";
+import { Compass, Mountain } from "lucide-react";
 import { plants, Habitat } from "@/data/plants";
-import { getHabitatIcon, getHabitatLabel, getCategoryColor } from "@/lib/utils";
+import Chip from "@/components/ui/Chip";
+import {
+  getCategoryTone,
+  getHabitatDotClass,
+  getHabitatLabel,
+} from "@/lib/utils";
 
 interface HabitatInfo {
   id: Habitat;
@@ -86,47 +92,42 @@ const HABITAT_INFO: HabitatInfo[] = [
 
 export default function HabitatsPage() {
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="atlas-shell py-10">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl font-bold" style={{ color: "var(--color-text)" }}>
+        <p className="section-label">Field conditions</p>
+        <h1 className="mt-1.5 text-4xl font-semibold tracking-tight text-text sm:text-5xl">
           Habitats
         </h1>
-        <p className="mt-1 text-sm" style={{ color: "var(--color-text-muted)" }}>
-          Plants grouped by habitat type, with walking directions from the school dormitory
+        <p className="mt-3 text-sm text-text-soft">
+          Plants grouped by habitat type, with walking directions from the school
+          dormitory.
         </p>
       </div>
 
       {/* Quick jump links */}
-      <div className="flex flex-wrap gap-2 mb-8">
+      <div className="mb-8 flex flex-wrap gap-2">
         {HABITAT_INFO.map((h) => {
           const count = plants.filter((p) => p.habitat.includes(h.id)).length;
           return (
             <a
               key={h.id}
               href={`#${h.id}`}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border text-sm hover:shadow-sm transition-all"
-              style={{
-                background: "var(--color-card)",
-                borderColor: "var(--color-border)",
-                color: "var(--color-text)",
-              }}
+              className="chip bg-surface text-text shadow-card transition-colors hover:bg-tint"
             >
-              <span>{getHabitatIcon(h.id)}</span>
-              <span className="font-medium">{getHabitatLabel(h.id)}</span>
               <span
-                className="text-xs px-1.5 py-0.5 rounded-full"
-                style={{ background: "var(--color-primary-pale)", color: "var(--color-primary)" }}
-              >
-                {count}
-              </span>
+                className={`h-2.5 w-2.5 rounded-full ${getHabitatDotClass(h.id)}`}
+                aria-hidden
+              />
+              {getHabitatLabel(h.id)}
+              <span className="font-semibold text-moss">{count}</span>
             </a>
           );
         })}
       </div>
 
       {/* Habitat sections */}
-      <div className="space-y-8">
+      <div className="space-y-6">
         {HABITAT_INFO.map((habitatInfo) => {
           const habitatPlants = plants.filter((p) =>
             p.habitat.includes(habitatInfo.id)
@@ -136,58 +137,46 @@ export default function HabitatsPage() {
             <section
               key={habitatInfo.id}
               id={habitatInfo.id}
-              className="rounded-2xl border overflow-hidden scroll-mt-20"
-              style={{ background: "var(--color-card)", borderColor: "var(--color-border)" }}
+              className="card scroll-mt-24 overflow-hidden"
             >
               {/* Header */}
-              <div
-                className="px-6 py-4 border-b"
-                style={{
-                  background: "var(--color-primary-pale)",
-                  borderColor: "var(--color-border)",
-                }}
-              >
+              <div className="bg-tint/60 px-6 py-5">
                 <div className="flex items-center gap-3">
-                  <span className="text-3xl">{getHabitatIcon(habitatInfo.id)}</span>
+                  <span
+                    className={`h-2.5 w-2.5 flex-shrink-0 rounded-full ${getHabitatDotClass(habitatInfo.id)}`}
+                    aria-hidden
+                  />
                   <div>
-                    <h2 className="text-xl font-bold" style={{ color: "var(--color-text)" }}>
+                    <h2 className="text-2xl font-semibold tracking-tight text-text">
                       {getHabitatLabel(habitatInfo.id)}
                     </h2>
-                    <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
+                    <p className="text-sm text-text-soft">
                       {habitatPlants.length} species documented
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="p-6 grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 gap-6 p-6 lg:grid-cols-3">
                 {/* Description + Directions */}
-                <div className="lg:col-span-1 flex flex-col gap-4">
+                <div className="flex flex-col gap-4 lg:col-span-1">
                   <div>
-                    <h3 className="text-sm font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--color-text-muted)" }}>
-                      About This Habitat
-                    </h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
+                    <p className="section-label">About this habitat</p>
+                    <p className="mt-2 text-sm leading-7 text-text">
                       {habitatInfo.description}
                     </p>
                   </div>
 
-                  <div
-                    className="rounded-xl border p-4"
-                    style={{
-                      background: "var(--color-primary-pale)",
-                      borderColor: "var(--color-border)",
-                    }}
-                  >
-                    <h3 className="text-sm font-semibold mb-2 flex items-center gap-1.5" style={{ color: "var(--color-primary)" }}>
-                      <span>🧭</span>
-                      Walking Directions
-                    </h3>
-                    <p className="text-sm leading-relaxed" style={{ color: "var(--color-text)" }}>
+                  <div className="rounded-tile bg-moss-tint p-4">
+                    <p className="flex items-center gap-1.5 text-sm font-semibold text-moss">
+                      <Compass size={15} strokeWidth={1.8} />
+                      Walking directions
+                    </p>
+                    <p className="mt-2 text-sm leading-7 text-text">
                       {habitatInfo.walkingDirections}
                     </p>
-                    <p className="text-xs mt-2 italic flex items-center gap-1" style={{ color: "var(--color-text-muted)" }}>
-                      <span>⛰️</span>
+                    <p className="mt-2 flex items-center gap-1.5 text-xs text-text-soft">
+                      <Mountain size={13} strokeWidth={1.8} className="flex-shrink-0" />
                       {habitatInfo.terrain}
                     </p>
                   </div>
@@ -195,42 +184,34 @@ export default function HabitatsPage() {
 
                 {/* Species list */}
                 <div className="lg:col-span-2">
-                  <h3 className="text-sm font-semibold uppercase tracking-wide mb-3" style={{ color: "var(--color-text-muted)" }}>
-                    Species Found Here
-                  </h3>
+                  <p className="section-label">Species found here</p>
                   {habitatPlants.length > 0 ? (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
                       {habitatPlants.map((plant) => (
                         <Link
                           key={plant.id}
                           href={`/plants/${plant.id}`}
-                          className="flex items-start gap-2.5 p-3 rounded-xl border hover:shadow-sm transition-all group"
-                          style={{
-                            borderColor: "var(--color-border)",
-                            background: "var(--color-background)",
-                          }}
+                          className="group flex items-start gap-2.5 rounded-tile bg-canvas p-3 transition-colors hover:bg-tint"
                         >
-                          <div className="flex-1 min-w-0">
-                            <p
-                              className="text-sm font-semibold leading-tight truncate group-hover:underline"
-                              style={{ color: "var(--color-text)" }}
-                            >
+                          <div className="min-w-0 flex-1">
+                            <p className="truncate text-sm font-semibold leading-tight text-text group-hover:text-moss">
                               {plant.commonName}
                             </p>
-                            <p className="text-xs italic mt-0.5 truncate" style={{ color: "var(--color-text-muted)" }}>
+                            <p className="sci-name mt-0.5 truncate text-xs text-text-soft">
                               {plant.scientificName}
                             </p>
                           </div>
-                          <span
-                            className={`text-xs px-2 py-0.5 rounded-full border font-medium flex-shrink-0 capitalize ${getCategoryColor(plant.category)}`}
+                          <Chip
+                            tone={getCategoryTone(plant.category)}
+                            className="flex-shrink-0 capitalize"
                           >
                             {plant.category}
-                          </span>
+                          </Chip>
                         </Link>
                       ))}
                     </div>
                   ) : (
-                    <p className="text-sm italic" style={{ color: "var(--color-text-muted)" }}>
+                    <p className="mt-3 text-sm text-text-soft">
                       No species currently documented for this habitat.
                     </p>
                   )}

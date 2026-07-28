@@ -4,7 +4,29 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import type { Plant, Habitat } from "@/data/plants";
 import type { HabitatLocation } from "@/data/habitatLocations";
-import { getHabitatIcon, getHabitatLabel } from "@/lib/utils";
+import {
+  getHabitatDotClass,
+  getHabitatDotHex,
+  getHabitatLabel,
+} from "@/lib/utils";
+
+// Leaflet ships its own chrome; this pulls popups onto the atlas card look.
+const ATLAS_LEAFLET_CSS = `
+.leaflet-container { font-family: var(--font-instrument-sans), system-ui, sans-serif; }
+.leaflet-popup-content-wrapper {
+  border-radius: 16px;
+  padding: 2px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgb(23 27 23 / 0.04), 0 16px 40px -16px rgb(23 27 23 / 0.18);
+}
+.leaflet-popup-content { margin: 12px 14px; }
+.leaflet-popup-tip { box-shadow: none; }
+.leaflet-container a.leaflet-popup-close-button { color: #6b7268; padding: 8px 8px 0 0; }
+/* Leaflet's own link colour outranks the utility class, so restate it here. */
+.leaflet-container .leaflet-popup-content a { color: #3d5a44; text-decoration: none; }
+.leaflet-container .leaflet-popup-content a.atlas-popup-more { color: #6b7268; }
+.leaflet-bar, .leaflet-control-attribution { border-radius: 10px; }
+`;
 
 interface HabitatMapProps {
   habitatLocations: HabitatLocation[];
@@ -40,6 +62,12 @@ export default function HabitatMap({
       link.crossOrigin = "";
       document.head.appendChild(link);
     }
+    if (!document.getElementById("leaflet-atlas-css")) {
+      const style = document.createElement("style");
+      style.id = "leaflet-atlas-css";
+      style.textContent = ATLAS_LEAFLET_CSS;
+      document.head.appendChild(style);
+    }
     setReady(true);
   }, []);
 
@@ -70,25 +98,30 @@ export default function HabitatMap({
       // 1km radius circle
       L.circle(schoolCenter, {
         radius: surveyRadius,
-        color: "#2d6a4f",
-        fillColor: "#2d6a4f",
-        fillOpacity: 0.08,
+        color: "#3d5a44",
+        fillColor: "rgba(201,226,101,0.12)",
+        fillOpacity: 1,
         weight: 2,
         dashArray: "8 4",
       }).addTo(map);
 
-      // School marker
+      // School marker — a moss dot in a sprout halo, no emoji
       const schoolIcon = L.divIcon({
-        html: '<div style="font-size:24px;line-height:1;text-align:center;">🏫</div>',
-        iconSize: [30, 30],
-        iconAnchor: [15, 15],
+        html:
+          '<span style="display:block;width:14px;height:14px;border-radius:9999px;' +
+          'background:#3d5a44;box-shadow:0 0 0 5px rgba(201,226,101,0.55);"></span>',
+        iconSize: [14, 14],
+        iconAnchor: [7, 7],
         className: "school-marker",
       });
 
       L.marker(schoolCenter, { icon: schoolIcon })
         .addTo(map)
         .bindPopup(
-          '<strong>St. Mark\'s School</strong><br/>25 Marlboro Road<br/>Southborough, MA'
+          '<div class="min-w-[160px]">' +
+            '<div class="text-[13px] font-semibold text-text">St. Mark\'s School</div>' +
+            '<div class="mt-0.5 text-[11px] leading-4 text-text-soft">25 Marlboro Road<br/>Southborough, MA</div>' +
+            "</div>"
         );
 
       // Habitat zones
@@ -101,9 +134,9 @@ export default function HabitatMap({
 
         const circle = L.circleMarker(loc.coords, {
           radius: isSelected ? 16 : 12,
-          color: loc.color,
-          fillColor: loc.color,
-          fillOpacity: isSelected ? 0.7 : 0.5,
+          color: "#3d5a44",
+          fillColor: getHabitatDotHex(loc.habitat),
+          fillOpacity: isSelected ? 0.85 : 0.65,
           weight: isSelected ? 3 : 2,
         }).addTo(map);
 
@@ -111,26 +144,28 @@ export default function HabitatMap({
           .slice(0, 8)
           .map(
             (p) =>
-              `<a href="/plants/${p.id}" style="color:${loc.color};text-decoration:none;font-size:12px;">&bull; ${p.commonName}</a>`
+              `<a href="/plants/${p.id}" class="block text-[12px] font-medium text-moss no-underline">${p.commonName}</a>`
           )
-          .join("<br/>");
+          .join("");
 
         const moreText =
           plantsInHabitat.length > 8
-            ? `<br/><a href="/habitats#${loc.habitat}" style="color:${loc.color};font-size:11px;font-style:italic;">+ ${plantsInHabitat.length - 8} more...</a>`
+            ? `<a href="/habitats#${loc.habitat}" class="atlas-popup-more mt-1 block text-[11px] no-underline">+ ${plantsInHabitat.length - 8} more</a>`
             : "";
 
         circle.bindPopup(
-          `<div style="min-width:160px;">` +
-            `<strong style="font-size:13px;">${getHabitatIcon(loc.habitat)} ${getHabitatLabel(loc.habitat)}</strong>` +
-            `<br/><span style="font-size:11px;color:#666;">${loc.name}</span>` +
-            `<hr style="margin:6px 0;border:none;border-top:1px solid #eee;"/>` +
-            `<div style="font-size:12px;color:#555;margin-bottom:4px;">${loc.description}</div>` +
-            `<hr style="margin:6px 0;border:none;border-top:1px solid #eee;"/>` +
-            `<div style="font-size:11px;color:#888;margin-bottom:4px;">${plantsInHabitat.length} species found here:</div>` +
+          `<div class="min-w-[180px]">` +
+            `<div class="flex items-center gap-2">` +
+            `<span class="h-2.5 w-2.5 flex-shrink-0 rounded-full ${getHabitatDotClass(loc.habitat)}"></span>` +
+            `<span class="text-[13px] font-semibold text-text">${getHabitatLabel(loc.habitat)}</span>` +
+            `</div>` +
+            `<div class="mt-0.5 text-[11px] text-text-soft">${loc.name}</div>` +
+            `<div class="mt-2 border-t border-hairline pt-2 text-[12px] leading-5 text-text">${loc.description}</div>` +
+            `<div class="mt-2 border-t border-hairline pt-2 text-[11px] text-text-soft">${plantsInHabitat.length} species found here</div>` +
+            `<div class="mt-1 space-y-0.5">` +
             plantLinks +
             moreText +
-            `</div>`
+            `</div></div>`
         );
       });
 
@@ -165,28 +200,22 @@ export default function HabitatMap({
     <div className="relative w-full">
       <div
         ref={mapRef}
-        style={{ height: `${height}px`, width: "100%", borderRadius: "12px", zIndex: 1 }}
+        className="overflow-hidden rounded-tile"
+        style={{ height: `${height}px`, width: "100%", zIndex: 1 }}
       />
       {showLegend && (
-        <div
-          className="mt-4 flex flex-wrap gap-2"
-        >
+        <div className="mt-4 flex flex-wrap gap-2">
           {uniqueHabitats.map((loc) => (
             <Link
               key={loc.habitat}
               href={`/habitats#${loc.habitat}`}
-              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border hover:shadow-sm transition-all"
-              style={{
-                borderColor: loc.color,
-                color: loc.color,
-                background: `${loc.color}10`,
-              }}
+              className="chip bg-surface text-text shadow-card transition-colors hover:bg-tint"
             >
               <span
-                className="w-2.5 h-2.5 rounded-full inline-block"
-                style={{ background: loc.color }}
+                className={`h-2.5 w-2.5 rounded-full ${getHabitatDotClass(loc.habitat)}`}
+                aria-hidden
               />
-              {getHabitatIcon(loc.habitat)} {getHabitatLabel(loc.habitat)}
+              {getHabitatLabel(loc.habitat)}
             </Link>
           ))}
         </div>

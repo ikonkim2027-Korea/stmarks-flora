@@ -8,19 +8,10 @@ const HabitatMap = dynamic(() => import("@/components/HabitatMap"), {
   ssr: false,
   loading: () => (
     <div
-      className="rounded-xl border flex items-center justify-center"
-      style={{
-        height: "300px",
-        background: "var(--color-primary-pale)",
-        borderColor: "var(--color-border)",
-      }}
+      className="flex animate-pulse items-center justify-center rounded-tile bg-tint"
+      style={{ height: "300px" }}
     >
-      <div className="text-center">
-        <div className="text-4xl mb-2">🗺️</div>
-        <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
-          Loading map...
-        </p>
-      </div>
+      <p className="text-sm text-text-soft">Loading map</p>
     </div>
   ),
 });

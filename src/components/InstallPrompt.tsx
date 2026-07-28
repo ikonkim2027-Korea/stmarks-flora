@@ -54,39 +54,21 @@ export default function InstallPrompt() {
   if (!showBanner) return null;
 
   return (
-    <div
-      className="fixed bottom-0 left-0 right-0 z-50 p-4 sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-sm sm:p-0"
-    >
-      <div
-        className="flex items-start gap-3 rounded-lg border p-4 shadow-lg"
-        style={{
-          background: "var(--color-card)",
-          borderColor: "var(--color-border)",
-        }}
-      >
-        <div
-          className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg"
-          style={{ background: "var(--color-ink)" }}
-        >
-          <Download size={19} style={{ color: "var(--color-card)" }} />
-        </div>
-        <div className="flex-1 min-w-0">
-          <p
-            className="text-sm font-black"
-            style={{ color: "var(--color-text)" }}
-          >
+    <div className="fixed bottom-0 left-0 right-0 z-50 p-4 sm:bottom-4 sm:left-4 sm:right-auto sm:max-w-sm sm:p-0">
+      <div className="card flex items-start gap-3 p-5 shadow-float">
+        <span className="grid h-10 w-10 flex-shrink-0 place-items-center rounded-full bg-moss-tint text-moss">
+          <Download size={18} strokeWidth={1.7} />
+        </span>
+        <div className="min-w-0 flex-1">
+          <p className="text-sm font-semibold tracking-tight text-text">
             Install field atlas
           </p>
-          <p
-            className="text-xs mt-0.5 leading-relaxed"
-            style={{ color: "var(--color-text-muted)" }}
-          >
+          <p className="mt-0.5 text-xs leading-5 text-text-soft">
             Offline access for campus fieldwork.
           </p>
           <button
             onClick={handleInstall}
-            className="mt-2 inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold text-white transition-colors"
-            style={{ background: "var(--color-ink)" }}
+            className="btn-ink mt-3 min-h-0 px-4 py-2 text-xs"
           >
             <Download size={14} />
             Install
@@ -94,10 +76,10 @@ export default function InstallPrompt() {
         </div>
         <button
           onClick={handleDismiss}
-          className="flex-shrink-0 p-1 rounded-md hover:bg-gray-100 transition-colors"
+          className="flex-shrink-0 rounded-full p-1 text-text-soft transition-colors hover:bg-tint hover:text-text"
           aria-label="Dismiss"
         >
-          <X size={16} style={{ color: "var(--color-text-muted)" }} />
+          <X size={16} />
         </button>
       </div>
     </div>

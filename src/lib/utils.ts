@@ -31,46 +31,27 @@ export function getCategoryTone(category: PlantCategory): ChipTone {
   return map[category] ?? "sage";
 }
 
-/** @deprecated v2 — use getCategoryTone/getNativeStatusTone; removed in Task 10 */
-export function getCategoryColor(category: PlantCategory): string {
-  const map: Record<PlantCategory, string> = {
-    tree: "bg-green-100 text-green-800 border-green-300",
-    shrub: "bg-amber-100 text-amber-800 border-amber-300",
-    wildflower: "bg-pink-100 text-pink-800 border-pink-300",
-    fern: "bg-emerald-100 text-emerald-800 border-emerald-300",
-    grass: "bg-lime-100 text-lime-800 border-lime-300",
-    vine: "bg-purple-100 text-purple-800 border-purple-300",
-  };
-  return map[category] ?? "bg-gray-100 text-gray-800 border-gray-300";
+// Habitats read as one moss/sage scale rather than a per-habitat hue: wooded
+// and wet ground sits deep, open ground sits light. The hex mirrors the class
+// for consumers that cannot take a utility, such as Leaflet vector styles.
+const HABITAT_SCALE: Record<Habitat, { dot: string; hex: string }> = {
+  "forest-floor": { dot: "bg-moss", hex: "#3d5a44" },
+  "pond-edge": { dot: "bg-moss", hex: "#3d5a44" },
+  "woodland-edge": { dot: "bg-moss-soft", hex: "#5c7a62" },
+  wetland: { dot: "bg-moss-soft", hex: "#5c7a62" },
+  streambank: { dot: "bg-moss-soft", hex: "#5c7a62" },
+  roadside: { dot: "bg-sage", hex: "#aec2a4" },
+  "rocky-outcrop": { dot: "bg-sage", hex: "#aec2a4" },
+  meadow: { dot: "bg-sprout", hex: "#c9e265" },
+  "lawn-adjacent": { dot: "bg-sprout", hex: "#c9e265" },
+};
+
+export function getHabitatDotClass(habitat: Habitat): string {
+  return HABITAT_SCALE[habitat]?.dot ?? "bg-sage";
 }
 
-/** @deprecated v2 — use getCategoryTone/getNativeStatusTone; removed in Task 10 */
-export function getCategoryDotColor(category: PlantCategory): string {
-  const map: Record<PlantCategory, string> = {
-    tree: "bg-green-600",
-    shrub: "bg-amber-600",
-    wildflower: "bg-pink-500",
-    fern: "bg-emerald-600",
-    grass: "bg-lime-600",
-    vine: "bg-purple-600",
-  };
-  return map[category] ?? "bg-gray-500";
-}
-
-/** @deprecated v2 — use getCategoryTone/getNativeStatusTone; removed in Task 10 */
-export function getHabitatIcon(habitat: Habitat): string {
-  const map: Record<Habitat, string> = {
-    "forest-floor": "🌿",
-    "woodland-edge": "🌳",
-    roadside: "🛤️",
-    wetland: "🌾",
-    "pond-edge": "🌊",
-    "lawn-adjacent": "🌱",
-    "rocky-outcrop": "🪨",
-    meadow: "🌼",
-    streambank: "💧",
-  };
-  return map[habitat] ?? "🌱";
+export function getHabitatDotHex(habitat: Habitat): string {
+  return HABITAT_SCALE[habitat]?.hex ?? "#aec2a4";
 }
 
 export function getHabitatLabel(habitat: Habitat): string {
@@ -108,13 +89,6 @@ export function getNativeStatusTone(status: Plant["nativeStatus"]): ChipTone {
   if (status === "native") return "moss";
   if (status === "naturalized") return "mist";
   return "clay";
-}
-
-/** @deprecated v2 — use getCategoryTone/getNativeStatusTone; removed in Task 10 */
-export function getNativeStatusColor(status: Plant["nativeStatus"]): string {
-  if (status === "native") return "bg-green-100 text-green-800 border-green-300";
-  if (status === "naturalized") return "bg-blue-100 text-blue-800 border-blue-300";
-  return "bg-red-100 text-red-800 border-red-300";
 }
 
 export function getNativeStatusLabel(status: Plant["nativeStatus"]): string {
