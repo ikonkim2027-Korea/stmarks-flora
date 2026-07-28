@@ -3,6 +3,7 @@
 import { Info } from "lucide-react";
 import { Plant } from "@/data/plants";
 import CollectionCalendar from "@/components/CollectionCalendar";
+import Chip from "@/components/ui/Chip";
 import { getCollectionPolicy } from "@/lib/plantDiscovery";
 import { useCurrentMonthWeek } from "@/lib/useCurrentMonthWeek";
 
@@ -29,58 +30,28 @@ export default function AvailabilityBadge({
 
   const collectionPolicy = getCollectionPolicy(plant);
 
+  const photoOnly = collectionPolicy.type === "photograph-only";
+
   if (variant === "pill") {
     return (
-      <span
-        className={`mt-1 flex-shrink-0 rounded-md px-3 py-2 text-[10px] font-black uppercase tracking-[0.14em] ${
-          collectionPolicy.type === "photograph-only"
-            ? "bg-sky-200 text-sky-950"
-            : "bg-green-300 text-green-900"
-        }`}
-      >
-        {collectionPolicy.type === "photograph-only"
-          ? "Photograph Now"
-          : "Collectible Now"}
-      </span>
+      <Chip tone={photoOnly ? "mist" : "sprout"} className="flex-shrink-0">
+        {photoOnly ? "Photograph now" : "Collectible now"}
+      </Chip>
     );
   }
 
   return (
     <div
-      className="flex gap-3 rounded-lg border p-4"
-      style={
-        collectionPolicy.type === "photograph-only"
-          ? { background: "#e0f2fe", borderColor: "#7dd3fc" }
-          : { background: "#e8f5e2", borderColor: "#a8d58a" }
-      }
+      className={`flex gap-3 rounded-tile p-4 ${
+        photoOnly ? "bg-mist-tint text-mist" : "bg-moss-tint text-moss"
+      }`}
     >
-      <Info
-        size={18}
-        className={`flex-shrink-0 mt-0.5 ${
-          collectionPolicy.type === "photograph-only"
-            ? "text-sky-700"
-            : "text-green-700"
-        }`}
-      />
-      <div>
-        <p
-          className={`font-semibold text-sm ${
-            collectionPolicy.type === "photograph-only"
-              ? "text-sky-900"
-              : "text-green-800"
-          }`}
-        >
-          {collectionPolicy.type === "photograph-only"
-            ? "Photograph This Week"
-            : "Collectible This Week"}
+      <Info size={16} className="mt-0.5 flex-shrink-0" />
+      <div className="text-sm leading-6">
+        <p className="font-semibold">
+          {photoOnly ? "Photograph this week" : "Collectible this week"}
         </p>
-        <p
-          className={`text-sm mt-0.5 ${
-            collectionPolicy.type === "photograph-only"
-              ? "text-sky-800"
-              : "text-green-700"
-          }`}
-        >
+        <p>
           {currentWindow.note} {collectionPolicy.description}
         </p>
       </div>

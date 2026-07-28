@@ -13,6 +13,8 @@ interface CollectionCalendarProps {
 const MONTHS = [4, 5, 6, 7, 8, 9, 10, 11];
 const WEEKS = [1, 2, 3, 4];
 
+const DOT = "mx-auto block h-3.5 w-3.5 rounded-full";
+
 export default function CollectionCalendar({
   collectionWindows,
   currentMonth,
@@ -32,23 +34,22 @@ export default function CollectionCalendar({
 
   return (
     <div className="overflow-x-auto">
-      <table className="text-xs border-collapse w-full min-w-[480px]">
+      <table className="w-full min-w-[480px] border-collapse text-xs">
         <thead>
           <tr>
-            <th className="text-left pr-3 pb-2 font-medium w-12" style={{ color: "var(--color-text-muted)" }}>
+            <th className="w-12 pb-3 pr-3 text-left text-xs font-medium text-text-soft">
               Wk
             </th>
             {MONTHS.map((month) => (
               <th
                 key={month}
-                className={`pb-2 font-semibold text-center px-1 ${
-                  month === currentMonth ? "text-green-700" : ""
+                className={`px-1 pb-3 text-center text-xs font-medium ${
+                  month === currentMonth ? "text-moss" : "text-text-soft"
                 }`}
-                style={month !== currentMonth ? { color: "var(--color-text-muted)" } : {}}
               >
                 {formatMonthShort(month)}
                 {month === currentMonth && (
-                  <span className="block text-[9px] text-green-600 font-normal">now</span>
+                  <span className="block text-[9px] font-normal text-moss">now</span>
                 )}
               </th>
             ))}
@@ -57,20 +58,16 @@ export default function CollectionCalendar({
         <tbody>
           {WEEKS.map((week) => (
             <tr key={week}>
-              <td className="pr-3 py-0.5 font-medium" style={{ color: "var(--color-text-muted)" }}>
-                {week}
-              </td>
+              <td className="py-1.5 pr-3 text-xs font-medium text-text-soft">{week}</td>
               {MONTHS.map((month) => {
                 const win = getWindow(month, week);
                 const current = isCurrent(month, week);
                 return (
-                  <td key={month} className="px-1 py-0.5">
+                  <td key={month} className="px-1 py-1.5">
                     {win ? (
-                      <div
-                        className={`w-full h-6 rounded cursor-help flex items-center justify-center transition-opacity hover:opacity-80 relative ${
-                          current
-                            ? "bg-green-600 ring-2 ring-green-400 ring-offset-1"
-                            : "bg-green-500"
+                      <span
+                        className={`${DOT} cursor-help ${
+                          current ? "bg-sprout ring-2 ring-sprout/40" : "bg-moss"
                         }`}
                         title={win.note}
                         onMouseEnter={(e) => {
@@ -78,16 +75,9 @@ export default function CollectionCalendar({
                           setTooltip({ note: win.note, x: rect.left, y: rect.top });
                         }}
                         onMouseLeave={() => setTooltip(null)}
-                      >
-                        {current && (
-                          <span className="text-white text-[8px] font-bold">●</span>
-                        )}
-                      </div>
-                    ) : (
-                      <div
-                        className="w-full h-6 rounded"
-                        style={{ background: "var(--color-border)" }}
                       />
+                    ) : (
+                      <span className={`${DOT} bg-tint`} />
                     )}
                   </td>
                 );
@@ -98,36 +88,31 @@ export default function CollectionCalendar({
       </table>
 
       {/* Legend */}
-      <div className="flex gap-4 mt-3 text-xs" style={{ color: "var(--color-text-muted)" }}>
-        <div className="flex items-center gap-1.5">
-          <div className="w-4 h-4 rounded bg-green-500" />
-          <span>Collectible</span>
-        </div>
-        <div className="flex items-center gap-1.5">
-          <div className="w-4 h-4 rounded bg-green-600 ring-2 ring-green-400 ring-offset-1" />
-          <span>Current week</span>
-        </div>
-        <div className="flex items-center gap-1.5">
-          <div className="w-4 h-4 rounded" style={{ background: "var(--color-border)" }} />
-          <span>Not collectible</span>
-        </div>
+      <div className="mt-4 flex flex-wrap gap-4 text-[11px] text-text-soft">
+        <span className="flex items-center gap-1.5">
+          <span className="h-3 w-3 rounded-full bg-moss" />
+          Collectible
+        </span>
+        <span className="flex items-center gap-1.5">
+          <span className="h-3 w-3 rounded-full bg-sprout ring-2 ring-sprout/40" />
+          Current week
+        </span>
+        <span className="flex items-center gap-1.5">
+          <span className="h-3 w-3 rounded-full bg-tint" />
+          Not collectible
+        </span>
       </div>
 
       {/* Collection notes list */}
       {collectionWindows.length > 0 && (
-        <div className="mt-4 space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-wide" style={{ color: "var(--color-text-muted)" }}>
-            Collection Notes
-          </p>
+        <div className="mt-6 space-y-2">
+          <p className="section-label">Collection notes</p>
           {collectionWindows.map((w, i) => (
-            <div key={i} className="flex gap-3 text-sm">
-              <span
-                className="flex-shrink-0 font-semibold"
-                style={{ color: "var(--color-primary)", minWidth: "4rem" }}
-              >
+            <div key={i} className="flex gap-3 text-sm leading-6">
+              <span className="w-20 flex-shrink-0 font-medium text-moss">
                 {formatMonthShort(w.month)} Wk {w.weeks.join(",")}
               </span>
-              <span style={{ color: "var(--color-text)" }}>{w.note}</span>
+              <span className="text-text">{w.note}</span>
             </div>
           ))}
         </div>
@@ -135,8 +120,8 @@ export default function CollectionCalendar({
 
       {tooltip && (
         <div
-          className="fixed z-50 bg-gray-900 text-white text-xs rounded px-2 py-1 pointer-events-none max-w-xs shadow-lg"
-          style={{ top: tooltip.y - 36, left: tooltip.x }}
+          className="card pointer-events-none fixed z-50 max-w-xs px-3 py-2 text-xs text-text shadow-float"
+          style={{ top: tooltip.y - 44, left: tooltip.x }}
         >
           {tooltip.note}
         </div>
