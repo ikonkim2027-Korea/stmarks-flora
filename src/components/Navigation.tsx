@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, Search, Sprout } from "lucide-react";
 
 const navLinks = [
@@ -13,101 +13,77 @@ const navLinks = [
   { href: "/map", label: "Map" },
 ];
 
+const linkBase = "rounded-full px-4 py-2 text-sm font-medium transition-colors";
+const linkActive = "bg-ink text-white";
+const linkIdle = "text-text-soft hover:bg-tint";
+
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const pathname = usePathname();
+  const router = useRouter();
+
+  function isActive(href: string) {
+    return href === "/" ? pathname === "/" : pathname.startsWith(href);
+  }
 
   function handleSearchSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (searchQuery.trim()) {
-      window.location.href = `/plants?q=${encodeURIComponent(searchQuery.trim())}`;
+      router.push(`/plants?q=${encodeURIComponent(searchQuery.trim())}`);
       setSearchOpen(false);
       setSearchQuery("");
     }
   }
 
   return (
-    <nav
-      className="sticky top-0 z-50 border-b backdrop-blur-xl"
-      style={{
-        background: "color-mix(in srgb, var(--color-card) 88%, transparent)",
-        borderColor: "var(--color-border)",
-      }}
-    >
+    <nav className="sticky top-0 z-50 bg-canvas/85 backdrop-blur-xl">
       <div className="atlas-shell">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <span
-              className="grid h-8 w-8 place-items-center rounded-lg border"
-              style={{
-                background: "var(--color-ink)",
-                borderColor: "var(--color-ink)",
-                color: "var(--color-card)",
-              }}
-            >
-              <Sprout size={17} strokeWidth={1.8} />
+          <Link href="/" className="group flex items-center gap-2.5">
+            <span className="grid h-9 w-9 place-items-center rounded-full bg-moss text-white">
+              <Sprout size={16} strokeWidth={1.8} />
             </span>
             <span className="flex flex-col leading-none">
-              <span className="text-sm font-black tracking-tight" style={{ color: "var(--color-text)" }}>
+              <span className="text-sm font-semibold tracking-tight text-text">
                 Tiny Worlds
               </span>
-              <span className="mt-1 text-[10px] font-bold uppercase tracking-[0.2em]" style={{ color: "var(--color-text-muted)" }}>
-                Field Atlas
-              </span>
+              <span className="mt-1 text-[10px] text-text-soft">Field Atlas</span>
             </span>
           </Link>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => {
-              const active =
-                link.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(link.href);
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
-                    active
-                      ? "text-white"
-                      : "hover:bg-black/[0.04]"
-                  }`}
-                  style={
-                    active
-                      ? { background: "var(--color-ink)" }
-                      : { color: "var(--color-text-muted)" }
-                  }
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
+          <div className="hidden items-center gap-1 rounded-full bg-surface p-1 shadow-card md:flex">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`${linkBase} ${isActive(link.href) ? linkActive : linkIdle}`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
 
           {/* Right: search + hamburger */}
           <div className="flex items-center gap-2">
-            {/* Search toggle */}
             <button
               onClick={() => setSearchOpen((v) => !v)}
-              className="rounded-lg border p-2 transition-colors hover:bg-black/[0.04]"
-              style={{ borderColor: "var(--color-border)", color: "var(--color-text)" }}
+              className="rounded-full bg-surface p-2.5 text-text shadow-card transition-colors hover:bg-tint"
               aria-label="Search"
             >
               <Search size={18} />
             </button>
 
-            {/* Mobile hamburger */}
             <button
-              className="rounded-lg border p-2 transition-colors hover:bg-black/[0.04] md:hidden"
-              style={{ borderColor: "var(--color-border)", color: "var(--color-text)" }}
+              className="rounded-full bg-surface p-2.5 text-text shadow-card transition-colors hover:bg-tint md:hidden"
               onClick={() => setMenuOpen((v) => !v)}
               aria-label="Toggle menu"
             >
-              {menuOpen ? <X size={20} /> : <Menu size={20} />}
+              {menuOpen ? <X size={18} /> : <Menu size={18} />}
             </button>
           </div>
         </div>
@@ -122,17 +98,9 @@ export default function Navigation() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search plants by name, family, habitat, or trait..."
-                className="flex-1 rounded-lg border px-3 py-2 text-sm focus:outline-none"
-                style={{
-                  background: "var(--color-card)",
-                  borderColor: "var(--color-border)",
-                  color: "var(--color-text)",
-                }}
+                className="flex-1 rounded-full bg-surface px-5 py-3 text-sm text-text shadow-card focus:outline-none focus:ring-2 focus:ring-sage"
               />
-              <button
-                type="submit"
-                className="atlas-button-primary min-h-0 py-2"
-              >
+              <button type="submit" className="btn-ink">
                 Search
               </button>
             </form>
@@ -141,32 +109,18 @@ export default function Navigation() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="mt-1 flex flex-col gap-1 border-t pb-3 pt-3 md:hidden" style={{ borderColor: "var(--color-border)" }}>
-            {navLinks.map((link) => {
-              const active =
-                link.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(link.href);
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className={`rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
-                    active
-                      ? "text-white"
-                      : "hover:bg-black/[0.04]"
-                  }`}
-                  style={
-                    active
-                      ? { background: "var(--color-ink)" }
-                      : { color: "var(--color-text-muted)" }
-                  }
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
+          <div className="mt-1 flex flex-col gap-1 border-t border-hairline pb-3 pt-3 md:hidden">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                aria-current={isActive(link.href) ? "page" : undefined}
+                className={`${linkBase} ${isActive(link.href) ? linkActive : linkIdle}`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         )}
       </div>
