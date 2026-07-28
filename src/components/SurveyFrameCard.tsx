@@ -1,6 +1,5 @@
 "use client";
 
-import { Microscope } from "lucide-react";
 import { useCurrentMonthWeek } from "@/lib/useCurrentMonthWeek";
 
 const MONTH_NAMES = [
@@ -34,31 +33,28 @@ export default function SurveyFrameCard({
 }: SurveyFrameCardProps) {
   const now = useCurrentMonthWeek();
 
+  const stats: { label: string; value: number }[] = [
+    { label: "Species", value: speciesCount },
+    { label: "Native", value: nativeCount },
+    { label: "Invasive", value: invasiveCount },
+    { label: "Photo only", value: photoOnlyCount },
+  ];
+
   return (
-    <aside className="atlas-panel bg-white/8 p-5 text-white shadow-none backdrop-blur-md">
-      <div className="flex items-start justify-between gap-6 border-b border-white/20 pb-4">
-        <div>
-          <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/54">
-            Active survey frame
-          </p>
-          <p className="mt-2 text-2xl font-black">
-            {now ? `${MONTH_NAMES[now.month]} W${now.week}` : "–"}
-          </p>
-        </div>
-        <Microscope className="text-[#d9b44a]" size={28} strokeWidth={1.6} />
+    <aside className="glass divide-y divide-hairline p-5">
+      <div className="pb-4">
+        <p className="section-label">Active survey frame</p>
+        <p className="mt-1.5 text-2xl font-semibold tracking-tight text-text">
+          {now ? `${MONTH_NAMES[now.month]} W${now.week}` : "–"}
+        </p>
       </div>
-      <div className="mt-5 grid grid-cols-2 gap-3">
-        {[
-          ["Species", speciesCount],
-          ["Native", nativeCount],
-          ["Invasive", invasiveCount],
-          ["Photo only", photoOnlyCount],
-        ].map(([label, value]) => (
-          <div key={label} className="border-t border-white/18 pt-3">
-            <div className="text-3xl font-black">{value}</div>
-            <div className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/52">
-              {label}
+      <div className="grid grid-cols-2 gap-x-4 gap-y-4 pt-4">
+        {stats.map((stat) => (
+          <div key={stat.label}>
+            <div className="text-2xl font-semibold tracking-tight text-text">
+              {stat.value}
             </div>
+            <div className="mt-0.5 text-[11px] text-text-soft">{stat.label}</div>
           </div>
         ))}
       </div>

@@ -22,19 +22,18 @@ export default function FieldReadySection() {
     <section className="atlas-shell py-14">
       <div className="mb-7 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
         <div>
-          <p className="atlas-kicker">Current field window</p>
-          <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
+          <p className="section-label">Current field window</p>
+          <h2 className="mt-1.5 text-3xl font-semibold tracking-tight text-text">
             Field-ready now
           </h2>
-          <p className="mt-2 text-sm" style={{ color: "var(--color-text-muted)" }}>
+          <p className="mt-2 text-sm text-text-soft">
             {availableNow.collectible.length} collectible specimens and{" "}
             {availableNow.observationOnly.length} photograph-only observations.
           </p>
         </div>
         <Link
           href="/calendar"
-          className="inline-flex items-center gap-2 text-sm font-bold"
-          style={{ color: "var(--color-primary)" }}
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-moss"
         >
           View full calendar
           <ArrowUpRight size={16} />
