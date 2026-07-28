@@ -1,41 +1,38 @@
 @import "tailwindcss";
 
-:root {
-  --color-primary: #174f38;
-  --color-secondary: #b35a2f;
-  --color-accent: #d9b44a;
-  --color-background: #f6f3eb;
-  --color-card: #fffdf7;
-  --color-text: #16201c;
-  --color-text-muted: #66736d;
-  --color-border: #d9d5c8;
-  --color-primary-light: #2f7a55;
-  --color-primary-pale: #dce9de;
-  --color-ink: #111816;
-  --color-sky: #5e9bb5;
-  --color-field: #ece7dc;
-  --shadow-soft: 0 18px 45px rgba(17, 24, 22, 0.08);
-}
+@theme {
+  --color-canvas: #f0f1ea;
+  --color-surface: #ffffff;
+  --color-tint: #e7ebdf;
+  --color-ink: #171b17;
+  --color-moss: #3d5a44;
+  --color-moss-soft: #5c7a62;
+  --color-sage: #aec2a4;
+  --color-sprout: #c9e265;
+  --color-clay: #b0603f;
+  --color-clay-tint: #f4e3db;
+  --color-mist: #64707a;
+  --color-mist-tint: #e2e8ed;
+  --color-moss-tint: #e3edd8;
+  --color-text: #20241f;
+  --color-text-soft: #6b7268;
+  --color-hairline: rgb(23 27 23 / 0.07);
 
-@theme inline {
-  --color-background: var(--color-background);
-  --color-foreground: var(--color-text);
-  --font-sans: var(--font-inter);
+  --radius-card: 22px;
+  --radius-tile: 16px;
+
+  --font-sans: var(--font-instrument-sans);
+  --font-serif: var(--font-source-serif);
+
+  --shadow-card: 0 1px 2px rgb(23 27 23 / 0.04), 0 16px 40px -16px rgb(23 27 23 / 0.1);
+  --shadow-float: 0 24px 60px -20px rgb(23 27 23 / 0.18);
 }
 
 body {
-  background:
-    linear-gradient(rgba(22, 32, 28, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(22, 32, 28, 0.035) 1px, transparent 1px),
-    var(--color-background);
-  background-size: 48px 48px;
+  background: var(--color-canvas);
   color: var(--color-text);
-  font-family: var(--font-inter), Arial, sans-serif;
-}
-
-.herbarium-border {
-  border: 2px solid var(--color-border);
-  box-shadow: 0 2px 8px rgba(60, 36, 21, 0.08);
+  font-family: var(--font-instrument-sans), system-ui, sans-serif;
+  font-feature-settings: "ss01";
 }
 
 .atlas-shell {
@@ -43,101 +40,99 @@ body {
   margin-inline: auto;
   padding-inline: 1rem;
 }
-
 @media (min-width: 640px) {
   .atlas-shell {
     padding-inline: 1.5rem;
   }
 }
-
 @media (min-width: 1024px) {
   .atlas-shell {
     padding-inline: 2rem;
   }
 }
 
-.atlas-kicker {
-  color: var(--color-primary);
-  font-size: 0.72rem;
-  font-weight: 760;
-  letter-spacing: 0.16em;
-  line-height: 1;
-  text-transform: uppercase;
+/* Cards: shadow + tint separation, no hard borders */
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+}
+.card-hover {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-float);
 }
 
-.atlas-panel {
-  background: color-mix(in srgb, var(--color-card) 88%, transparent);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  box-shadow: var(--shadow-soft);
+/* Glass panel — only over photography */
+.glass {
+  background: rgb(255 255 255 / 0.72);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
 }
 
-.atlas-button-primary,
-.atlas-button-secondary {
-  align-items: center;
-  border-radius: 8px;
+/* Pill chip */
+.chip {
   display: inline-flex;
-  font-size: 0.875rem;
-  font-weight: 760;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 999px;
+  padding: 0.3125rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* Buttons */
+.btn-ink,
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
   gap: 0.5rem;
+  border-radius: 999px;
   min-height: 2.75rem;
-  padding: 0.7rem 1rem;
-  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease;
+  padding: 0.75rem 1.375rem;
+  font-size: 0.875rem;
+  font-weight: 550;
+  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
 }
-
-.atlas-button-primary {
+.btn-ink {
   background: var(--color-ink);
-  border: 1px solid var(--color-ink);
-  color: #fffdf7;
+  color: #fff;
 }
-
-.atlas-button-primary:hover {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
+.btn-ink:hover {
+  background: var(--color-moss);
   transform: translateY(-1px);
 }
-
-.atlas-button-secondary {
-  background: rgba(255, 253, 247, 0.08);
-  border: 1px solid rgba(255, 253, 247, 0.36);
-  color: #fffdf7;
+.btn-ghost {
+  background: var(--color-surface);
+  color: var(--color-text);
+  box-shadow: inset 0 0 0 1px var(--color-hairline);
+}
+.btn-ghost:hover {
+  background: var(--color-tint);
 }
 
-.atlas-button-secondary:hover {
-  background: rgba(255, 253, 247, 0.16);
-  transform: translateY(-1px);
+.section-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--color-text-soft);
+  letter-spacing: 0.02em;
+}
+.sci-name {
+  font-family: var(--font-source-serif), Georgia, serif;
+  font-style: italic;
 }
 
-.specimen-grid {
-  background-image:
-    linear-gradient(rgba(255, 253, 247, 0.13) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 253, 247, 0.13) 1px, transparent 1px);
-  background-size: 32px 32px;
-}
-
-.atlas-card {
-  background: var(--color-card);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  box-shadow: 0 10px 28px rgba(17, 24, 22, 0.05);
-}
-
-.atlas-card:hover {
-  border-color: color-mix(in srgb, var(--color-primary) 48%, var(--color-border));
-  box-shadow: 0 18px 40px rgba(17, 24, 22, 0.1);
-}
-
-/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-background);
+  background: var(--color-canvas);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-border);
+  background: var(--color-sage);
   border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-secondary);
 }
