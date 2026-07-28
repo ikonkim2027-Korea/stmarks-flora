@@ -1,5 +1,6 @@
 import { Plant, PlantCategory, Habitat } from "@/data/plants";
 import { resolveMonthWeek } from "./monthWeek";
+import type { ChipTone } from "@/components/ui/Chip";
 
 // server/build-time only — client UI must use useCurrentMonthWeek()
 export function getCurrentMonthWeek(): { month: number; week: number } {
@@ -18,6 +19,19 @@ export function getAvailablePlants(
   );
 }
 
+export function getCategoryTone(category: PlantCategory): ChipTone {
+  const map: Record<PlantCategory, ChipTone> = {
+    tree: "moss",
+    shrub: "clay",
+    wildflower: "sprout",
+    fern: "moss",
+    grass: "sage",
+    vine: "mist",
+  };
+  return map[category] ?? "sage";
+}
+
+/** @deprecated v2 — use getCategoryTone/getNativeStatusTone; removed in Task 10 */
 export function getCategoryColor(category: PlantCategory): string {
   const map: Record<PlantCategory, string> = {
     tree: "bg-green-100 text-green-800 border-green-300",
@@ -30,6 +44,7 @@ export function getCategoryColor(category: PlantCategory): string {
   return map[category] ?? "bg-gray-100 text-gray-800 border-gray-300";
 }
 
+/** @deprecated v2 — use getCategoryTone/getNativeStatusTone; removed in Task 10 */
 export function getCategoryDotColor(category: PlantCategory): string {
   const map: Record<PlantCategory, string> = {
     tree: "bg-green-600",
@@ -42,6 +57,7 @@ export function getCategoryDotColor(category: PlantCategory): string {
   return map[category] ?? "bg-gray-500";
 }
 
+/** @deprecated v2 — use getCategoryTone/getNativeStatusTone; removed in Task 10 */
 export function getHabitatIcon(habitat: Habitat): string {
   const map: Record<Habitat, string> = {
     "forest-floor": "🌿",
@@ -88,6 +104,13 @@ export function formatMonthShort(month: number): string {
   return names[month - 1] ?? `M${month}`;
 }
 
+export function getNativeStatusTone(status: Plant["nativeStatus"]): ChipTone {
+  if (status === "native") return "moss";
+  if (status === "naturalized") return "mist";
+  return "clay";
+}
+
+/** @deprecated v2 — use getCategoryTone/getNativeStatusTone; removed in Task 10 */
 export function getNativeStatusColor(status: Plant["nativeStatus"]): string {
   if (status === "native") return "bg-green-100 text-green-800 border-green-300";
   if (status === "naturalized") return "bg-blue-100 text-blue-800 border-blue-300";
