@@ -6,9 +6,10 @@ import { plants, PlantCategory } from "@/data/plants";
 import PlantCard from "@/components/PlantCard";
 import SearchBar from "@/components/SearchBar";
 import FilterPanel, { FilterState } from "@/components/FilterPanel";
+import Chip from "@/components/ui/Chip";
 import { useCurrentMonthWeek } from "@/lib/useCurrentMonthWeek";
 import { filterPlants, PlantSortKey } from "@/lib/plantDiscovery";
-import { SlidersHorizontal, X, ArrowUpDown, Search } from "lucide-react";
+import { SlidersHorizontal, X, ArrowUpDown } from "lucide-react";
 import PDFExport from "@/components/PDFExport";
 
 const EMPTY_FILTERS: FilterState = {
@@ -53,13 +54,13 @@ export default function BrowseContent() {
 
   return (
     <div className="atlas-shell py-10">
-      <div className="mb-8 border-b pb-6" style={{ borderColor: "var(--color-border)" }}>
-        <p className="atlas-kicker">Specimen database</p>
-        <h1 className="mt-3 text-4xl font-black tracking-tight sm:text-5xl" style={{ color: "var(--color-text)" }}>
+      <div className="mb-8">
+        <p className="section-label">Specimen database</p>
+        <h1 className="mt-1.5 text-4xl font-semibold tracking-tight text-text sm:text-5xl">
           Plant index
         </h1>
         <div className="mt-3 flex flex-wrap items-center gap-3">
-          <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
+          <p className="text-sm text-text-soft">
             {`${plants.length} species documented within 1km of St. Mark's School`}
           </p>
           <PDFExport variant="subtle" />
@@ -70,17 +71,13 @@ export default function BrowseContent() {
         <div className="flex-1">
           <SearchBar value={query} onChange={setQuery} />
         </div>
-        <div className="flex gap-2">
-          <div className="relative">
+        <div className="flex flex-wrap gap-2">
+          <div className="relative flex items-center rounded-full bg-surface px-4 py-3 text-sm font-medium shadow-card">
+            <ArrowUpDown size={14} className="pointer-events-none text-text-soft" />
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value as PlantSortKey)}
-              className="cursor-pointer appearance-none rounded-lg border py-3 pl-8 pr-4 text-sm font-bold focus:outline-none"
-              style={{
-                background: "var(--color-card)",
-                borderColor: "var(--color-border)",
-                color: "var(--color-text)",
-              }}
+              className="cursor-pointer appearance-none bg-transparent pl-2 pr-1 text-sm font-medium text-text focus:outline-none"
             >
               <option value="relevance">Sort: Relevance</option>
               <option value="commonName">Sort: Common Name</option>
@@ -88,41 +85,16 @@ export default function BrowseContent() {
               <option value="family">Sort: Family</option>
               <option value="category">Sort: Category</option>
             </select>
-            <ArrowUpDown
-              size={14}
-              className="absolute left-2.5 top-1/2 -translate-y-1/2 pointer-events-none"
-              style={{ color: "var(--color-text-muted)" }}
-            />
           </div>
-          <button
-            onClick={() => setShowFilters((v) => !v)}
-            className={`flex items-center gap-2 rounded-lg border px-4 py-3 text-sm font-bold transition-colors ${
-              showFilters || activeFilterCount > 0
-                ? "bg-[var(--color-ink)] text-white border-[var(--color-ink)]"
-                : ""
-            }`}
-            style={
-              !showFilters && activeFilterCount === 0
-                ? {
-                    background: "var(--color-card)",
-                    borderColor: "var(--color-border)",
-                    color: "var(--color-text)",
-                  }
-                : {}
-            }
-          >
-            <SlidersHorizontal size={14} />
+          <button onClick={() => setShowFilters((v) => !v)} className="btn-ghost">
+            <SlidersHorizontal size={15} />
             Filters
-            {activeFilterCount > 0 && (
-              <span className="bg-white text-green-800 text-xs px-1.5 py-0 rounded-full font-bold">
-                {activeFilterCount}
-              </span>
-            )}
+            {activeFilterCount > 0 && <Chip tone="ink">{activeFilterCount}</Chip>}
           </button>
         </div>
       </div>
 
-      <div className="flex gap-6 items-start">
+      <div className="flex items-start gap-6">
         {showFilters && (
           <aside className="hidden w-64 flex-shrink-0 lg:block">
             <FilterPanel
@@ -134,21 +106,22 @@ export default function BrowseContent() {
         )}
 
         {showFilters && (
-          <div className="lg:hidden fixed inset-0 z-50 flex">
+          <div className="fixed inset-0 z-50 flex lg:hidden">
             <div
-              className="absolute inset-0 bg-black/40"
+              className="absolute inset-0 bg-ink/40"
               onClick={() => setShowFilters(false)}
             />
-            <div
-              className="relative ml-auto w-72 h-full overflow-y-auto p-4"
-              style={{ background: "var(--color-background)" }}
-            >
-              <div className="flex items-center justify-between mb-4">
-                <span className="font-bold" style={{ color: "var(--color-text)" }}>
+            <div className="relative ml-auto h-full w-80 overflow-y-auto bg-canvas p-4">
+              <div className="mb-4 flex items-center justify-between">
+                <span className="text-sm font-semibold tracking-tight text-text">
                   Filters
                 </span>
-                <button onClick={() => setShowFilters(false)}>
-                  <X size={20} style={{ color: "var(--color-text)" }} />
+                <button
+                  onClick={() => setShowFilters(false)}
+                  aria-label="Close filters"
+                  className="rounded-full bg-surface p-2 text-text shadow-card transition-colors hover:bg-tint"
+                >
+                  <X size={16} />
                 </button>
               </div>
               <FilterPanel
@@ -160,20 +133,13 @@ export default function BrowseContent() {
           </div>
         )}
 
-        <div className="flex-1 min-w-0">
+        <div className="min-w-0 flex-1">
           {(activeFilterCount > 0 || query) && (
-            <div className="flex flex-wrap gap-2 mb-4">
+            <div className="mb-4 flex flex-wrap items-center gap-2">
               {query && (
-                <span
-              className="inline-flex items-center gap-1.5 rounded-md border px-3 py-1 text-xs font-bold"
-                  style={{
-                    background: "var(--color-primary-pale)",
-                    borderColor: "var(--color-primary)",
-                    color: "var(--color-primary)",
-                  }}
-                >
+                <span className="chip bg-tint text-text">
                   &ldquo;{query}&rdquo;
-                  <button onClick={() => setQuery("")}>
+                  <button onClick={() => setQuery("")} aria-label="Clear search">
                     <X size={12} />
                   </button>
                 </span>
@@ -181,8 +147,7 @@ export default function BrowseContent() {
               {activeFilterCount > 0 && (
                 <button
                   onClick={resetFilters}
-                  className="inline-flex items-center gap-1 rounded-md border px-3 py-1 text-xs font-bold transition-opacity hover:opacity-70"
-                  style={{ borderColor: "var(--color-border)", color: "var(--color-text-muted)" }}
+                  className="chip bg-surface text-text-soft shadow-card transition-colors hover:bg-tint"
                 >
                   <X size={12} />
                   Clear all filters
@@ -191,12 +156,9 @@ export default function BrowseContent() {
             </div>
           )}
 
-          <p className="mb-4 text-sm" style={{ color: "var(--color-text-muted)" }}>
-            Showing{" "}
-            <span className="font-semibold" style={{ color: "var(--color-text)" }}>
-              {filtered.length}
-            </span>{" "}
-            of {plants.length} species
+          <p className="mb-4 text-sm text-text-soft">
+            Showing <span className="font-medium text-text">{filtered.length}</span> of{" "}
+            {plants.length} species
           </p>
 
           {filtered.length > 0 ? (
@@ -206,22 +168,14 @@ export default function BrowseContent() {
               ))}
             </div>
           ) : (
-            <div
-              className="atlas-panel p-12 text-center"
-              style={{ borderColor: "var(--color-border)", background: "var(--color-card)" }}
-            >
-              <Search className="mx-auto mb-4" size={34} strokeWidth={1.4} style={{ color: "var(--color-primary)" }} />
-              <p className="mb-1 text-lg font-black" style={{ color: "var(--color-text)" }}>
+            <div className="card p-10 text-center">
+              <p className="text-lg font-semibold tracking-tight text-text">
                 No plants found
               </p>
-              <p className="text-sm" style={{ color: "var(--color-text-muted)" }}>
-                Try adjusting your search or filters
+              <p className="mt-1.5 text-sm text-text-soft">
+                Try a different search term, or loosen the active filters.
               </p>
-              <button
-                onClick={resetFilters}
-                className="mt-4 text-sm font-medium hover:underline"
-                style={{ color: "var(--color-primary)" }}
-              >
+              <button onClick={resetFilters} className="btn-ghost mt-5">
                 Reset all filters
               </button>
             </div>

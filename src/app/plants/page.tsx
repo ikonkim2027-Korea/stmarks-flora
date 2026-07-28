@@ -6,20 +6,21 @@ export default function BrowsePage() {
   return (
     <Suspense
       fallback={
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="mb-6">
-            <h1 className="text-3xl font-bold" style={{ color: "var(--color-text)" }}>
-              Plant Index
+        <div className="atlas-shell py-10">
+          <div className="mb-8">
+            <p className="section-label">Specimen database</p>
+            <h1 className="mt-1.5 text-4xl font-semibold tracking-tight text-text sm:text-5xl">
+              Plant index
             </h1>
-            <p className="mt-1 text-sm" style={{ color: "var(--color-text-muted)" }}>
+            <p className="mt-3 text-sm text-text-soft">
               {plants.length} species documented within 1km of St. Mark&apos;s School
             </p>
           </div>
           <div className="animate-pulse space-y-4">
-            <div className="h-10 rounded-lg bg-gray-200 w-full" />
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div className="h-12 w-full rounded-full bg-tint" />
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {Array.from({ length: 8 }).map((_, i) => (
-                <div key={i} className="h-52 rounded-xl bg-gray-200" />
+                <div key={i} className="h-52 rounded-card bg-tint" />
               ))}
             </div>
           </div>

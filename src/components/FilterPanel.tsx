@@ -1,9 +1,10 @@
 "use client";
 
 import { PlantCategory, Habitat } from "@/data/plants";
-import { getCategoryColor, getHabitatIcon, getHabitatLabel, formatMonthShort } from "@/lib/utils";
-import { SlidersHorizontal, ChevronDown, ChevronUp } from "lucide-react";
+import { getHabitatLabel, formatMonthShort } from "@/lib/utils";
+import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
+import Chip from "@/components/ui/Chip";
 
 export interface FilterState {
   categories: PlantCategory[];
@@ -35,44 +36,42 @@ function Section({
 }) {
   const [open, setOpen] = useState(true);
   return (
-    <div className="mb-3 border-b pb-3" style={{ borderColor: "var(--color-border)" }}>
+    <div className="mb-4 last:mb-0">
       <button
         onClick={() => setOpen((v) => !v)}
-        className="mb-2 flex w-full items-center justify-between text-sm font-black transition-opacity hover:opacity-70"
-        style={{ color: "var(--color-text)" }}
+        className="section-label mb-2 flex w-full items-center justify-between transition-colors hover:text-text"
       >
         {title}
-        {open ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
+        {open ? <ChevronUp size={13} /> : <ChevronDown size={13} />}
       </button>
       {open && children}
     </div>
   );
 }
 
-function CheckItem({
+/** Pill-shaped checkbox: the native input stays for semantics and keyboard use. */
+function PillToggle({
   checked,
   label,
-  badge,
   onChange,
 }: {
   checked: boolean;
   label: string;
-  badge?: React.ReactNode;
   onChange: (checked: boolean) => void;
 }) {
   return (
-    <label className="group flex cursor-pointer items-center gap-2">
+    <label
+      className={`chip cursor-pointer transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-sage ${
+        checked ? "bg-ink text-white" : "bg-tint text-text-soft hover:bg-sage/45"
+      }`}
+    >
       <input
         type="checkbox"
         checked={checked}
         onChange={(e) => onChange(e.target.checked)}
-        className="rounded border"
-        style={{ accentColor: "var(--color-primary)" }}
+        className="sr-only"
       />
-      <span className="flex items-center gap-1.5 text-sm font-medium transition-opacity group-hover:opacity-80" style={{ color: "var(--color-text)" }}>
-        {badge}
-        {label}
-      </span>
+      {label}
     </label>
   );
 }
@@ -121,29 +120,15 @@ export default function FilterPanel({ filters, onChange, onReset }: FilterPanelP
   }
 
   return (
-    <div
-      className="atlas-panel p-4 shadow-none"
-      style={{ background: "var(--color-card)", borderColor: "var(--color-border)" }}
-    >
+    <div className="card p-5">
       {/* Header */}
-      <div className="flex items-center justify-between mb-4">
+      <div className="mb-5 flex items-center justify-between gap-2">
         <div className="flex items-center gap-2">
-          <SlidersHorizontal size={16} style={{ color: "var(--color-primary)" }} />
-          <span className="font-semibold text-sm" style={{ color: "var(--color-text)" }}>
-            Filters
-          </span>
-          {activeCount > 0 && (
-            <span className="rounded-md bg-[var(--color-ink)] px-1.5 py-0.5 text-xs font-bold text-white">
-              {activeCount}
-            </span>
-          )}
+          <span className="text-sm font-semibold tracking-tight text-text">Filters</span>
+          {activeCount > 0 && <Chip tone="ink">{activeCount}</Chip>}
         </div>
         {activeCount > 0 && (
-          <button
-            onClick={onReset}
-            className="text-xs font-bold hover:underline"
-            style={{ color: "var(--color-secondary)" }}
-          >
+          <button onClick={onReset} className="btn-ghost text-sm">
             Reset all
           </button>
         )}
@@ -151,17 +136,12 @@ export default function FilterPanel({ filters, onChange, onReset }: FilterPanelP
 
       {/* Category */}
       <Section title="Category">
-        <div className="flex flex-col gap-1.5">
+        <div className="flex flex-wrap gap-1.5">
           {ALL_CATEGORIES.map((cat) => (
-            <CheckItem
+            <PillToggle
               key={cat}
               checked={filters.categories.includes(cat)}
               label={cat.charAt(0).toUpperCase() + cat.slice(1)}
-              badge={
-                <span className={`rounded border px-1.5 py-0 text-xs ${getCategoryColor(cat)}`}>
-                  &nbsp;
-                </span>
-              }
               onChange={(checked) => toggleCategory(cat, checked)}
             />
           ))}
@@ -169,10 +149,10 @@ export default function FilterPanel({ filters, onChange, onReset }: FilterPanelP
       </Section>
 
       {/* Native Status */}
-      <Section title="Native Status">
-        <div className="flex flex-col gap-1.5">
+      <Section title="Native status">
+        <div className="flex flex-wrap gap-1.5">
           {ALL_NATIVE_STATUSES.map((status) => (
-            <CheckItem
+            <PillToggle
               key={status}
               checked={filters.nativeStatuses.includes(status)}
               label={status.charAt(0).toUpperCase() + status.slice(1)}
@@ -184,13 +164,12 @@ export default function FilterPanel({ filters, onChange, onReset }: FilterPanelP
 
       {/* Habitat */}
       <Section title="Habitat">
-        <div className="flex flex-col gap-1.5">
+        <div className="flex flex-wrap gap-1.5">
           {ALL_HABITATS.map((hab) => (
-            <CheckItem
+            <PillToggle
               key={hab}
               checked={filters.habitats.includes(hab)}
               label={getHabitatLabel(hab)}
-              badge={<span>{getHabitatIcon(hab)}</span>}
               onChange={(checked) => toggleHabitat(hab, checked)}
             />
           ))}
@@ -198,25 +177,16 @@ export default function FilterPanel({ filters, onChange, onReset }: FilterPanelP
       </Section>
 
       {/* Month */}
-      <Section title="Collectible in Month">
-        <div className="grid grid-cols-4 gap-1.5">
-          {COLLECTION_MONTHS.map((month) => {
-            const checked = filters.months.includes(month);
-            return (
-              <button
-                key={month}
-                onClick={() => toggleMonth(month, !checked)}
-                className={`text-xs py-1.5 rounded-lg border font-medium transition-colors ${
-                  checked
-                    ? "bg-[var(--color-ink)] text-white border-[var(--color-ink)]"
-                    : "border-gray-200 hover:border-green-300"
-                }`}
-                style={!checked ? { color: "var(--color-text-muted)" } : {}}
-              >
-                {formatMonthShort(month)}
-              </button>
-            );
-          })}
+      <Section title="Collectible in month">
+        <div className="flex flex-wrap gap-1.5">
+          {COLLECTION_MONTHS.map((month) => (
+            <PillToggle
+              key={month}
+              checked={filters.months.includes(month)}
+              label={formatMonthShort(month)}
+              onChange={(checked) => toggleMonth(month, checked)}
+            />
+          ))}
         </div>
       </Section>
     </div>

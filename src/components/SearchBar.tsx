@@ -42,29 +42,23 @@ export default function SearchBar({
 
   return (
     <div className="relative">
-      <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-        <Search size={16} style={{ color: "var(--color-text-muted)" }} />
+      <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-5 text-text-soft">
+        <Search size={16} />
       </div>
       <input
         type="text"
         value={localValue}
         onChange={handleChange}
         placeholder={placeholder}
-        className="w-full rounded-lg border py-3 pl-9 pr-9 text-sm font-medium transition-all focus:outline-none focus:ring-2"
-        style={{
-          background: "var(--color-card)",
-          borderColor: "var(--color-border)",
-          color: "var(--color-text)",
-          "--tw-ring-color": "var(--color-primary)",
-        } as React.CSSProperties}
+        className="w-full rounded-full bg-surface px-5 py-3 pl-12 pr-12 text-sm text-text shadow-card focus:outline-none focus:ring-2 focus:ring-sage"
       />
       {localValue && (
         <button
           onClick={handleClear}
-          className="absolute inset-y-0 right-0 flex items-center pr-3 transition-opacity hover:opacity-70"
+          className="absolute inset-y-0 right-0 flex items-center pr-5 text-text-soft transition-colors hover:text-text"
           aria-label="Clear search"
         >
-          <X size={16} style={{ color: "var(--color-text-muted)" }} />
+          <X size={16} />
         </button>
       )}
     </div>
