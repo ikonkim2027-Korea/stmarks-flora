@@ -5,12 +5,11 @@ import {
   SCHOOL_CENTER,
   SURVEY_RADIUS,
 } from "@/data/habitatLocations";
-import PlantCard from "@/components/PlantCard";
 import HabitatMapLoader from "@/components/HabitatMapLoader";
-import { getCurrentMonthWeek, getHabitatLabel } from "@/lib/utils";
-import { getDiscoverablePlantsForWeek } from "@/lib/plantDiscovery";
+import SurveyFrameCard from "@/components/SurveyFrameCard";
+import FieldReadySection from "@/components/FieldReadySection";
+import { getHabitatLabel } from "@/lib/utils";
 import {
-  ArrowUpRight,
   BookOpen,
   Calendar,
   Camera,
@@ -23,22 +22,6 @@ import {
   TreePine,
 } from "lucide-react";
 import PDFExport from "@/components/PDFExport";
-
-const MONTH_NAMES = [
-  "",
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
 
 const quickLinks = [
   {
@@ -68,13 +51,6 @@ const quickLinks = [
 ];
 
 export default function HomePage() {
-  const { month, week } = getCurrentMonthWeek();
-  const availableNow = getDiscoverablePlantsForWeek(month, week, plants);
-  const fieldReadyPlants = [
-    ...availableNow.collectible,
-    ...availableNow.observationOnly,
-  ];
-
   const habitats = Array.from(new Set(plants.flatMap((p) => p.habitat)));
   const nativeCount = plants.filter((p) => p.nativeStatus === "native").length;
   const invasiveCount = plants.filter((p) => p.nativeStatus === "invasive").length;
@@ -127,34 +103,12 @@ export default function HomePage() {
               </div>
             </div>
 
-            <aside className="atlas-panel bg-white/8 p-5 text-white shadow-none backdrop-blur-md">
-              <div className="flex items-start justify-between gap-6 border-b border-white/20 pb-4">
-                <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-white/54">
-                    Active survey frame
-                  </p>
-                  <p className="mt-2 text-2xl font-black">
-                    {MONTH_NAMES[month]} W{week}
-                  </p>
-                </div>
-                <Microscope className="text-[#d9b44a]" size={28} strokeWidth={1.6} />
-              </div>
-              <div className="mt-5 grid grid-cols-2 gap-3">
-                {[
-                  ["Species", plants.length],
-                  ["Native", nativeCount],
-                  ["Invasive", invasiveCount],
-                  ["Photo only", photoOnlyCount],
-                ].map(([label, value]) => (
-                  <div key={label} className="border-t border-white/18 pt-3">
-                    <div className="text-3xl font-black">{value}</div>
-                    <div className="mt-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white/52">
-                      {label}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </aside>
+            <SurveyFrameCard
+              speciesCount={plants.length}
+              nativeCount={nativeCount}
+              invasiveCount={invasiveCount}
+              photoOnlyCount={photoOnlyCount}
+            />
           </div>
 
           <div className="mt-12 grid gap-3 border-t border-white/18 pt-5 text-xs uppercase tracking-[0.18em] text-white/58 sm:grid-cols-3">
@@ -165,36 +119,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {fieldReadyPlants.length > 0 && (
-        <section className="atlas-shell py-14">
-          <div className="mb-7 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <p className="atlas-kicker">Current field window</p>
-              <h2 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
-                Field-ready now
-              </h2>
-              <p className="mt-2 text-sm" style={{ color: "var(--color-text-muted)" }}>
-                {availableNow.collectible.length} collectible specimens and{" "}
-                {availableNow.observationOnly.length} photograph-only observations.
-              </p>
-            </div>
-            <Link
-              href="/calendar"
-              className="inline-flex items-center gap-2 text-sm font-bold"
-              style={{ color: "var(--color-primary)" }}
-            >
-              View full calendar
-              <ArrowUpRight size={16} />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {fieldReadyPlants.slice(0, 8).map((plant) => (
-              <PlantCard key={plant.id} plant={plant} currentMonth={month} />
-            ))}
-          </div>
-        </section>
-      )}
+      <FieldReadySection />
 
       <section className="border-y" style={{ borderColor: "var(--color-border)", background: "var(--color-field)" }}>
         <div className="atlas-shell py-12">

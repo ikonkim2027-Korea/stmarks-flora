@@ -1,17 +1,16 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { plants } from "@/data/plants";
-import CollectionCalendar from "@/components/CollectionCalendar";
+import AvailabilityBadge, { CalendarWithNow } from "@/components/AvailabilityBadge";
 import {
   getCategoryColor,
   getNativeStatusColor,
   getNativeStatusLabel,
   getHabitatLabel,
   getAbundanceLabel,
-  getCurrentMonthWeek,
 } from "@/lib/utils";
 import { getCollectionPolicy } from "@/lib/plantDiscovery";
-import { ArrowLeft, AlertTriangle, Info, Leaf, MapPin, ExternalLink } from "lucide-react";
+import { ArrowLeft, AlertTriangle, Leaf, MapPin, ExternalLink } from "lucide-react";
 
 export async function generateStaticParams() {
   return plants.map((p) => ({ id: p.id }));
@@ -39,14 +38,6 @@ export default async function PlantDetailPage({
   const { id } = await params;
   const plant = plants.find((p) => p.id === id);
   if (!plant) notFound();
-
-  const { month, week } = getCurrentMonthWeek();
-  const isAvailableNow = plant.collectionWindows.some(
-    (w) => w.month === month && w.weeks.includes(week)
-  );
-  const currentWindow = plant.collectionWindows.find(
-    (w) => w.month === month && w.weeks.includes(week)
-  );
 
   const categoryColor = getCategoryColor(plant.category);
   const nativeColor = getNativeStatusColor(plant.nativeStatus);
@@ -88,19 +79,7 @@ export default async function PlantDetailPage({
               </h1>
               <p className="mt-2 text-lg italic text-white/64">{plant.scientificName}</p>
             </div>
-            {isAvailableNow && (
-              <span
-                className={`mt-1 flex-shrink-0 rounded-md px-3 py-2 text-[10px] font-black uppercase tracking-[0.14em] ${
-                  collectionPolicy.type === "photograph-only"
-                    ? "bg-sky-200 text-sky-950"
-                    : "bg-green-300 text-green-900"
-                }`}
-              >
-                {collectionPolicy.type === "photograph-only"
-                  ? "Photograph Now"
-                  : "Collectible Now"}
-              </span>
-            )}
+            <AvailabilityBadge plant={plant} variant="pill" />
           </div>
         </div>
 
@@ -213,47 +192,7 @@ export default async function PlantDetailPage({
           {/* Right: description, tips, notes */}
           <div className="lg:col-span-2 flex flex-col gap-6">
             {/* Current collection note */}
-            {isAvailableNow && currentWindow && (
-              <div
-                className="flex gap-3 rounded-lg border p-4"
-                style={
-                  collectionPolicy.type === "photograph-only"
-                    ? { background: "#e0f2fe", borderColor: "#7dd3fc" }
-                    : { background: "#e8f5e2", borderColor: "#a8d58a" }
-                }
-              >
-                <Info
-                  size={18}
-                  className={`flex-shrink-0 mt-0.5 ${
-                    collectionPolicy.type === "photograph-only"
-                      ? "text-sky-700"
-                      : "text-green-700"
-                  }`}
-                />
-                <div>
-                  <p
-                    className={`font-semibold text-sm ${
-                      collectionPolicy.type === "photograph-only"
-                        ? "text-sky-900"
-                        : "text-green-800"
-                    }`}
-                  >
-                    {collectionPolicy.type === "photograph-only"
-                      ? "Photograph This Week"
-                      : "Collectible This Week"}
-                  </p>
-                  <p
-                    className={`text-sm mt-0.5 ${
-                      collectionPolicy.type === "photograph-only"
-                        ? "text-sky-800"
-                        : "text-green-700"
-                    }`}
-                  >
-                    {currentWindow.note} {collectionPolicy.description}
-                  </p>
-                </div>
-              </div>
-            )}
+            <AvailabilityBadge plant={plant} variant="note" />
 
             {/* Conservation note */}
             {plant.conservationNote && (
@@ -344,11 +283,7 @@ export default async function PlantDetailPage({
         <h2 className="mb-4 text-xl font-black" style={{ color: "var(--color-text)" }}>
           Collection Calendar
         </h2>
-        <CollectionCalendar
-          collectionWindows={plant.collectionWindows}
-          currentMonth={month}
-          currentWeek={week}
-        />
+        <CalendarWithNow plant={plant} />
       </div>
 
       {/* Sources */}

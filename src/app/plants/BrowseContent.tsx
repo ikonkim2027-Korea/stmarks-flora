@@ -6,7 +6,7 @@ import { plants, PlantCategory } from "@/data/plants";
 import PlantCard from "@/components/PlantCard";
 import SearchBar from "@/components/SearchBar";
 import FilterPanel, { FilterState } from "@/components/FilterPanel";
-import { getCurrentMonthWeek } from "@/lib/utils";
+import { useCurrentMonthWeek } from "@/lib/useCurrentMonthWeek";
 import { filterPlants, PlantSortKey } from "@/lib/plantDiscovery";
 import { SlidersHorizontal, X, ArrowUpDown, Search } from "lucide-react";
 import PDFExport from "@/components/PDFExport";
@@ -20,7 +20,7 @@ const EMPTY_FILTERS: FilterState = {
 
 export default function BrowseContent() {
   const searchParams = useSearchParams();
-  const { month: currentMonth } = getCurrentMonthWeek();
+  const now = useCurrentMonthWeek();
 
   const [query, setQuery] = useState(searchParams.get("q") ?? "");
   const [filters, setFilters] = useState<FilterState>(() => {
@@ -202,7 +202,7 @@ export default function BrowseContent() {
           {filtered.length > 0 ? (
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {filtered.map((plant) => (
-                <PlantCard key={plant.id} plant={plant} currentMonth={currentMonth} />
+                <PlantCard key={plant.id} plant={plant} currentMonth={now?.month} />
               ))}
             </div>
           ) : (
