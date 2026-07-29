@@ -2,8 +2,15 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import type * as LeafletTypes from "leaflet";
 import type { Plant, Habitat } from "@/data/plants";
 import type { HabitatLocation } from "@/data/habitatLocations";
+import {
+  destinationPoint,
+  haversineMeters,
+  RADIUS_MAX,
+  RADIUS_MIN,
+} from "@/lib/radiusExplorer";
 import {
   getHabitatDotClass,
   getHabitatDotHex,
@@ -36,6 +43,12 @@ interface HabitatMapProps {
   selectedHabitat?: Habitat;
   height?: number;
   showLegend?: boolean;
+  /** Live survey radius in metres. Falls back to `surveyRadius`. */
+  radius?: number;
+  /** Providing this turns on the draggable edge handle. */
+  onRadiusChange?: (meters: number) => void;
+  /** Habitats currently in reach — zones outside it fade back. */
+  activeHabitats?: Set<Habitat>;
 }
 
 export default function HabitatMap({
@@ -46,10 +59,29 @@ export default function HabitatMap({
   selectedHabitat,
   height = 500,
   showLegend = true,
+  radius,
+  onRadiusChange,
+  activeHabitats,
 }: HabitatMapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
-  const leafletMapRef = useRef<unknown>(null);
+  const leafletMapRef = useRef<LeafletTypes.Map | null>(null);
+  const circleRef = useRef<LeafletTypes.Circle | null>(null);
+  const handleRef = useRef<LeafletTypes.Marker | null>(null);
+  const zoneLayersRef = useRef<Map<string, LeafletTypes.CircleMarker>>(new Map());
+  const draggingRef = useRef(false);
   const [ready, setReady] = useState(false);
+
+  const effectiveRadius = radius ?? surveyRadius;
+  const interactive = Boolean(onRadiusChange);
+
+  // Latest values the map-construction effect needs *without* depending on them:
+  // rebuilding the map on every radius tick would reload tiles mid-drag.
+  const radiusRef = useRef(effectiveRadius);
+  radiusRef.current = effectiveRadius;
+  const onRadiusChangeRef = useRef(onRadiusChange);
+  onRadiusChangeRef.current = onRadiusChange;
+  const activeHabitatsRef = useRef(activeHabitats);
+  activeHabitatsRef.current = activeHabitats;
 
   useEffect(() => {
     // Load Leaflet CSS
@@ -71,10 +103,12 @@ export default function HabitatMap({
     setReady(true);
   }, []);
 
+  // Map construction. `radius` / `activeHabitats` are deliberately NOT deps —
+  // see the sync effect below.
   useEffect(() => {
     if (!ready || !mapRef.current) return;
 
-    let map: ReturnType<typeof import("leaflet")["map"]> extends infer T ? T : never;
+    let map: LeafletTypes.Map | null = null;
     let cancelled = false;
 
     (async () => {
@@ -83,7 +117,8 @@ export default function HabitatMap({
 
       // Clean up previous map instance
       if (leafletMapRef.current) {
-        (leafletMapRef.current as { remove: () => void }).remove();
+        leafletMapRef.current.remove();
+        leafletMapRef.current = null;
       }
 
       map = L.map(mapRef.current).setView(schoolCenter, 15);
@@ -95,14 +130,24 @@ export default function HabitatMap({
         maxZoom: 19,
       }).addTo(map);
 
-      // 1km radius circle
+      // Dashed reference circle — the official 1km survey boundary, never moves.
       L.circle(schoolCenter, {
         radius: surveyRadius,
         color: "#3d5a44",
-        fillColor: "rgba(201,226,101,0.12)",
-        fillOpacity: 1,
+        fillOpacity: 0,
         weight: 2,
         dashArray: "8 4",
+        interactive: false,
+      }).addTo(map);
+
+      // The adjustable survey circle.
+      circleRef.current = L.circle(schoolCenter, {
+        radius: radiusRef.current,
+        color: "#3d5a44",
+        fillColor: "#c9e265",
+        fillOpacity: 0.1,
+        weight: 2,
+        interactive: false,
       }).addTo(map);
 
       // School marker — a moss dot in a sprout halo, no emoji
@@ -125,6 +170,7 @@ export default function HabitatMap({
         );
 
       // Habitat zones
+      zoneLayersRef.current = new Map();
       habitatLocations.forEach((loc) => {
         const plantsInHabitat = plants.filter((p) =>
           p.habitat.includes(loc.habitat)
@@ -138,7 +184,9 @@ export default function HabitatMap({
           fillColor: getHabitatDotHex(loc.habitat),
           fillOpacity: isSelected ? 0.85 : 0.65,
           weight: isSelected ? 3 : 2,
-        }).addTo(map);
+        }).addTo(map!);
+
+        zoneLayersRef.current.set(loc.name, circle);
 
         const plantLinks = plantsInHabitat
           .slice(0, 8)
@@ -169,6 +217,61 @@ export default function HabitatMap({
         );
       });
 
+      // The map is built asynchronously, so paint the current in-reach state
+      // once the layers exist rather than waiting for the next radius change.
+      if (activeHabitatsRef.current) {
+        const reach = activeHabitatsRef.current;
+        zoneLayersRef.current.forEach((layer, name) => {
+          const loc = habitatLocations.find((l) => l.name === name);
+          if (!loc) return;
+          const active = reach.has(loc.habitat);
+          layer.setStyle({
+            fillOpacity: active ? 0.55 : 0.12,
+            opacity: active ? 1 : 0.25,
+          });
+        });
+      }
+
+      // Draggable edge handle — radius only, the centre is fixed.
+      if (interactive) {
+        const handleIcon = L.divIcon({
+          className: "radius-handle",
+          iconSize: [44, 44],
+          iconAnchor: [22, 22],
+          html: '<div class="radius-handle-dot"></div>',
+        });
+
+        const handle = L.marker(
+          destinationPoint(schoolCenter, radiusRef.current, 90),
+          {
+            draggable: true,
+            icon: handleIcon,
+            keyboard: false,
+            zIndexOffset: 1000,
+          }
+        ).addTo(map);
+        handleRef.current = handle;
+
+        handle.on("dragstart", () => {
+          draggingRef.current = true;
+        });
+
+        handle.on("drag", () => {
+          const p = handle.getLatLng();
+          const meters = haversineMeters(schoolCenter, [p.lat, p.lng]);
+          const clamped = Math.max(RADIUS_MIN, Math.min(RADIUS_MAX, meters));
+          onRadiusChangeRef.current?.(Math.round(clamped));
+        });
+
+        handle.on("dragend", () => {
+          draggingRef.current = false;
+          // Snap back onto the due-east edge of the final circle.
+          handle.setLatLng(
+            destinationPoint(schoolCenter, radiusRef.current, 90)
+          );
+        });
+      }
+
       // Fix Leaflet default icon issue
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       delete (L.Icon.Default.prototype as any)._getIconUrl;
@@ -187,9 +290,43 @@ export default function HabitatMap({
       if (map) {
         map.remove();
         leafletMapRef.current = null;
+        circleRef.current = null;
+        handleRef.current = null;
+        zoneLayersRef.current = new Map();
       }
     };
-  }, [ready, habitatLocations, plants, schoolCenter, surveyRadius, selectedHabitat]);
+  }, [
+    ready,
+    habitatLocations,
+    plants,
+    schoolCenter,
+    surveyRadius,
+    selectedHabitat,
+    interactive,
+  ]);
+
+  // Cheap per-frame sync: resize the circle, move the handle, light zones up.
+  // No map teardown here, so tiles never reload while dragging.
+  useEffect(() => {
+    circleRef.current?.setRadius(effectiveRadius);
+
+    if (handleRef.current && !draggingRef.current) {
+      const p = destinationPoint(schoolCenter, effectiveRadius, 90);
+      handleRef.current.setLatLng(p);
+    }
+
+    if (activeHabitats) {
+      habitatLocations.forEach((loc) => {
+        const layer = zoneLayersRef.current.get(loc.name);
+        if (!layer) return;
+        const active = activeHabitats.has(loc.habitat);
+        layer.setStyle({
+          fillOpacity: active ? 0.55 : 0.12,
+          opacity: active ? 1 : 0.25,
+        });
+      });
+    }
+  }, [effectiveRadius, activeHabitats, habitatLocations, schoolCenter, ready]);
 
   // Deduplicate habitats for legend
   const uniqueHabitats = Array.from(

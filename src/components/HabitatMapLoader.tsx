@@ -24,6 +24,9 @@ interface HabitatMapLoaderProps {
   selectedHabitat?: Habitat;
   height?: number;
   showLegend?: boolean;
+  radius?: number;
+  onRadiusChange?: (meters: number) => void;
+  activeHabitats?: Set<Habitat>;
 }
 
 export default function HabitatMapLoader(props: HabitatMapLoaderProps) {

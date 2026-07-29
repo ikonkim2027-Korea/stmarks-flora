@@ -828,7 +828,13 @@ describe("collection window invariants", () => {
 ```
 
 - [ ] **Step 12.2:** `npm test && npm run build && npm run lint` → all green, all routes still Static/SSG.
-- [ ] **Step 12.3:** Legacy-vocabulary zero check: `grep -rn "font-black\|tracking-\[0.2\|tracking-\[0.16\|tracking-\[0.18\|tracking-\[0.22\|bg-green-100\|bg-pink-100\|bg-amber-100\|bg-sky-100\|atlas-kicker\|atlas-card\|atlas-panel\|atlas-button" src/` → empty.
+- [ ] **Step 12.3:** Legacy-vocabulary zero check — **exclude `src/data/`**, whose plant prose legitimately contains the word "herbarium" (17 matches in `specimenNotes`; those are botanical content, not CSS):
+
+```bash
+grep -rn "font-black\|tracking-\[0.2\|tracking-\[0.16\|tracking-\[0.18\|tracking-\[0.22\|bg-green-100\|bg-pink-100\|bg-amber-100\|bg-sky-100\|atlas-kicker\|atlas-card\|atlas-panel\|atlas-button\|specimen-grid\|--color-primary\|--color-border\|--color-card\|--color-field\|--color-text-muted\|--color-accent\|--color-secondary\|--color-sky" src/ --exclude-dir=data
+```
+
+→ must be empty.
 - [ ] **Step 12.4:** Browser verification via `.claude/launch.json` dev server: screenshot `/`, `/plants`, `/plants/spring-beauty`, `/calendar`, `/habitats`, `/map`, `/field-guide` at desktop (1280) and mobile (375), light scheme. Confirm: current date correct everywhere, no hydration errors in console, no horizontal scroll, PDF download still generates, and the `/map` radius explorer passes the acceptance-criterion-7 interaction checks at both breakpoints.
 - [ ] **Step 12.5:** Run the `visual-verdict` skill comparing screenshots against the three reference images for: radius language, border-vs-shadow separation, type weight discipline, palette adherence. Iterate on misses before shipping.
 
