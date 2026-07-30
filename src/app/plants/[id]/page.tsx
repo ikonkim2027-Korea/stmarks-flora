@@ -4,6 +4,7 @@ import { plants } from "@/data/plants";
 import AvailabilityBadge, { CalendarWithNow } from "@/components/AvailabilityBadge";
 import Chip from "@/components/ui/Chip";
 import PhenologyChart from "@/components/PhenologyChart";
+import FeelingLucky from "@/components/FeelingLucky";
 import {
   getNativeStatusLabel,
   getHabitatLabel,
@@ -231,6 +232,7 @@ export default async function PlantDetailPage({
         <Link href="/calendar" className="btn-ghost">
           View collection calendar
         </Link>
+        <FeelingLucky label="Another plant" />
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, Search, Sprout } from "lucide-react";
+import FeelingLucky from "@/components/FeelingLucky";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -68,8 +69,10 @@ export default function Navigation() {
             ))}
           </div>
 
-          {/* Right: search + hamburger */}
+          {/* Right: lucky + search + hamburger */}
           <div className="flex items-center gap-2">
+            <FeelingLucky variant="icon" />
+
             <button
               onClick={() => setSearchOpen((v) => !v)}
               className="rounded-full bg-surface p-2.5 text-text shadow-card transition-colors hover:bg-tint"

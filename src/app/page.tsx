@@ -23,6 +23,7 @@ import {
   TreePine,
 } from "lucide-react";
 import PDFExport from "@/components/PDFExport";
+import FeelingLucky from "@/components/FeelingLucky";
 
 const quickLinks = [
   {
@@ -103,6 +104,7 @@ export default function HomePage() {
               This season
             </Link>
             <PDFExport variant="secondary" />
+            <FeelingLucky />
           </div>
 
           <div className="mt-10 flex flex-wrap gap-x-8 gap-y-2 text-xs text-text-soft">

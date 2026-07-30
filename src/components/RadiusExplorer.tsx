@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  useEffect,
-  useMemo,
-  useRef,
-  useState,
-  useSyncExternalStore,
-} from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { plants } from "@/data/plants";
 import {
   habitatLocations,
@@ -21,23 +15,7 @@ import {
   zonesWithinRadius,
 } from "@/lib/radiusExplorer";
 import HabitatMapLoader from "@/components/HabitatMapLoader";
-
-// Hydration-safe read of prefers-reduced-motion. useSyncExternalStore (not
-// setState-in-effect) is the React-sanctioned way to read this kind of
-// external, client-only value without a server/client render mismatch:
-// getServerSnapshot returns `false` for both the server render and the
-// first client render, then the real value takes over once mounted.
-function usePrefersReducedMotion(): boolean {
-  return useSyncExternalStore(
-    (onChange) => {
-      const mql = window.matchMedia("(prefers-reduced-motion: reduce)");
-      mql.addEventListener("change", onChange);
-      return () => mql.removeEventListener("change", onChange);
-    },
-    () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
-    () => false,
-  );
-}
+import { usePrefersReducedMotion } from "@/lib/usePrefersReducedMotion";
 
 // Tween a number toward its target so counts tick up/down as the circle
 // moves. Correctness requirement: `display` must converge to `target` even
