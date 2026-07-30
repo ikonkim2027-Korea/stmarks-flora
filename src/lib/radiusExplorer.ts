@@ -61,6 +61,8 @@ export function destinationPoint(
   return [toDeg(lat2), toDeg(lng2)];
 }
 
-export const RADIUS_MIN = 100;
-export const RADIUS_MAX = 1500;
+export const RADIUS_MIN = 50;
+// The guide is branded "plants within 1km" — the adjustable circle should
+// never be draggable past the survey's own stated radius.
+export const RADIUS_MAX = 1000;
 export const RADIUS_STEP = 25;

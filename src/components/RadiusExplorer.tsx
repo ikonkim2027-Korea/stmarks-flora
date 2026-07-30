@@ -88,6 +88,9 @@ export default function RadiusExplorer() {
             <div className="text-[11px] text-text-soft">habitat zones</div>
           </div>
         </div>
+        {activeZones.length === habitatLocations.length && (
+          <p className="mt-2 text-[11px] text-text-soft">Full survey area</p>
+        )}
       </div>
 
       <div className="card mt-4 flex flex-wrap items-center gap-4 p-4">
@@ -105,7 +108,7 @@ export default function RadiusExplorer() {
           className="h-2 min-w-0 flex-1 basis-64 cursor-pointer appearance-none rounded-full bg-tint accent-moss"
         />
         <div className="flex items-center gap-2">
-          {[250, 500, 1000, 1500].map((preset) => (
+          {[100, 200, 300, 1000].map((preset) => (
             <button
               key={preset}
               onClick={() => setRadius(preset)}
@@ -113,7 +116,7 @@ export default function RadiusExplorer() {
                 radius === preset ? "bg-ink text-white" : "bg-tint text-text-soft hover:bg-sage/40"
               }`}
             >
-              {preset >= 1000 ? `${preset / 1000}km` : `${preset}m`}
+              {preset >= 1000 ? "Full 1km" : `${preset}m`}
             </button>
           ))}
         </div>
