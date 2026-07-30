@@ -3,6 +3,7 @@ import Link from "next/link";
 import { plants } from "@/data/plants";
 import AvailabilityBadge, { CalendarWithNow } from "@/components/AvailabilityBadge";
 import Chip from "@/components/ui/Chip";
+import PhenologyChart from "@/components/PhenologyChart";
 import {
   getNativeStatusLabel,
   getHabitatLabel,
@@ -190,6 +191,11 @@ export default async function PlantDetailPage({
           Collection calendar
         </h2>
         <CalendarWithNow plant={plant} />
+      </div>
+
+      {/* Guide window vs. observed flowering records */}
+      <div className="card mt-6 p-6">
+        <PhenologyChart plant={plant} />
       </div>
 
       {/* Sources */}
