@@ -1,14 +1,10 @@
 import { Metadata } from "next";
 import { plants } from "@/data/plants";
-import {
-  habitatLocations,
-  SCHOOL_CENTER,
-  SURVEY_RADIUS,
-} from "@/data/habitatLocations";
+import { habitatLocations } from "@/data/habitatLocations";
 import { getHabitatDotClass, getHabitatLabel } from "@/lib/utils";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import HabitatMapLoader from "@/components/HabitatMapLoader";
+import RadiusExplorer from "@/components/RadiusExplorer";
 
 export const metadata: Metadata = {
   title: "Interactive Map | Tiny Worlds Collectibles",
@@ -48,21 +44,15 @@ export default function MapPage() {
           Interactive habitat map
         </h1>
         <p className="mt-3 max-w-2xl text-sm text-text-soft">
-          Explore the survey area within 1km of St. Mark&apos;s School. Select a
-          habitat zone to see the plants found there.
+          Explore the survey area within 1km of St. Mark&apos;s School. Grow or
+          shrink the radius to see which habitat zones fall inside it, then
+          select a zone to see the plants found there.
         </p>
       </div>
 
       {/* Map */}
-      <div className="card mb-8 overflow-hidden p-3 sm:p-4">
-        <HabitatMapLoader
-          habitatLocations={habitatLocations}
-          plants={plants}
-          schoolCenter={SCHOOL_CENTER}
-          surveyRadius={SURVEY_RADIUS}
-          height={500}
-          showLegend={true}
-        />
+      <div className="mb-8">
+        <RadiusExplorer />
       </div>
 
       {/* Habitat breakdown */}

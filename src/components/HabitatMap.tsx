@@ -121,8 +121,16 @@ export default function HabitatMap({
         leafletMapRef.current = null;
       }
 
-      map = L.map(mapRef.current).setView(schoolCenter, 15);
+      // In explorer mode a glass readout sits in the top-left corner, so the
+      // zoom buttons move out from under it. Static maps keep the default spot.
+      map = L.map(mapRef.current, { zoomControl: !interactive }).setView(
+        schoolCenter,
+        15
+      );
       leafletMapRef.current = map;
+      if (interactive) {
+        L.control.zoom({ position: "bottomright" }).addTo(map);
+      }
 
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
         attribution:
