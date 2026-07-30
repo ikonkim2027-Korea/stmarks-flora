@@ -1,0 +1,3590 @@
+{
+  "generatedAt": "2026-07-30T05:13:03.663Z",
+  "plants": {
+    "american-beech": {
+      "id": "american-beech",
+      "scientificName": "Fagus grandifolia",
+      "fetchedAt": "2026-07-30T05:09:33.499Z",
+      "gbif": {
+        "usageKey": 2882274,
+        "taxonKey": 2882274,
+        "status": "ACCEPTED",
+        "matchedName": "Fagus grandifolia Ehrh.",
+        "acceptedName": null,
+        "family": "Fagaceae",
+        "vernacularNames": [
+          "American Beech",
+          "Gaawemizh"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        2,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        3,
+        12,
+        13,
+        12,
+        5,
+        0,
+        1
+      ],
+      "nearbyObservations": 860,
+      "inatTaxonId": 49202,
+      "wikipedia": {
+        "extract": "Fagus grandifolia, the American beech or North American beech, is a species of tree growing to 16–35 meters tall. It is one of two beech species native to North America, the other occurring in Mexico. It flourished over most of the continent prior to the last ice age, but is now limited to the east. The tree is shade tolerant and found in forests in the final stage of succession.",
+        "url": "https://en.wikipedia.org/wiki/Fagus_grandifolia",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Beech_with_Branches.jpg/330px-Beech_with_Branches.jpg"
+      }
+    },
+    "american-elm": {
+      "id": "american-elm",
+      "scientificName": "Ulmus americana",
+      "fetchedAt": "2026-07-30T05:09:55.679Z",
+      "gbif": {
+        "usageKey": 5361872,
+        "taxonKey": 5361872,
+        "status": "ACCEPTED",
+        "matchedName": "Ulmus americana L.",
+        "acceptedName": null,
+        "family": "Ulmaceae",
+        "vernacularNames": [
+          "American Elm",
+          "Water Elm",
+          "White Elm"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        6,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        20,
+        11,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "nearbyObservations": 532,
+      "inatTaxonId": 53547,
+      "wikipedia": {
+        "extract": "Ulmus americana, generally known as the American elm or, less commonly, as the white elm or water elm, is a species of elm native to eastern North America. The trees can live for several hundred years. It is a very hardy species that can withstand low winter temperatures. The American elm was once exceptionally common as a street tree, its tolerance of urban conditions making it a popular choice to line American streets in the 19th and early 20th centuries. The coming of beetles bearing Dutch elm disease devastated the American elm population, starting in the 1920s. The species still holds out in some locations, but is also no longer nearly as common as during its height.",
+        "url": "https://en.wikipedia.org/wiki/Ulmus_americana",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/American_Elm_Tree%2C_Old_South_Street%2C_Northampton%2C_MA_-_October_2019.jpg/330px-American_Elm_Tree%2C_Old_South_Street%2C_Northampton%2C_MA_-_October_2019.jpg"
+      }
+    },
+    "bee-balm": {
+      "id": "bee-balm",
+      "scientificName": "Monarda didyma",
+      "fetchedAt": "2026-07-30T05:07:59.994Z",
+      "gbif": {
+        "usageKey": 5341407,
+        "taxonKey": 5341407,
+        "status": "ACCEPTED",
+        "matchedName": "Monarda didyma L.",
+        "acceptedName": null,
+        "family": "Lamiaceae",
+        "vernacularNames": [
+          "Beebalm",
+          "Bergamot",
+          "Fragrantbalm",
+          "Mixed Monarda",
+          "Mountain-mint",
+          "Oswego Tea"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        13,
+        2,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        3,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 86,
+      "inatTaxonId": 52735,
+      "wikipedia": {
+        "extract": "Monarda didyma, the crimson beebalm, scarlet beebalm, scarlet monarda, Eau-de-Cologne plant, Oswego tea, or bergamot, is a North American aromatic herb in the family Lamiaceae.",
+        "url": "https://en.wikipedia.org/wiki/Monarda_didyma",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Monarda_didyma_inflorescence_and_upper_cauline_leaves.jpg/330px-Monarda_didyma_inflorescence_and_upper_cauline_leaves.jpg"
+      }
+    },
+    "black-cherry": {
+      "id": "black-cherry",
+      "scientificName": "Prunus serotina",
+      "fetchedAt": "2026-07-30T05:09:48.516Z",
+      "gbif": {
+        "usageKey": 3021850,
+        "taxonKey": 3021850,
+        "status": "ACCEPTED",
+        "matchedName": "Prunus serotina Ehrh.",
+        "acceptedName": null,
+        "family": "Rosaceae",
+        "vernacularNames": [
+          "Black Cherry",
+          "Black Chokecherry",
+          "Rum Cherry",
+          "Rum Cherry, Black Cherry",
+          "Wild Cherry",
+          "wild black cherry"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        2,
+        301,
+        101,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        6,
+        77,
+        80,
+        190,
+        12,
+        1,
+        1,
+        0
+      ],
+      "nearbyObservations": 1177,
+      "inatTaxonId": 54834,
+      "wikipedia": {
+        "extract": "Prunus serotina, commonly called black cherry, wild black cherry, rum cherry, or mountain black cherry, is a deciduous tree or shrub in the rose family Rosaceae. Despite its common names, it is not very closely related to commonly cultivated cherries. It is found in the Americas.",
+        "url": "https://en.wikipedia.org/wiki/Prunus_serotina",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Amerikaanse_vogelkers_Prunus_serotina_closeup.jpg/330px-Amerikaanse_vogelkers_Prunus_serotina_closeup.jpg"
+      }
+    },
+    "black-eyed-susan": {
+      "id": "black-eyed-susan",
+      "scientificName": "Rudbeckia hirta",
+      "fetchedAt": "2026-07-30T05:08:15.161Z",
+      "gbif": {
+        "usageKey": 3114225,
+        "taxonKey": 3114225,
+        "status": "ACCEPTED",
+        "matchedName": "Rudbeckia hirta L.",
+        "acceptedName": null,
+        "family": "Asteraceae",
+        "vernacularNames": [
+          "Black-Eyed-Susan",
+          "Black-eyed Susan",
+          "Blackeyed Susan",
+          "black-eyed coneflower",
+          "brown betty",
+          "common black-eyed Susan"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        78,
+        189,
+        81,
+        54,
+        27,
+        2,
+        0
+      ],
+      "fruitingByMonth": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        1,
+        3,
+        6,
+        0,
+        1
+      ],
+      "nearbyObservations": 602,
+      "inatTaxonId": 62741,
+      "wikipedia": {
+        "extract": "Rudbeckia hirta, commonly called black-eyed Susan and yellow coneflower, is a North American flowering plant in the family Asteraceae. It grows to 1 metre tall with daisy-like yellow flower heads. There are numerous cultivars. It was used medicinally by Native Americans and is the state flower of Maryland.",
+        "url": "https://en.wikipedia.org/wiki/Rudbeckia_hirta",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Rudbeckia_hirta_kz03.jpg/330px-Rudbeckia_hirta_kz03.jpg"
+      }
+    },
+    "black-tupelo": {
+      "id": "black-tupelo",
+      "scientificName": "Nyssa sylvatica",
+      "fetchedAt": "2026-07-30T05:10:00.104Z",
+      "gbif": {
+        "usageKey": 5383717,
+        "taxonKey": 5383717,
+        "status": "ACCEPTED",
+        "matchedName": "Nyssa sylvatica Marshall",
+        "acceptedName": null,
+        "family": "Nyssaceae",
+        "vernacularNames": [
+          "Black Gum",
+          "Black Tupelo",
+          "Blackgum",
+          "Sour-gum",
+          "Tupelo",
+          "black-gum"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        19,
+        21,
+        36,
+        8,
+        2,
+        1
+      ],
+      "nearbyObservations": 237,
+      "inatTaxonId": 54802,
+      "wikipedia": {
+        "extract": "Nyssa sylvatica, commonly known as tupelo, black tupelo, black gum or sour gum, is a medium-sized deciduous tree native to eastern North America from the coastal Northeastern United States and southern Ontario south to central Florida and eastern Texas, as well as Mexico.",
+        "url": "https://en.wikipedia.org/wiki/Nyssa_sylvatica",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Nyssa_sylvatica_v_sylvatica.jpg/330px-Nyssa_sylvatica_v_sylvatica.jpg"
+      }
+    },
+    "bloodroot": {
+      "id": "bloodroot",
+      "scientificName": "Sanguinaria canadensis",
+      "fetchedAt": "2026-07-30T05:06:46.996Z",
+      "gbif": {
+        "usageKey": 5334192,
+        "taxonKey": 5334192,
+        "status": "ACCEPTED",
+        "matchedName": "Sanguinaria canadensis L.",
+        "acceptedName": null,
+        "family": "Papaveraceae",
+        "vernacularNames": [
+          "Bloodroot",
+          "Bloodwort",
+          "Puccoon",
+          "Red Puccoon",
+          "Redroot",
+          "Tetterwort"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        4,
+        686,
+        63,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        131,
+        73,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 306,
+      "inatTaxonId": 51044,
+      "wikipedia": {
+        "extract": "Sanguinaria canadensis, bloodroot, is a perennial, herbaceous flowering plant native to eastern North America. It is the only species in the genus Sanguinaria, included in the poppy family Papaveraceae, and is most closely related to Eomecon of eastern Asia.",
+        "url": "https://en.wikipedia.org/wiki/Sanguinaria",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Sanguinaria_canadensis_Arkansas.jpg/330px-Sanguinaria_canadensis_Arkansas.jpg"
+      }
+    },
+    "blue-vervain": {
+      "id": "blue-vervain",
+      "scientificName": "Verbena hastata",
+      "fetchedAt": "2026-07-30T05:08:30.367Z",
+      "gbif": {
+        "usageKey": 2925527,
+        "taxonKey": 2925527,
+        "status": "ACCEPTED",
+        "matchedName": "Verbena hastata L.",
+        "acceptedName": null,
+        "family": "Verbenaceae",
+        "vernacularNames": [
+          "American Blue Vervain",
+          "American Vervain",
+          "American Vervain, Blue Vervain, Swamp Vervain",
+          "Blue Vervain",
+          "Simpler's-joy",
+          "Swamp Verbena"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        22,
+        164,
+        118,
+        34,
+        2,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        14,
+        10,
+        7,
+        6,
+        2,
+        0
+      ],
+      "nearbyObservations": 312,
+      "inatTaxonId": 60251,
+      "wikipedia": {
+        "extract": "Verbena hastata, commonly known as American vervain, blue vervain, simpler's joy, or swamp verbena, is a perennial flowering plant in the vervain family Verbenaceae. It grows throughout the continental United States and in much of southern Canada.",
+        "url": "https://en.wikipedia.org/wiki/Verbena_hastata",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Verbena_hastata.JPG/330px-Verbena_hastata.JPG"
+      }
+    },
+    "boneset": {
+      "id": "boneset",
+      "scientificName": "Eupatorium perfoliatum",
+      "fetchedAt": "2026-07-30T05:08:11.663Z",
+      "gbif": {
+        "usageKey": 5402874,
+        "taxonKey": 5402874,
+        "status": "ACCEPTED",
+        "matchedName": "Eupatorium perfoliatum L.",
+        "acceptedName": null,
+        "family": "Asteraceae",
+        "vernacularNames": [
+          "Boneset",
+          "Chapman's Thoroughwort",
+          "Common Boneset",
+          "Thoroughwax",
+          "Thoroughwort",
+          "perfoliate thoroughwort"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        10,
+        123,
+        58,
+        4,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        6,
+        3,
+        0
+      ],
+      "nearbyObservations": 236,
+      "inatTaxonId": 119045,
+      "wikipedia": {
+        "extract": "Eupatorium perfoliatum, known as common boneset or just boneset, is a North American perennial plant in the family Asteraceae. It is a common native to the Eastern United States and Canada, widespread from Nova Scotia to Florida, west as far as Texas, Nebraska, the Dakotas, and Manitoba. It is also called agueweed, feverwort, or sweating-plant. In herbal medicine, the plant is a diaphoretic, or an agent to cause sweating. It was introduced to American colonists by natives who used the plant for breaking fevers by means of heavy sweating, and commonly used to treat fever by the African-American population of the southern United States. The name \"boneset\" comes from the use of the plant to treat dengue fever, which is also called \"break-bone fever.\" It is nearly always found in low, wet areas.",
+        "url": "https://en.wikipedia.org/wiki/Eupatorium_perfoliatum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Eupatorium_perfoliatum_001.JPG/330px-Eupatorium_perfoliatum_001.JPG"
+      }
+    },
+    "butterfly-weed": {
+      "id": "butterfly-weed",
+      "scientificName": "Asclepias tuberosa",
+      "fetchedAt": "2026-07-30T05:07:49.887Z",
+      "gbif": {
+        "usageKey": 3170305,
+        "taxonKey": 3170305,
+        "status": "ACCEPTED",
+        "matchedName": "Asclepias tuberosa L.",
+        "acceptedName": null,
+        "family": "Apocynaceae",
+        "vernacularNames": [
+          "Butterfly Milkweed",
+          "Butterfly-weed",
+          "Canada root",
+          "Chieger-flower",
+          "Indian posy",
+          "Pleurisy-root"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        91,
+        245,
+        84,
+        28,
+        1,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        6,
+        21,
+        32,
+        17,
+        2,
+        0
+      ],
+      "nearbyObservations": 313,
+      "inatTaxonId": 47912,
+      "wikipedia": {
+        "extract": "Asclepias tuberosa, commonly known as butterfly weed or pleurisy root, is a species of milkweed native to eastern and southwestern North America. It is commonly known as butterfly weed because of the butterflies that are attracted to the plant by its color and its copious production of nectar.",
+        "url": "https://en.wikipedia.org/wiki/Asclepias_tuberosa",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Asclepias_tuberosa_interior.jpg/330px-Asclepias_tuberosa_interior.jpg"
+      }
+    },
+    "cardinal-flower": {
+      "id": "cardinal-flower",
+      "scientificName": "Lobelia cardinalis",
+      "fetchedAt": "2026-07-30T05:08:08.407Z",
+      "gbif": {
+        "usageKey": 5408269,
+        "taxonKey": 5408269,
+        "status": "ACCEPTED",
+        "matchedName": "Lobelia cardinalis L.",
+        "acceptedName": null,
+        "family": "Campanulaceae",
+        "vernacularNames": [
+          "Cardinal-flower",
+          "Cardinalflower",
+          "Scarlet Lobelia",
+          "cardinal flower"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        94,
+        294,
+        103,
+        3,
+        1,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        5,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 481,
+      "inatTaxonId": 48038,
+      "wikipedia": {
+        "extract": "Lobelia cardinalis, the cardinal flower, is a species of flowering plant in the bellflower family Campanulaceae native to the Americas, from southeastern Canada south through the eastern and southwestern United States, Mexico and Central America to northern Colombia.",
+        "url": "https://en.wikipedia.org/wiki/Lobelia_cardinalis",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Lobelia_cardinalis_-_Cardinal_Flower.jpg/330px-Lobelia_cardinalis_-_Cardinal_Flower.jpg"
+      }
+    },
+    "christmas-fern": {
+      "id": "christmas-fern",
+      "scientificName": "Polystichum acrostichoides",
+      "fetchedAt": "2026-07-30T05:10:31.661Z",
+      "gbif": {
+        "usageKey": 2651098,
+        "taxonKey": 2651098,
+        "status": "ACCEPTED",
+        "matchedName": "Polystichum acrostichoides (Michx.) Schott",
+        "acceptedName": null,
+        "family": "Dryopteridaceae",
+        "vernacularNames": [
+          "Christmas Fern",
+          "Dagger Fern",
+          "Holly Fern"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 344,
+      "inatTaxonId": 54412,
+      "wikipedia": {
+        "extract": "Polystichum acrostichoides, commonly denominated Christmas fern, is a perennial, evergreen fern native to eastern North America, from Nova Scotia west to Minnesota and south to Florida and eastern Texas. It is one of the most common ferns in eastern North America, being found in moist and shady habitats in woodlands, stream banks and rocky slopes. The common name derives from the evergreen fronds, which are often still green at Christmas.",
+        "url": "https://en.wikipedia.org/wiki/Polystichum_acrostichoides",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Christmas_fern.jpg/330px-Christmas_fern.jpg"
+      }
+    },
+    "cinnamon-fern": {
+      "id": "cinnamon-fern",
+      "scientificName": "Osmundastrum cinnamomeum",
+      "fetchedAt": "2026-07-30T05:06:40.353Z",
+      "gbif": {
+        "usageKey": 7319895,
+        "taxonKey": 7319895,
+        "status": "ACCEPTED",
+        "matchedName": "Osmundastrum cinnamomeum (L.) C.Presl",
+        "acceptedName": null,
+        "family": "Osmundaceae",
+        "vernacularNames": [
+          "Buckhorn",
+          "Cinnamon Fern"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 1606,
+      "inatTaxonId": 204165,
+      "wikipedia": {
+        "extract": "Osmundastrum cinnamomeum, commonly known as the cinnamon fern or the buckhorn fern, is a species of royal fern native to the Americas and Asia. It is the sole living representative of the genus Osmundastrum, which was separated from Osmunda after modern phylogenetic studies demonstrated that Osmunda was not monophyletic. In North America it occurs from southern Labrador west to Ontario, and south through the eastern United States to eastern Mexico and the West Indies; in South America it occurs west to Peru and south to Paraguay. In Asia it occurs from southeastern Siberia south through Japan, Korea, China and Taiwan to India, Myanmar, Thailand and Vietnam.",
+        "url": "https://en.wikipedia.org/wiki/Osmundastrum_cinnamomeum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Osmundastrum_cinnamomeum_May2015.jpg/330px-Osmundastrum_cinnamomeum_May2015.jpg"
+      }
+    },
+    "common-dandelion": {
+      "id": "common-dandelion",
+      "scientificName": "Taraxacum officinale",
+      "fetchedAt": "2026-07-30T05:11:02.995Z",
+      "gbif": {
+        "usageKey": 5394163,
+        "taxonKey": 5394163,
+        "status": "ACCEPTED",
+        "matchedName": "Taraxacum officinale Weber ex F.H.Wigg.",
+        "acceptedName": null,
+        "family": "Asteraceae",
+        "vernacularNames": [
+          "Blowball",
+          "Common Dandelion",
+          "Common Dandelion, Blow Ball, Faceclock",
+          "Dandelion",
+          "Eurasian dandelion",
+          "Faceclock"
+        ]
+      },
+      "floweringByMonth": [
+        4,
+        1,
+        10,
+        189,
+        94,
+        15,
+        6,
+        1,
+        11,
+        13,
+        11,
+        6
+      ],
+      "fruitingByMonth": [
+        1,
+        0,
+        2,
+        3,
+        29,
+        1,
+        3,
+        2,
+        6,
+        7,
+        0,
+        2
+      ],
+      "nearbyObservations": 1404,
+      "inatTaxonId": 47602,
+      "wikipedia": {
+        "extract": "Taraxacum officinale, the dandelion or common dandelion, is a herbaceous perennial flowering plant in the daisy family, Asteraceae. The common dandelion is well-known for its yellow flower heads that turn into round balls of many silver-tufted fruit, which disperse in the wind. These balls are sometimes called \"clocks\" or \"blowballs\".",
+        "url": "https://en.wikipedia.org/wiki/Taraxacum_officinale",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Taraxacum_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-135.jpg/330px-Taraxacum_officinale_-_K%C3%B6hler%E2%80%93s_Medizinal-Pflanzen-135.jpg"
+      }
+    },
+    "common-milkweed": {
+      "id": "common-milkweed",
+      "scientificName": "Asclepias syriaca",
+      "fetchedAt": "2026-07-30T05:07:44.662Z",
+      "gbif": {
+        "usageKey": 3170247,
+        "taxonKey": 3170247,
+        "status": "ACCEPTED",
+        "matchedName": "Asclepias syriaca L.",
+        "acceptedName": null,
+        "family": "Apocynaceae",
+        "vernacularNames": [
+          "Broadleaf Milkweed",
+          "Butterfly Flower",
+          "Common Milkweed",
+          "Kansas Milkweed",
+          "Silkweed",
+          "Silky Swallowwort"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        296,
+        185,
+        9,
+        0,
+        0,
+        3,
+        0
+      ],
+      "fruitingByMonth": [
+        14,
+        10,
+        6,
+        9,
+        1,
+        5,
+        101,
+        158,
+        173,
+        161,
+        58,
+        20
+      ],
+      "nearbyObservations": 1577,
+      "inatTaxonId": 47911,
+      "wikipedia": {
+        "extract": "Asclepias syriaca, commonly called common milkweed, butterfly flower, silkweed, silky swallow-wort, and Virginia silkweed, is a species of flowering plant. It is native to southern Canada and much of the United States east of the Rocky Mountains, excluding the drier parts of the prairies. It is in the genus Asclepias, the milkweeds. It grows in sandy soils as well as other kinds of soils in sunny areas.",
+        "url": "https://en.wikipedia.org/wiki/Asclepias_syriaca",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Asclepias_syriacus.tif/lossy-page1-330px-Asclepias_syriacus.tif.jpg"
+      }
+    },
+    "dutchmans-breeches": {
+      "id": "dutchmans-breeches",
+      "scientificName": "Dicentra cucullaria",
+      "fetchedAt": "2026-07-30T05:07:07.300Z",
+      "gbif": {
+        "usageKey": 2888548,
+        "taxonKey": 2888548,
+        "status": "ACCEPTED",
+        "matchedName": "Dicentra cucullaria (L.) Bernh.",
+        "acceptedName": null,
+        "family": "Papaveraceae",
+        "vernacularNames": [
+          "Dutchman's Breeches",
+          "Dutchman's britches",
+          "Dutchman's-breeches",
+          "Dutchman's-britches",
+          "Dutchman’s-breeches",
+          "Turkey-corn"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        142,
+        44,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 59,
+      "inatTaxonId": 51053,
+      "wikipedia": {
+        "extract": "Dicentra cucullaria, Dutchman's britches, or Dutchman's breeches, is a perennial herbaceous plant, native to rich woods of eastern North America, with a disjunct population in the Columbia Basin.",
+        "url": "https://en.wikipedia.org/wiki/Dicentra_cucullaria",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Dicentra_cucullaria_-_Dutchmans_Breeches_2.jpg/330px-Dicentra_cucullaria_-_Dutchmans_Breeches_2.jpg"
+      }
+    },
+    "eastern-hemlock": {
+      "id": "eastern-hemlock",
+      "scientificName": "Tsuga canadensis",
+      "fetchedAt": "2026-07-30T05:09:41.666Z",
+      "gbif": {
+        "usageKey": 2687182,
+        "taxonKey": 2687182,
+        "status": "ACCEPTED",
+        "matchedName": "Tsuga canadensis (L.) Carrière",
+        "acceptedName": null,
+        "family": "Pinaceae",
+        "vernacularNames": [
+          "Black Hemlock",
+          "Canada Hemlock",
+          "Canadian Hemlock",
+          "Common Hemlock",
+          "Eastern Hemlock",
+          "Eastern Hemlock-Spruce"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 1015,
+      "inatTaxonId": 48734,
+      "wikipedia": {
+        "extract": "Tsuga canadensis, also known as Canadian hemlock, eastern hemlock-spruce, or eastern hemlock, and in the French-speaking regions of Canada as pruche du Canada, is a coniferous tree native to eastern North America. It is the state tree of Pennsylvania. Eastern hemlocks are widespread throughout much of the Great Lakes region, the Appalachian Mountains, The Maritimes and the Northeastern United States. They have been introduced in the United Kingdom and mainland Europe, where they are used as ornamental trees.",
+        "url": "https://en.wikipedia.org/wiki/Tsuga_canadensis",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Tsuga_canadensis_morton.jpg/330px-Tsuga_canadensis_morton.jpg"
+      }
+    },
+    "eastern-white-pine": {
+      "id": "eastern-white-pine",
+      "scientificName": "Pinus strobus",
+      "fetchedAt": "2026-07-30T05:06:24.536Z",
+      "gbif": {
+        "usageKey": 5284982,
+        "taxonKey": 5284982,
+        "status": "ACCEPTED",
+        "matchedName": "Pinus strobus L.",
+        "acceptedName": null,
+        "family": "Pinaceae",
+        "vernacularNames": [
+          "Eastern White Pine",
+          "Eastern White Pine, Northern White Pine, White Pine, Weymouth Pine (british), Soft Pine",
+          "Northern White Pine",
+          "Soft Pine",
+          "Weymouth Pine",
+          "White Pine"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 3931,
+      "inatTaxonId": 52391,
+      "wikipedia": {
+        "extract": "Pinus strobus, commonly called the eastern white pine, northern white pine, white pine, Weymouth pine (British), and soft pine is a large pine native to eastern North America. It occurs from Newfoundland, Canada, west through the Great Lakes region to southeastern Manitoba and Minnesota, United States, and south along the Appalachian Mountains and upper Piedmont to northernmost Georgia and very rare in some of the higher elevations in northeastern Alabama. It is considered rare in Indiana.",
+        "url": "https://en.wikipedia.org/wiki/Pinus_strobus",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Pinus_strobus_trees.jpg/330px-Pinus_strobus_trees.jpg"
+      }
+    },
+    "flowering-dogwood": {
+      "id": "flowering-dogwood",
+      "scientificName": "Cornus florida",
+      "fetchedAt": "2026-07-30T05:09:52.329Z",
+      "gbif": {
+        "usageKey": 3082240,
+        "taxonKey": 3082240,
+        "status": "ACCEPTED",
+        "matchedName": "Cornus florida L.",
+        "acceptedName": null,
+        "family": "Cornaceae",
+        "vernacularNames": [
+          "American Boxwood",
+          "American-boxwood",
+          "Arrowwood",
+          "Dogwood",
+          "Eastern Flowering Dogwood",
+          "Florida Dogwood"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        11,
+        106,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        5,
+        9,
+        30,
+        17,
+        1,
+        2
+      ],
+      "nearbyObservations": 363,
+      "inatTaxonId": 54777,
+      "wikipedia": {
+        "extract": "Cornus florida, the flowering dogwood or American dogwood, is a species of flowering tree in the family Cornaceae native to eastern North America and northern Mexico. An endemic population once spanned from southernmost coastal Maine south to northern Florida and west to the Mississippi River. The tree is commonly planted as an ornamental in residential and public areas because of its showy bracts and interesting bark structure.",
+        "url": "https://en.wikipedia.org/wiki/Cornus_florida",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Cornus_florida_Arkansas.jpg/330px-Cornus_florida_Arkansas.jpg"
+      }
+    },
+    "foamflower": {
+      "id": "foamflower",
+      "scientificName": "Tiarella cordifolia",
+      "fetchedAt": "2026-07-30T05:07:23.758Z",
+      "gbif": {
+        "usageKey": 5371610,
+        "taxonKey": 5371610,
+        "status": "ACCEPTED",
+        "matchedName": "Tiarella cordifolia L.",
+        "acceptedName": null,
+        "family": "Saxifragaceae",
+        "vernacularNames": [
+          "Allegheny Foamflower",
+          "Creeping Foamflower",
+          "False Mitrewort",
+          "Foamflower",
+          "Heart-leaf Foamflower",
+          "Heartleaf Foam-flower"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 7,
+      "inatTaxonId": 1569249,
+      "wikipedia": {
+        "extract": "Tiarella cordifolia, the heart-leaved foamflower, is a species of flowering plant in the family Saxifragaceae. The specific name cordifolia means \"with heart-shaped leaves\", a characteristic shared by all taxa of Tiarella in eastern North America. It is also referred to as Allegheny foamflower, false miterwort, and coolwort.",
+        "url": "https://en.wikipedia.org/wiki/Tiarella_cordifolia",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Heartleaved_foamflower_%28Tiarella_cordifolia%29.jpg/330px-Heartleaved_foamflower_%28Tiarella_cordifolia%29.jpg"
+      }
+    },
+    "garlic-mustard": {
+      "id": "garlic-mustard",
+      "scientificName": "Alliaria petiolata",
+      "fetchedAt": "2026-07-30T05:06:35.482Z",
+      "gbif": {
+        "usageKey": 5376075,
+        "taxonKey": 5376075,
+        "status": "ACCEPTED",
+        "matchedName": "Alliaria petiolata (M.Bieb.) Cavara & Grande",
+        "acceptedName": null,
+        "family": "Brassicaceae",
+        "vernacularNames": [
+          "Garlic Mustard",
+          "Hedge mustard",
+          "Hedge-garlic",
+          "Jack-by-the-hedge",
+          "hedge garlic"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        214,
+        419,
+        22,
+        3,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        1,
+        0,
+        4,
+        53,
+        27,
+        12,
+        3,
+        1,
+        1,
+        0,
+        2
+      ],
+      "nearbyObservations": 2504,
+      "inatTaxonId": 56061,
+      "wikipedia": {
+        "extract": "Alliaria petiolata, or garlic mustard, is a biennial flowering plant in the mustard family (Brassicaceae). It is native to Europe, western and central Asia, north-western Africa, Morocco, Iberia and the British Isles, north to northern Scandinavia, and east to northern Pakistan and Xinjiang in western China. It has now become a tenacious invasive plant across the northern U.S., in particular because of its earlier springtime emergence than many native species, often in the forest understory.",
+        "url": "https://en.wikipedia.org/wiki/Alliaria_petiolata",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Alliaria_petiolata_marais-belloy-sur-somme_80_26042007_3.jpg/330px-Alliaria_petiolata_marais-belloy-sur-somme_80_26042007_3.jpg"
+      }
+    },
+    "hay-scented-fern": {
+      "id": "hay-scented-fern",
+      "scientificName": "Dennstaedtia punctilobula",
+      "fetchedAt": "2026-07-30T05:12:58.743Z",
+      "gbif": {
+        "usageKey": 2650777,
+        "taxonKey": 3605467,
+        "status": "SYNONYM",
+        "matchedName": "Dennstaedtia punctilobula (Michx.) T.Moore",
+        "acceptedName": "Sitobolium punctilobum",
+        "family": "Dennstaedtiaceae",
+        "vernacularNames": [
+          "Eastern Hayscented Fern",
+          "Hay-scent Fern",
+          "Hay-scented Fern",
+          "Eastern Hay-scented Fern",
+          "Boulder Fern"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 790,
+      "inatTaxonId": 63115,
+      "wikipedia": {
+        "extract": "Sitobolium punctilobulum, the eastern hayscented fern or hay-scented fern, is a species of fern native to eastern North America, from Newfoundland west to Wisconsin and Arkansas, and south in the Appalachian Mountains to northern Alabama; it is most abundant in the east of its range, with only scattered populations in the west.",
+        "url": "https://en.wikipedia.org/wiki/Sitobolium_punctilobulum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Dennstaedtia_punctilobula1.jpg/330px-Dennstaedtia_punctilobula1.jpg"
+      }
+    },
+    "hepatica": {
+      "id": "hepatica",
+      "scientificName": "Hepatica nobilis var. obtusa",
+      "fetchedAt": "2026-07-30T05:06:51.794Z",
+      "gbif": {
+        "usageKey": 5616031,
+        "taxonKey": 6374864,
+        "status": "SYNONYM",
+        "matchedName": "Hepatica nobilis var. obtusa (Pursh) Steyerm.",
+        "acceptedName": "Hepatica americana",
+        "family": "Ranunculaceae",
+        "vernacularNames": [
+          "American hepatica",
+          "American liverleaf",
+          "round-lobe hepatica",
+          "round-lobe liverleaf",
+          "round-lobed hepatica",
+          "Round-leaved Hepatica"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        12,
+        98,
+        5,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 27,
+      "inatTaxonId": 741014,
+      "wikipedia": {
+        "extract": "Hepatica americana, the round-lobed hepatica, is a herbaceous flowering plant in the buttercup family Ranunculaceae. It is native to the eastern United States and Canada.",
+        "url": "https://en.wikipedia.org/wiki/Hepatica_americana",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Anemone_americana_5445458.jpg/330px-Anemone_americana_5445458.jpg"
+      }
+    },
+    "highbush-blueberry": {
+      "id": "highbush-blueberry",
+      "scientificName": "Vaccinium corymbosum",
+      "fetchedAt": "2026-07-30T05:10:05.528Z",
+      "gbif": {
+        "usageKey": 2882849,
+        "taxonKey": 2882849,
+        "status": "ACCEPTED",
+        "matchedName": "Vaccinium corymbosum L.",
+        "acceptedName": null,
+        "family": "Ericaceae",
+        "vernacularNames": [
+          "American Blueberry",
+          "Blueberry",
+          "Highbush Blueberry",
+          "New Jersey Blueberry",
+          "Smallflower Blueberry",
+          "Smooth Highbush Blueberry"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        45,
+        110,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        1,
+        0,
+        0,
+        3,
+        56,
+        64,
+        40,
+        2,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 859,
+      "inatTaxonId": 52740,
+      "wikipedia": {
+        "extract": "Vaccinium corymbosum is a North American species of blueberry with several common names, including highbush blueberry and rabbiteye blueberry.",
+        "url": "https://en.wikipedia.org/wiki/Vaccinium_corymbosum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Vaccinium_corymbosum%2801%29.jpg/330px-Vaccinium_corymbosum%2801%29.jpg"
+      }
+    },
+    "jack-in-the-pulpit": {
+      "id": "jack-in-the-pulpit",
+      "scientificName": "Arisaema triphyllum",
+      "fetchedAt": "2026-07-30T05:07:12.041Z",
+      "gbif": {
+        "usageKey": 2867316,
+        "taxonKey": 2867316,
+        "status": "ACCEPTED",
+        "matchedName": "Arisaema triphyllum (L.) Schott",
+        "acceptedName": null,
+        "family": "Araceae",
+        "vernacularNames": [
+          "Indian-turnip",
+          "Jack In The Pulpit",
+          "Jack-in-the-pulpit",
+          "Indian Jack-in-the-pulpit"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        62,
+        500,
+        73,
+        1,
+        0,
+        1,
+        3,
+        1,
+        0
+      ],
+      "fruitingByMonth": [
+        4,
+        0,
+        1,
+        0,
+        2,
+        18,
+        48,
+        77,
+        146,
+        33,
+        7,
+        2
+      ],
+      "nearbyObservations": 1167,
+      "inatTaxonId": 1441600,
+      "wikipedia": {
+        "extract": "Arisaema triphyllum, the Jack-in-the-pulpit, is a species of flowering plant in the arum family Araceae. It is a member of the Arisaema triphyllum complex, a group of four or five closely related taxa in eastern North America. The specific name triphyllum means \"three-leaved\", a characteristic feature of the species, which is also referred to as Indian turnip, bog onion, and brown dragon.",
+        "url": "https://en.wikipedia.org/wiki/Arisaema_triphyllum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Arisaema_triphyllum_Bob_Hunter_Memorial_Park.jpg/330px-Arisaema_triphyllum_Bob_Hunter_Memorial_Park.jpg"
+      }
+    },
+    "japanese-barberry": {
+      "id": "japanese-barberry",
+      "scientificName": "Berberis thunbergii",
+      "fetchedAt": "2026-07-30T05:06:43.510Z",
+      "gbif": {
+        "usageKey": 3033896,
+        "taxonKey": 3033896,
+        "status": "ACCEPTED",
+        "matchedName": "Berberis thunbergii DC.",
+        "acceptedName": null,
+        "family": "Berberidaceae",
+        "vernacularNames": [
+          "Japanese Barberry",
+          "Japanese Berberis",
+          "Thunberg's Barberry"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        23,
+        82,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        25,
+        13,
+        37,
+        22,
+        5,
+        6,
+        9,
+        11,
+        62,
+        148,
+        60,
+        50
+      ],
+      "nearbyObservations": 1001,
+      "inatTaxonId": 58727,
+      "wikipedia": {
+        "extract": "Berberis thunbergii, the Japanese barberry, Thunberg's barberry, or red barberry, is a species of flowering plant in the barberry family Berberidaceae, native to Japan and eastern Asia, though widely naturalized in China and North America, where it has become a problematic invasive in many places, leading to declines in species diversity, increased tick habitat, and soil changes. Growing to 1 m tall by 2.5 m broad, it is a small deciduous shrub with green leaves turning red in the autumn, brilliant red fruits in autumn and pale yellow flowers in spring.",
+        "url": "https://en.wikipedia.org/wiki/Berberis_thunbergii",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Berberis_thunb_frt.jpg/330px-Berberis_thunb_frt.jpg"
+      }
+    },
+    "joe-pye-weed": {
+      "id": "joe-pye-weed",
+      "scientificName": "Eutrochium purpureum",
+      "fetchedAt": "2026-07-30T05:08:04.699Z",
+      "gbif": {
+        "usageKey": 3138192,
+        "taxonKey": 3138192,
+        "status": "ACCEPTED",
+        "matchedName": "Eutrochium purpureum (L.) E.E.Lamont",
+        "acceptedName": null,
+        "family": "Asteraceae",
+        "vernacularNames": [
+          "Gravelroot",
+          "Green-stem Joe-pyeweed",
+          "Joe-pye",
+          "Joe-pyeweed",
+          "Marsh-milkweed",
+          "Queen-of-the-meadow"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 12,
+      "inatTaxonId": 85378,
+      "wikipedia": {
+        "extract": "Eutrochium purpureum, commonly known as sweet Joe Pye weed, sweet-scented Joe Pye weed or purple Joe Pye weed, is an herbaceous perennial plant in the family Asteraceae. It is native to eastern and central North America, from Ontario east to New Hampshire and south as far as Florida, Louisiana, and Oklahoma.",
+        "url": "https://en.wikipedia.org/wiki/Eutrochium_purpureum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Eutrochium_purpureum.jpg/330px-Eutrochium_purpureum.jpg"
+      }
+    },
+    "little-bluestem": {
+      "id": "little-bluestem",
+      "scientificName": "Schizachyrium scoparium",
+      "fetchedAt": "2026-07-30T05:10:59.488Z",
+      "gbif": {
+        "usageKey": 2704432,
+        "taxonKey": 2704432,
+        "status": "ACCEPTED",
+        "matchedName": "Schizachyrium scoparium (Michx.) Nash",
+        "acceptedName": null,
+        "family": "Poaceae",
+        "vernacularNames": [
+          "Little Bluestem",
+          "Prairie Beard Grass",
+          "beard grass",
+          "broom beardgrass",
+          "broom bluestem",
+          "small bluestem"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        2,
+        3,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        7,
+        13,
+        8,
+        3
+      ],
+      "nearbyObservations": 169,
+      "inatTaxonId": 122603,
+      "wikipedia": {
+        "extract": "Schizachyrium scoparium, commonly known as little bluestem or beard grass, is a species of North American prairie grass native to most of the contiguous United States as well as a small area north of the Canada–US border and northern Mexico. It is most common in the Midwestern prairies and is one of the most abundant native plants in Texas grasslands.",
+        "url": "https://en.wikipedia.org/wiki/Schizachyrium_scoparium",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Andropogon_scoparius.jpg/330px-Andropogon_scoparius.jpg"
+      }
+    },
+    "marsh-marigold": {
+      "id": "marsh-marigold",
+      "scientificName": "Caltha palustris",
+      "fetchedAt": "2026-07-30T05:07:19.733Z",
+      "gbif": {
+        "usageKey": 5371685,
+        "taxonKey": 5371685,
+        "status": "ACCEPTED",
+        "matchedName": "Caltha palustris L.",
+        "acceptedName": null,
+        "family": "Ranunculaceae",
+        "vernacularNames": [
+          "Cow's Lips",
+          "Cowflock",
+          "Cowslip",
+          "Giant Kingcup",
+          "Kaljužnica",
+          "Kingcup"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        5,
+        275,
+        244,
+        2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        7,
+        59,
+        30,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 301,
+      "inatTaxonId": 56224,
+      "wikipedia": {
+        "extract": "Caltha palustris, known as marsh-marigold and kingcup, is a small to medium sized perennial herbaceous plant of the buttercup family, native to marshes, fens, ditches and wet woodland in temperate regions of the Northern Hemisphere. It flowers between April and August, dependent on altitude and latitude, but occasional flowers may occur at other times.",
+        "url": "https://en.wikipedia.org/wiki/Caltha_palustris",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Caltha_palustris_plant.JPG/330px-Caltha_palustris_plant.JPG"
+      }
+    },
+    "mountain-laurel": {
+      "id": "mountain-laurel",
+      "scientificName": "Kalmia latifolia",
+      "fetchedAt": "2026-07-30T05:07:30.741Z",
+      "gbif": {
+        "usageKey": 2883005,
+        "taxonKey": 2883005,
+        "status": "ACCEPTED",
+        "matchedName": "Kalmia latifolia L.",
+        "acceptedName": null,
+        "family": "Ericaceae",
+        "vernacularNames": [
+          "Calico Bush",
+          "Calico-bush",
+          "Clamoun",
+          "Ivybush",
+          "Lambkill",
+          "Mountain Laurel"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        18,
+        403,
+        14,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        6,
+        3,
+        4,
+        8,
+        0,
+        5,
+        35,
+        24,
+        25,
+        29,
+        10,
+        5
+      ],
+      "nearbyObservations": 505,
+      "inatTaxonId": 49397,
+      "wikipedia": {
+        "extract": "Kalmia latifolia, the mountain laurel, calico-bush, or spoonwood, is a flowering plant and one of the 10 species in the genus of Kalmia belonging to the heath(er) family Ericaceae. It is native to the eastern United States. Its range stretches from southern Maine to northern Florida, and west to Indiana and Louisiana. Mountain laurel is the state flower of Connecticut and Pennsylvania. It is the namesake of Laurel County in Kentucky, the city of Laurel, Mississippi, and the Laurel Highlands in southwestern Pennsylvania.",
+        "url": "https://en.wikipedia.org/wiki/Kalmia_latifolia",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Kalmia_Latifolia.jpg/330px-Kalmia_Latifolia.jpg"
+      }
+    },
+    "multiflora-rose": {
+      "id": "multiflora-rose",
+      "scientificName": "Rosa multiflora",
+      "fetchedAt": "2026-07-30T05:07:54.766Z",
+      "gbif": {
+        "usageKey": 3003244,
+        "taxonKey": 3003244,
+        "status": "ACCEPTED",
+        "matchedName": "Rosa multiflora Thunb.",
+        "acceptedName": null,
+        "family": "Rosaceae",
+        "vernacularNames": [
+          "Baby Rose",
+          "Japanese Rose",
+          "Many-Flowered Rose",
+          "Many-flower Rose",
+          "Multiflora Rose",
+          "Seven-sisters Rose"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        36,
+        359,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "fruitingByMonth": [
+        31,
+        14,
+        17,
+        27,
+        4,
+        6,
+        20,
+        35,
+        83,
+        134,
+        70,
+        35
+      ],
+      "nearbyObservations": 1721,
+      "inatTaxonId": 78882,
+      "wikipedia": {
+        "extract": "Rosa multiflora is a species of rose known commonly as multiflora rose, baby rose, Japanese rose, many-flowered rose, seven-sisters rose, Eijitsu rose and rambler rose. It is native to eastern Asia, in China, Japan, and Korea. It should not be confused with Rosa rugosa, which is also known as \"Japanese rose\", or with polyantha roses which are garden cultivars derived from hybrids of R. multiflora. It was introduced to North America, where it is an invasive species, forming extensive, impenetrable stands within forest understories, thickets, borders, and lowlands. It can be identified by its characteristic fringed stipules, which form pairs at the bases of leaf stalks bearing 3–89 leaves.",
+        "url": "https://en.wikipedia.org/wiki/Rosa_multiflora",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/2020-05-20_08_05_42_Multiflora_Rose_flowers_along_a_walking_path_within_Horsepen_Run_Stream_Valley_Park_in_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg/330px-2020-05-20_08_05_42_Multiflora_Rose_flowers_along_a_walking_path_within_Horsepen_Run_Stream_Valley_Park_in_Oak_Hill%2C_Fairfax_County%2C_Virginia.jpg"
+      }
+    },
+    "new-england-aster": {
+      "id": "new-england-aster",
+      "scientificName": "Symphyotrichum novae-angliae",
+      "fetchedAt": "2026-07-30T05:08:51.334Z",
+      "gbif": {
+        "usageKey": 3151618,
+        "taxonKey": 3151618,
+        "status": "ACCEPTED",
+        "matchedName": "Symphyotrichum novae-angliae (L.) G.L.Nesom",
+        "acceptedName": null,
+        "family": "Asteraceae",
+        "vernacularNames": [
+          "Hairy Michaelmas Daisy",
+          "Hairy Michaelmas-daisy",
+          "Michaelmas Daisy",
+          "New England Aster",
+          "New England Daisy",
+          "New England Or Michaelmas Daisy"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        9,
+        260,
+        142,
+        8,
+        0
+      ],
+      "fruitingByMonth": [
+        5,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        17,
+        4,
+        4
+      ],
+      "nearbyObservations": 383,
+      "inatTaxonId": 117443,
+      "wikipedia": {
+        "extract": "Symphyotrichum novae-angliae is a species of flowering plant in the aster family (Asteraceae) native to central and eastern North America. Commonly known as New England aster, hairy Michaelmas-daisy, or Michaelmas daisy, it is a perennial, herbaceous plant usually between 30 and 120 centimeters tall and 60 to 90 cm wide.",
+        "url": "https://en.wikipedia.org/wiki/Symphyotrichum_novae-angliae",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Symphyotrichum_novae-angliae3.jpg/330px-Symphyotrichum_novae-angliae3.jpg"
+      }
+    },
+    "northern-arrowwood": {
+      "id": "northern-arrowwood",
+      "scientificName": "Viburnum dentatum",
+      "fetchedAt": "2026-07-30T05:10:10.674Z",
+      "gbif": {
+        "usageKey": 2888594,
+        "taxonKey": 2888594,
+        "status": "ACCEPTED",
+        "matchedName": "Viburnum dentatum L.",
+        "acceptedName": null,
+        "family": "Viburnaceae",
+        "vernacularNames": [
+          "Arrow-wood",
+          "Arrow-wood Viburnum",
+          "Arrowwood",
+          "Southern Arrow-wood",
+          "Southern Arrowwood"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        36,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        20,
+        57,
+        19,
+        7,
+        0,
+        0
+      ],
+      "nearbyObservations": 317,
+      "inatTaxonId": 82247,
+      "wikipedia": {
+        "extract": "Viburnum dentatum, southern arrowwood or arrowwood viburnum or roughish arrowwood, is a small shrub, native to the eastern United States and Canada from Maine south to northern Florida and eastern Texas.",
+        "url": "https://en.wikipedia.org/wiki/Viburnum_dentatum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Viburnum_dentatum_flowers.jpg/330px-Viburnum_dentatum_flowers.jpg"
+      }
+    },
+    "ostrich-fern": {
+      "id": "ostrich-fern",
+      "scientificName": "Matteuccia struthiopteris",
+      "fetchedAt": "2026-07-30T05:10:35.141Z",
+      "gbif": {
+        "usageKey": 2650999,
+        "taxonKey": 2650999,
+        "status": "ACCEPTED",
+        "matchedName": "Matteuccia struthiopteris (L.) Tod.",
+        "acceptedName": null,
+        "family": "Onocleaceae",
+        "vernacularNames": [
+          "Fiddle Fern",
+          "Ostrich Fern",
+          "Shuttlecock Fern"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 131,
+      "inatTaxonId": 82574,
+      "wikipedia": {
+        "extract": "Matteuccia is a genus of ferns with one species: Matteuccia struthiopteris. The species epithet struthiopteris comes from Ancient Greek words στρουθίων (strouthíōn) \"ostrich\" and πτερίς (pterís) \"fern\".",
+        "url": "https://en.wikipedia.org/wiki/Matteuccia",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Matteuccia_struthiopteris_fiddleheads.jpg/330px-Matteuccia_struthiopteris_fiddleheads.jpg"
+      }
+    },
+    "paper-birch": {
+      "id": "paper-birch",
+      "scientificName": "Betula papyrifera",
+      "fetchedAt": "2026-07-30T05:09:38.292Z",
+      "gbif": {
+        "usageKey": 5332120,
+        "taxonKey": 5332120,
+        "status": "ACCEPTED",
+        "matchedName": "Betula papyrifera Marshall",
+        "acceptedName": null,
+        "family": "Betulaceae",
+        "vernacularNames": [
+          "American white birch",
+          "Canoe Birch",
+          "Paper Birch",
+          "Paper Birch, Canoe Birch, Silver Birch, White Birch",
+          "Paper White White Birch",
+          "Silver Birch"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        7,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        2,
+        1,
+        0,
+        1,
+        4,
+        3,
+        4,
+        5,
+        4,
+        3,
+        1,
+        2
+      ],
+      "nearbyObservations": 437,
+      "inatTaxonId": 49883,
+      "wikipedia": {
+        "extract": "Betula papyrifera is a short-lived species of birch native to northern North America. Paper birch is named after the tree's thin white bark, which often peels in paper-like layers from the trunk. Paper birch is often one of the first species to colonize a burned area within the northern latitudes, and is an important species for moose browsing. Primary commercial uses for paper birch wood are as boltwood and sawlogs, while secondary products include firewood and pulpwood. It is the provincial tree of Saskatchewan and the state tree of New Hampshire.",
+        "url": "https://en.wikipedia.org/wiki/Betula_papyrifera",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/13._The_Fall_of_Acadia_%284039110079%29.jpg/330px-13._The_Fall_of_Acadia_%284039110079%29.jpg"
+      }
+    },
+    "pink-ladys-slipper": {
+      "id": "pink-ladys-slipper",
+      "scientificName": "Cypripedium acaule",
+      "fetchedAt": "2026-07-30T05:07:27.333Z",
+      "gbif": {
+        "usageKey": 2820380,
+        "taxonKey": 2820380,
+        "status": "ACCEPTED",
+        "matchedName": "Cypripedium acaule Aiton",
+        "acceptedName": null,
+        "family": "Orchidaceae",
+        "vernacularNames": [
+          "Lady's-Slipper Orchid",
+          "Mocassin Flower",
+          "Mocassin-flower",
+          "Moccasin Flower",
+          "Pink Lady's-slipper",
+          "Pink Lady's-slipper Orchid"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        2,
+        1,
+        2100,
+        661,
+        3,
+        3,
+        3,
+        3,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        2,
+        1,
+        1,
+        2,
+        5,
+        23,
+        32,
+        20,
+        20,
+        10,
+        0,
+        1
+      ],
+      "nearbyObservations": 1980,
+      "inatTaxonId": 47588,
+      "wikipedia": {
+        "extract": "Cypripedium acaule, the pink lady's slipper or moccasin flower, is a species of flowering plant in the orchid family Orchidaceae native to eastern North America. It is currently the provincial flower of Prince Edward Island, Canada, and the state wildflower of New Hampshire, United States.",
+        "url": "https://en.wikipedia.org/wiki/Cypripedium_acaule",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Cypripedium_acaule_-_Sasata_edit1.jpg/330px-Cypripedium_acaule_-_Sasata_edit1.jpg"
+      }
+    },
+    "pokeweed": {
+      "id": "pokeweed",
+      "scientificName": "Phytolacca americana",
+      "fetchedAt": "2026-07-30T05:08:37.756Z",
+      "gbif": {
+        "usageKey": 3084015,
+        "taxonKey": 3084015,
+        "status": "ACCEPTED",
+        "matchedName": "Phytolacca americana L.",
+        "acceptedName": null,
+        "family": "Phytolaccaceae",
+        "vernacularNames": [
+          "American Nightshade",
+          "American Pokeweed",
+          "American spinach",
+          "Cancer Jalap",
+          "Cancer Root",
+          "Chongras"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        33,
+        142,
+        91,
+        53,
+        27,
+        1,
+        0
+      ],
+      "fruitingByMonth": [
+        1,
+        2,
+        0,
+        0,
+        0,
+        7,
+        87,
+        235,
+        464,
+        296,
+        30,
+        6
+      ],
+      "nearbyObservations": 1932,
+      "inatTaxonId": 48599,
+      "wikipedia": {
+        "extract": "Phytolacca americana, also known as American pokeweed, pokeweed, poke sallet, pokeberry, dragonberries, pigeonberry weed, and inkberry, is a poisonous, herbaceous perennial plant in the pokeweed family Phytolaccaceae. This pokeweed grows 1 to 3 metres. It has simple leaves on green to red or purplish stems and a large white taproot. The flowers are green to white, followed by berries which ripen through red to purple to almost black which are a food source for songbirds such as gray catbird, northern mockingbird, northern cardinal, and brown thrasher, as well as other birds and some small non-avian animals.",
+        "url": "https://en.wikipedia.org/wiki/Phytolacca_americana",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Pokeweed_bush_in_Northumberland_County%2C_Pennsylvania.JPG/330px-Pokeweed_bush_in_Northumberland_County%2C_Pennsylvania.JPG"
+      }
+    },
+    "queen-annes-lace": {
+      "id": "queen-annes-lace",
+      "scientificName": "Daucus carota",
+      "fetchedAt": "2026-07-30T05:08:20.222Z",
+      "gbif": {
+        "usageKey": 3034742,
+        "taxonKey": 3034742,
+        "status": "ACCEPTED",
+        "matchedName": "Daucus carota L.",
+        "acceptedName": null,
+        "family": "Apiaceae",
+        "vernacularNames": [
+          "Carrot",
+          "Queen Anne's Lace"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        23,
+        245,
+        156,
+        60,
+        16,
+        7,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        2,
+        4,
+        0,
+        1,
+        9,
+        24,
+        29,
+        13,
+        5,
+        1
+      ],
+      "nearbyObservations": 1006,
+      "inatTaxonId": 76610,
+      "wikipedia": {
+        "extract": "Daucus carota, whose common names include wild carrot, European wild carrot, bird's nest, bishop's lace, carrot flower, and Queen Anne's lace, is a flowering plant in the family Apiaceae. It is native to temperate regions of the Old World with a number of regional subspecies, and is naturalised widely elsewhere. Carrots cultivated as a food crop are cultivars of the domesticated subspecies Daucus carota subsp. sativus.",
+        "url": "https://en.wikipedia.org/wiki/Daucus_carota",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Daucus_carota_May_2008-1_edit.jpg/330px-Daucus_carota_May_2008-1_edit.jpg"
+      }
+    },
+    "red-maple": {
+      "id": "red-maple",
+      "scientificName": "Acer rubrum",
+      "fetchedAt": "2026-07-30T05:06:19.388Z",
+      "gbif": {
+        "usageKey": 3189883,
+        "taxonKey": 3189883,
+        "status": "ACCEPTED",
+        "matchedName": "Acer rubrum L.",
+        "acceptedName": null,
+        "family": "Sapindaceae",
+        "vernacularNames": [
+          "Maple",
+          "Red Maple",
+          "Red Maple, Swamp Maple, Water Maple, Soft Maple",
+          "scarlet maple",
+          "soft maple",
+          "swamp maple"
+        ]
+      },
+      "floweringByMonth": [
+        1,
+        0,
+        57,
+        298,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        1,
+        152,
+        143,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0,
+        1
+      ],
+      "nearbyObservations": 2091,
+      "inatTaxonId": 48098,
+      "wikipedia": {
+        "extract": "Acer rubrum, the red maple, also known as swamp maple, water maple, or soft maple, is one of the most common and widespread deciduous trees of eastern and central North America. The U.S. Forest Service recognizes it as the most abundant native tree in eastern North America. The red maple ranges from southeastern Manitoba around the Lake of the Woods on the border with Ontario and Minnesota, east to Newfoundland, south to Florida, and southwest to East Texas. Many of its features, especially its leaves, are quite variable in form. At maturity, it often attains a height around 30 m (100 ft). Its flowers, petioles, twigs, and seeds are all red to varying degrees. Among these features, however, it is best known for its brilliant deep scarlet foliage in autumn.",
+        "url": "https://en.wikipedia.org/wiki/Acer_rubrum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Acer_rubrum_15-p.bot-a.rubrum-114.jpg/330px-Acer_rubrum_15-p.bot-a.rubrum-114.jpg"
+      }
+    },
+    "red-oak": {
+      "id": "red-oak",
+      "scientificName": "Quercus rubra",
+      "fetchedAt": "2026-07-30T05:09:28.132Z",
+      "gbif": {
+        "usageKey": 2880539,
+        "taxonKey": 2880539,
+        "status": "ACCEPTED",
+        "matchedName": "Quercus rubra L.",
+        "acceptedName": null,
+        "family": "Fagaceae",
+        "vernacularNames": [
+          "Northern Red Oak",
+          "Red Oak",
+          "champion oak"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        1,
+        5,
+        12,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        1,
+        1,
+        4,
+        4,
+        20,
+        16,
+        10,
+        27,
+        17,
+        11,
+        1,
+        0
+      ],
+      "nearbyObservations": 1044,
+      "inatTaxonId": 49005,
+      "wikipedia": {
+        "extract": "Quercus rubra, the northern red oak or common red oak, is an oak tree in the red oak group. It is a native of North America, in the eastern and central United States and southeast and south-central Canada. It has been introduced to small areas in Western Europe, where it can frequently be seen cultivated in gardens and parks. It prefers good soil that is slightly acidic. Often simply called red oak, northern red oak is so named to distinguish it from southern red oak (Q. falcata), also known as the Spanish oak.",
+        "url": "https://en.wikipedia.org/wiki/Quercus_rubra",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Quercus_rubra_%40_Tortworth_Court.jpg/330px-Quercus_rubra_%40_Tortworth_Court.jpg"
+      }
+    },
+    "red-trillium": {
+      "id": "red-trillium",
+      "scientificName": "Trillium erectum",
+      "fetchedAt": "2026-07-30T05:07:02.393Z",
+      "gbif": {
+        "usageKey": 2742342,
+        "taxonKey": 2742342,
+        "status": "ACCEPTED",
+        "matchedName": "Trillium erectum L.",
+        "acceptedName": null,
+        "family": "Melanthiaceae",
+        "vernacularNames": [
+          "Beth Root",
+          "Bethroot",
+          "Birthroot",
+          "Purple Trillium",
+          "Red Benjamin",
+          "Red Trillium"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        762,
+        420,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        5,
+        11,
+        27,
+        21,
+        1,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 85,
+      "inatTaxonId": 50855,
+      "wikipedia": {
+        "extract": "Trillium erectum, the red trillium, also known as wake robin, purple trillium, bethroot, or stinking benjamin, is a species of flowering plant in the family Melanthiaceae. The plant takes its common name \"wake robin\" by analogy with the European robin, which has a red breast heralding spring. Likewise Trillium erectum is a spring ephemeral plant whose life-cycle is synchronized with that of the forests in which it lives. It is native to the eastern United States and eastern Canada from northern Georgia to Quebec and New Brunswick.",
+        "url": "https://en.wikipedia.org/wiki/Trillium_erectum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Trillium_erectum_-_Stephen%27s_Gulch_CA.jpg/330px-Trillium_erectum_-_Stephen%27s_Gulch_CA.jpg"
+      }
+    },
+    "rock-polypody": {
+      "id": "rock-polypody",
+      "scientificName": "Polypodium virginianum",
+      "fetchedAt": "2026-07-30T05:10:49.990Z",
+      "gbif": {
+        "usageKey": 5274950,
+        "taxonKey": 5274950,
+        "status": "ACCEPTED",
+        "matchedName": "Polypodium virginianum L.",
+        "acceptedName": null,
+        "family": "Polypodiaceae",
+        "vernacularNames": [
+          "American Polypody",
+          "American Wall Fern",
+          "Rock Polypody",
+          "Virginia polypody",
+          "Virginia rock polypody",
+          "rockcap fern"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 370,
+      "inatTaxonId": 54411,
+      "wikipedia": {
+        "extract": "Polypodium virginianum, commonly known as rock polypody, rock cap fern, or common polypody, is a small evergreen species of fern native to the Eastern United States and Canada. It generally grows on rocks and occasionally on tree roots in nature.",
+        "url": "https://en.wikipedia.org/wiki/Polypodium_virginianum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Polypodium_virginianum3.jpg/330px-Polypodium_virginianum3.jpg"
+      }
+    },
+    "royal-fern": {
+      "id": "royal-fern",
+      "scientificName": "Osmunda regalis",
+      "fetchedAt": "2026-07-30T05:10:46.337Z",
+      "gbif": {
+        "usageKey": 8049341,
+        "taxonKey": 8049341,
+        "status": "ACCEPTED",
+        "matchedName": "Osmunda regalis L.",
+        "acceptedName": null,
+        "family": "Osmundaceae",
+        "vernacularNames": [
+          "European royal fern",
+          "Green Fern",
+          "Royal Fern"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 634,
+      "inatTaxonId": 82303,
+      "wikipedia": {
+        "extract": "Osmunda regalis, or royal fern, is a species of deciduous fern, native to Europe, North Africa and West Asia, growing in woodland bogs and on the banks of streams. The species is sometimes known as flowering fern due to the appearance of its fertile fronds.",
+        "url": "https://en.wikipedia.org/wiki/Osmunda_regalis",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Osmunda_regalis_Mimizan.jpg/330px-Osmunda_regalis_Mimizan.jpg"
+      }
+    },
+    "sensitive-fern": {
+      "id": "sensitive-fern",
+      "scientificName": "Onoclea sensibilis",
+      "fetchedAt": "2026-07-30T05:10:42.807Z",
+      "gbif": {
+        "usageKey": 2650903,
+        "taxonKey": 2650903,
+        "status": "ACCEPTED",
+        "matchedName": "Onoclea sensibilis L.",
+        "acceptedName": null,
+        "family": "Onocleaceae",
+        "vernacularNames": [
+          "Sensitive Fern",
+          "Sensitive Fern, Bead Fern",
+          "bead fern",
+          "meadow brake",
+          "polypod brake"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 1531,
+      "inatTaxonId": 82576,
+      "wikipedia": {
+        "extract": "Onoclea sensibilis, the sensitive fern, also known as the bead fern, is a coarse-textured, medium to large-sized deciduous perennial fern. The name comes from its sensitivity to frost, the fronds dying quickly when first touched by it. It is sometimes treated as the only species in Onoclea, but some authors do not consider the genus monotypic.",
+        "url": "https://en.wikipedia.org/wiki/Onoclea_sensibilis",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Onoclea_sensibilis_3.jpg/330px-Onoclea_sensibilis_3.jpg"
+      }
+    },
+    "shagbark-hickory": {
+      "id": "shagbark-hickory",
+      "scientificName": "Carya ovata",
+      "fetchedAt": "2026-07-30T05:09:45.136Z",
+      "gbif": {
+        "usageKey": 3054296,
+        "taxonKey": 3054296,
+        "status": "ACCEPTED",
+        "matchedName": "Carya ovata (Mill.) K.Koch",
+        "acceptedName": null,
+        "family": "Juglandaceae",
+        "vernacularNames": [
+          "Caryer Ovale",
+          "Noyer Tendre",
+          "Shagbark Hickory",
+          "Shellbark Hickory",
+          "Upland Hickory"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        6,
+        37,
+        8,
+        1,
+        1,
+        0
+      ],
+      "nearbyObservations": 391,
+      "inatTaxonId": 54791,
+      "wikipedia": {
+        "extract": "Carya ovata, the shagbark hickory, is a common hickory native to eastern North America, with two varieties. The trees can grow to quite a large size but are unreliable in their fruit output. The nut is consumed by wildlife and historically by Native Americans, who also used the wood.",
+        "url": "https://en.wikipedia.org/wiki/Carya_ovata",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/2021-03-03_10_34_58_Shagbark_Hickory_trunk_within_the_woodlands_along_the_West_Branch_Shabakunk_Creek_in_Ewing_Township%2C_Mercer_County%2C_New_Jersey.jpg/330px-2021-03-03_10_34_58_Shagbark_Hickory_trunk_within_the_woodlands_along_the_West_Branch_Shabakunk_Creek_in_Ewing_Township%2C_Mercer_County%2C_New_Jersey.jpg"
+      }
+    },
+    "spicebush": {
+      "id": "spicebush",
+      "scientificName": "Lindera benzoin",
+      "fetchedAt": "2026-07-30T05:10:18.410Z",
+      "gbif": {
+        "usageKey": 5371740,
+        "taxonKey": 5371740,
+        "status": "ACCEPTED",
+        "matchedName": "Lindera benzoin (L.) Blume",
+        "acceptedName": null,
+        "family": "Lauraceae",
+        "vernacularNames": [
+          "Benjamin bush",
+          "Benjamin-bush",
+          "Northern Spicebush",
+          "Spicebush",
+          "Wild Allspice",
+          "allspice"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        217,
+        22,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        9,
+        16,
+        21,
+        46,
+        9,
+        8,
+        0
+      ],
+      "nearbyObservations": 475,
+      "inatTaxonId": 54793,
+      "wikipedia": {
+        "extract": "Lindera benzoin is a shrub in the laurel family. It is native to eastern North America, growing in the understory in moist, rich woods.",
+        "url": "https://en.wikipedia.org/wiki/Lindera_benzoin",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Spicebush_%284506720062%29.jpg/330px-Spicebush_%284506720062%29.jpg"
+      }
+    },
+    "spring-beauty": {
+      "id": "spring-beauty",
+      "scientificName": "Claytonia virginica",
+      "fetchedAt": "2026-07-30T05:06:57.816Z",
+      "gbif": {
+        "usageKey": 3084745,
+        "taxonKey": 3084745,
+        "status": "ACCEPTED",
+        "matchedName": "Claytonia virginica L.",
+        "acceptedName": null,
+        "family": "Montiaceae",
+        "vernacularNames": [
+          "Eastern Springbeauty",
+          "Fairy Spud",
+          "Narrow-leaved Spring Beauty",
+          "Purslane",
+          "Springbeauty",
+          "Virginia Springbeauty"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        35,
+        13,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 55,
+      "inatTaxonId": 117434,
+      "wikipedia": {
+        "extract": "Claytonia virginica, the Virginia springbeauty, eastern spring beauty, grass-flower narrowleaf springbeauty or fairy spud, is an herbaceous perennial plant in the family Montiaceae. Its native range is eastern North America. Its scientific name honors Colonial Virginian botanist John Clayton (1694–1773).",
+        "url": "https://en.wikipedia.org/wiki/Claytonia_virginica",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Claytonia_virginica_2_Radnor_Lake.jpg/330px-Claytonia_virginica_2_Radnor_Lake.jpg"
+      }
+    },
+    "st-johns-wort": {
+      "id": "st-johns-wort",
+      "scientificName": "Hypericum perforatum",
+      "fetchedAt": "2026-07-30T05:08:43.563Z",
+      "gbif": {
+        "usageKey": 3189486,
+        "taxonKey": 3189486,
+        "status": "ACCEPTED",
+        "matchedName": "Hypericum perforatum L.",
+        "acceptedName": null,
+        "family": "Hypericaceae",
+        "vernacularNames": [
+          "Common St. John's Wort",
+          "Common St. Johnswort",
+          "Gammock",
+          "Goatweed",
+          "Herb-John",
+          "Klamath Weed"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        120,
+        141,
+        31,
+        4,
+        3,
+        4,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2,
+        3,
+        0,
+        1,
+        0,
+        1
+      ],
+      "nearbyObservations": 594,
+      "inatTaxonId": 56077,
+      "wikipedia": {
+        "extract": "Hypericum perforatum, commonly known as St. John's wort, is a flowering plant in the family Hypericaceae. It is a hairless, perennial herb with woody roots, yellow flowers marked by black glands, and leaves that appear perforated due to translucent glands, producing thousands of seeds per plant.",
+        "url": "https://en.wikipedia.org/wiki/Hypericum_perforatum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/%28MHNT%29_Hypericum_perforatum_flower_and_buttons.jpg/330px-%28MHNT%29_Hypericum_perforatum_flower_and_buttons.jpg"
+      }
+    },
+    "staghorn-sumac": {
+      "id": "staghorn-sumac",
+      "scientificName": "Rhus typhina",
+      "fetchedAt": "2026-07-30T05:10:14.689Z",
+      "gbif": {
+        "usageKey": 3190538,
+        "taxonKey": 3190538,
+        "status": "ACCEPTED",
+        "matchedName": "Rhus typhina L.",
+        "acceptedName": null,
+        "family": "Anacardiaceae",
+        "vernacularNames": [
+          "Stag's-Horn Sumach",
+          "Staghorn Sumac",
+          "Velvet Sumac",
+          "Virginia Sumac",
+          "red sumac",
+          "staghorn sumach"
+        ]
+      },
+      "floweringByMonth": [
+        1,
+        0,
+        3,
+        2,
+        0,
+        100,
+        29,
+        11,
+        5,
+        5,
+        2,
+        1
+      ],
+      "fruitingByMonth": [
+        20,
+        9,
+        18,
+        35,
+        15,
+        26,
+        197,
+        125,
+        136,
+        83,
+        38,
+        35
+      ],
+      "nearbyObservations": 482,
+      "inatTaxonId": 167829,
+      "wikipedia": {
+        "extract": "Rhus typhina, the staghorn sumac, is a species of flowering plant in the family Anacardiaceae, native to eastern North America. It is primarily found in southeastern Canada, the northeastern and midwestern United States, and the Appalachian Mountains, but it is widely cultivated as an ornamental throughout the temperate world. It is an invasive species in some parts of the world.",
+        "url": "https://en.wikipedia.org/wiki/Rhus_typhina",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/%D0%A1%D1%83%D0%BC%D0%B0%D1%85_%D0%BE%D0%BB%D0%B5%D0%BD%D0%B5%D1%80%D0%BE%D0%B3%D0%B8%D0%B9_%28%D0%A1%D1%83%D0%BC%D0%B0%D1%85_%D0%BF%D1%83%D1%88%D0%B8%D1%81%D1%82%D1%8B%D0%B9%2C_%D0%A3%D0%BA%D1%81%D1%83%D1%81%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%29_-_Rhus_typhina_-_Staghorn_sumac_-_%D0%92%D0%BB%D0%B0%D0%BA%D0%BD%D0%B5%D1%81%D1%82_%D1%88%D0%BC%D0%B0%D0%BA_-_Essigbaum_%2823408707041%29.jpg/330px-thumbnail.jpg"
+      }
+    },
+    "sugar-maple": {
+      "id": "sugar-maple",
+      "scientificName": "Acer saccharum",
+      "fetchedAt": "2026-07-30T05:09:16.823Z",
+      "gbif": {
+        "usageKey": 3189859,
+        "taxonKey": 3189859,
+        "status": "ACCEPTED",
+        "matchedName": "Acer saccharum Marshall",
+        "acceptedName": null,
+        "family": "Sapindaceae",
+        "vernacularNames": [
+          "Sugar Maple",
+          "hard maple",
+          "rock maple"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        26,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        5,
+        3,
+        8,
+        5,
+        4,
+        0,
+        0
+      ],
+      "nearbyObservations": 1103,
+      "inatTaxonId": 1466282,
+      "wikipedia": {
+        "extract": "Acer saccharum, the sugar maple, is a species of flowering plant in the soapberry and lychee family Sapindaceae. It is native to the hardwood forests of eastern Canada and the eastern United States. Sugar maple is best known for being the primary source of maple syrup and for its brightly colored autumn foliage. It may also be called \"rock maple\", \"sugar tree\", \"sweet maple\", or, particularly in reference to the wood, \"hard maple\", \"birds-eye maple\", or \"curly maple\", the last two being specially figured lumber.",
+        "url": "https://en.wikipedia.org/wiki/Acer_saccharum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Acer_saccharum_1-jgreenlee_%285098070608%29.jpg/330px-Acer_saccharum_1-jgreenlee_%285098070608%29.jpg"
+      }
+    },
+    "sweet-fern": {
+      "id": "sweet-fern",
+      "scientificName": "Comptonia peregrina",
+      "fetchedAt": "2026-07-30T05:10:28.341Z",
+      "gbif": {
+        "usageKey": 5414197,
+        "taxonKey": 5414197,
+        "status": "ACCEPTED",
+        "matchedName": "Comptonia peregrina (L.) J.M.Coult.",
+        "acceptedName": null,
+        "family": "Myricaceae",
+        "vernacularNames": [
+          "Sweet Fern",
+          "comptonia",
+          "fern-gale",
+          "sweet-fern",
+          "Sweetfern"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        47,
+        15,
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        6,
+        19,
+        2,
+        2,
+        0,
+        2,
+        2,
+        0
+      ],
+      "nearbyObservations": 585,
+      "inatTaxonId": 121031,
+      "wikipedia": {
+        "extract": "Comptonia peregrina is a species of flowering plant in the family Myricaceae native to eastern North America. It is the only extant (living) species in the genus Comptonia, although some extinct species are placed in the genus.",
+        "url": "https://en.wikipedia.org/wiki/Comptonia_peregrina",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Sweet-fern_%28Huron_Shores%29.JPG/330px-Sweet-fern_%28Huron_Shores%29.JPG"
+      }
+    },
+    "sweet-pepperbush": {
+      "id": "sweet-pepperbush",
+      "scientificName": "Clethra alnifolia",
+      "fetchedAt": "2026-07-30T05:08:25.423Z",
+      "gbif": {
+        "usageKey": 2888323,
+        "taxonKey": 2888323,
+        "status": "ACCEPTED",
+        "matchedName": "Clethra alnifolia L.",
+        "acceptedName": null,
+        "family": "Clethraceae",
+        "vernacularNames": [
+          "Coastal Sweet Pepperbush",
+          "Coastal Sweetpepperbush",
+          "Pink-spire",
+          "Summersweet",
+          "Summersweet Clethra",
+          "Sweet Pepperbush"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        199,
+        350,
+        4,
+        3,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        10,
+        6,
+        7,
+        19,
+        6,
+        6,
+        7,
+        101,
+        176,
+        166,
+        25,
+        10
+      ],
+      "nearbyObservations": 1343,
+      "inatTaxonId": 52867,
+      "wikipedia": {
+        "extract": "Clethra alnifolia, the coastal sweetpepperbush or summer sweet, is a species of flowering plant in the genus Clethra of the family Clethraceae, native to eastern North America from southern Nova Scotia and Maine south to northern Florida, and west to eastern Texas. It is a deciduous shrub which grows in wetlands, bogs and woodland streams.",
+        "url": "https://en.wikipedia.org/wiki/Clethra_alnifolia",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Clethra-alnifolia-flowers.JPG/330px-Clethra-alnifolia-flowers.JPG"
+      }
+    },
+    "switchgrass": {
+      "id": "switchgrass",
+      "scientificName": "Panicum virgatum",
+      "fetchedAt": "2026-07-30T05:10:54.756Z",
+      "gbif": {
+        "usageKey": 2705081,
+        "taxonKey": 2705081,
+        "status": "ACCEPTED",
+        "matchedName": "Panicum virgatum L.",
+        "acceptedName": null,
+        "family": "Poaceae",
+        "vernacularNames": [
+          "Blackwell Switch Grass",
+          "Old Switch Panic Grass",
+          "Switch Grass",
+          "Switchgrass",
+          "old switch panicgrass",
+          "wand panicgrass"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        2,
+        3,
+        3,
+        0,
+        2,
+        1
+      ],
+      "nearbyObservations": 90,
+      "inatTaxonId": 125727,
+      "wikipedia": {
+        "extract": "Panicum virgatum, commonly known as switchgrass and panic grass, is a perennial warm season bunchgrass native to North America, where it occurs naturally from 55°N latitude in Canada southwards into the United States and Mexico. Switchgrass is one of the dominant species of the central North American tallgrass prairie and can be found in remnant prairies, in native grass pastures, and naturalized along roadsides. It is used primarily for soil conservation, forage production, game cover, as an ornamental grass, in phytoremediation projects, fiber, electricity, heat production, for biosequestration of atmospheric carbon dioxide, and more recently as a biomass crop for the production of ethanol and butanol.",
+        "url": "https://en.wikipedia.org/wiki/Panicum_virgatum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Panicum_virgatum.jpg/330px-Panicum_virgatum.jpg"
+      }
+    },
+    "trailing-arbutus": {
+      "id": "trailing-arbutus",
+      "scientificName": "Epigaea repens",
+      "fetchedAt": "2026-07-30T05:07:39.066Z",
+      "gbif": {
+        "usageKey": 2882805,
+        "taxonKey": 2882805,
+        "status": "ACCEPTED",
+        "matchedName": "Epigaea repens L.",
+        "acceptedName": null,
+        "family": "Ericaceae",
+        "vernacularNames": [
+          "Gravelroot",
+          "Ground-laurel",
+          "Mayflower",
+          "Trailing Arbutus",
+          "creeping mayflower",
+          "ground laurel"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        9,
+        661,
+        120,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        6,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 44,
+      "inatTaxonId": 83075,
+      "wikipedia": {
+        "extract": "Epigaea repens, the mayflower, trailing arbutus, or ground laurel, is a perennial, spreading shrub in the family Ericaceae. It is found from Newfoundland to Florida, west to Kentucky and into the Northwest Territories. It is the provincial flower of Nova Scotia.",
+        "url": "https://en.wikipedia.org/wiki/Epigaea_repens",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Trailing_arbutus_2006.jpg/330px-Trailing_arbutus_2006.jpg"
+      }
+    },
+    "trout-lily": {
+      "id": "trout-lily",
+      "scientificName": "Erythronium americanum",
+      "fetchedAt": "2026-07-30T05:06:30.562Z",
+      "gbif": {
+        "usageKey": 2752815,
+        "taxonKey": 2752815,
+        "status": "ACCEPTED",
+        "matchedName": "Erythronium americanum Ker Gawl.",
+        "acceptedName": null,
+        "family": "Liliaceae",
+        "vernacularNames": [
+          "Amberbell",
+          "American trout lily",
+          "Dogtooth Violet",
+          "Trout-lily",
+          "Yellow Adder's-tongue",
+          "trout lily"
+        ]
+      },
+      "floweringByMonth": [
+        1,
+        0,
+        0,
+        284,
+        126,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        4,
+        32,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 132,
+      "inatTaxonId": 48240,
+      "wikipedia": {
+        "extract": "Erythronium americanum, the trout lily, yellow trout lily, fawn lily, yellow adder's-tongue, or yellow dogtooth violet, is a species of perennial, colony forming, spring ephemeral flower native to North America and dwelling in woodland habitats. Within its range it is a very common and widespread species, especially in eastern North America. The common name \"trout lily\" refers to the appearance of its gray-green leaves mottled with brown or gray, which allegedly resemble the coloring of brook trout.",
+        "url": "https://en.wikipedia.org/wiki/Erythronium_americanum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Erythronium_americanum_-_anterior.jpg/330px-Erythronium_americanum_-_anterior.jpg"
+      }
+    },
+    "turtlehead": {
+      "id": "turtlehead",
+      "scientificName": "Chelone glabra",
+      "fetchedAt": "2026-07-30T05:08:34.372Z",
+      "gbif": {
+        "usageKey": 5414935,
+        "taxonKey": 5414935,
+        "status": "ACCEPTED",
+        "matchedName": "Chelone glabra L.",
+        "acceptedName": null,
+        "family": "Plantaginaceae",
+        "vernacularNames": [
+          "Balmony",
+          "Snakehead",
+          "Turtlehead",
+          "White Turtlehead",
+          "Smooth Balmony"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        45,
+        105,
+        8,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        1,
+        1,
+        10,
+        1,
+        1
+      ],
+      "nearbyObservations": 175,
+      "inatTaxonId": 82316,
+      "wikipedia": {
+        "extract": "Chelone glabra, or white turtlehead, is a herbaceous species of plant native to North America. Its native range extends from Georgia to Newfoundland and Labrador and from Mississippi to Manitoba. Its common name comes from the appearance of its flower petals, which resemble the head of a tortoise. In fact, in Greek, chelone means \"tortoise\" and was the name of a nymph who refused to attend the wedding of Zeus and was turned into a turtle as punishment. Its natural habitat is wet areas, such as riparian forests and swamps.",
+        "url": "https://en.wikipedia.org/wiki/Chelone_glabra",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Chelone_glabra_Red_River_Gorge.JPG/330px-Chelone_glabra_Red_River_Gorge.JPG"
+      }
+    },
+    "virginia-creeper": {
+      "id": "virginia-creeper",
+      "scientificName": "Parthenocissus quinquefolia",
+      "fetchedAt": "2026-07-30T05:09:11.644Z",
+      "gbif": {
+        "usageKey": 3039194,
+        "taxonKey": 3039194,
+        "status": "ACCEPTED",
+        "matchedName": "Parthenocissus quinquefolia (L.) Planch.",
+        "acceptedName": null,
+        "family": "Vitaceae",
+        "vernacularNames": [
+          "American Ivy",
+          "American-ivy",
+          "Five-leaf-ivy",
+          "Five-leaved Ivy",
+          "Fiveleaved Ivy",
+          "Virginia Creeper"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        6,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        2,
+        0,
+        0,
+        4,
+        8,
+        13,
+        42,
+        18,
+        3,
+        2
+      ],
+      "nearbyObservations": 1172,
+      "inatTaxonId": 50278,
+      "wikipedia": {
+        "extract": "Parthenocissus quinquefolia, commonly known as Virginia creeper, woodbine, five-leaved ivy, or five-finger, is a species of flowering vine in the grape family Vitaceae.",
+        "url": "https://en.wikipedia.org/wiki/Parthenocissus_quinquefolia",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Virginia_creeper_Parthenocissus_quinquifolia_169.JPG/330px-Virginia_creeper_Parthenocissus_quinquifolia_169.JPG"
+      }
+    },
+    "virginia-rose": {
+      "id": "virginia-rose",
+      "scientificName": "Rosa virginiana",
+      "fetchedAt": "2026-07-30T05:10:25.016Z",
+      "gbif": {
+        "usageKey": 9382645,
+        "taxonKey": 9382645,
+        "status": "ACCEPTED",
+        "matchedName": "Rosa virginiana Herrm.",
+        "acceptedName": null,
+        "family": "Rosaceae",
+        "vernacularNames": [
+          "Virginian Rose"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        17,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        2,
+        1,
+        1,
+        1,
+        0,
+        0,
+        2,
+        12,
+        15,
+        9,
+        1,
+        3
+      ],
+      "nearbyObservations": 38,
+      "inatTaxonId": 129195,
+      "wikipedia": {
+        "extract": "Rosa virginiana, commonly known as the Virginia rose, common wild rose or prairie rose, is a woody perennial in the rose family native to eastern North America, where it is the most common wild rose. It is deciduous, forming a suckering shrub up to 2 metres in height, though often less. The stems are covered in numerous hooked prickles. The leaves are pinnate, usually with between 7 and 9 glossy leaflets. The pink flowers are borne singly or in small clusters and appear over a long period in midsummer. The fruits are small, round and bright red, rich in vitamin C and edible, being both used to make jams and tea. It grows in clearings, thickets, and shores. The plant attracts birds, bees, butterflies, and hummingbirds.",
+        "url": "https://en.wikipedia.org/wiki/Rosa_virginiana",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Rosa_Helsinki_July_2013-2.jpg/330px-Rosa_Helsinki_July_2013-2.jpg"
+      }
+    },
+    "white-oak": {
+      "id": "white-oak",
+      "scientificName": "Quercus alba",
+      "fetchedAt": "2026-07-30T05:09:23.132Z",
+      "gbif": {
+        "usageKey": 2879737,
+        "taxonKey": 2879737,
+        "status": "ACCEPTED",
+        "matchedName": "Quercus alba L.",
+        "acceptedName": null,
+        "family": "Fagaceae",
+        "vernacularNames": [
+          "Stave Oak",
+          "White Oak",
+          "eastern white oak"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        4,
+        27,
+        10,
+        2,
+        0,
+        0
+      ],
+      "nearbyObservations": 1215,
+      "inatTaxonId": 54779,
+      "wikipedia": {
+        "extract": "Quercus alba, the white oak, is one of the preeminent hardwoods of eastern and central North America. It is a long-lived oak, native to eastern and central North America and found from Minnesota, Ontario, Quebec, and southern Maine south as far as northern Florida and eastern Texas. Specimens have been documented to be over 450 years old.",
+        "url": "https://en.wikipedia.org/wiki/Quercus_alba",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Keeler_Oak_Tree_-_distance_photo%2C_May_2013.jpg/330px-Keeler_Oak_Tree_-_distance_photo%2C_May_2013.jpg"
+      }
+    },
+    "white-wood-aster": {
+      "id": "white-wood-aster",
+      "scientificName": "Eurybia divaricata",
+      "fetchedAt": "2026-07-30T05:08:56.161Z",
+      "gbif": {
+        "usageKey": 5396125,
+        "taxonKey": 5396125,
+        "status": "ACCEPTED",
+        "matchedName": "Eurybia divaricata (L.) G.L.Nesom",
+        "acceptedName": null,
+        "family": "Asteraceae",
+        "vernacularNames": [
+          "Common White Heart-leaf Aster",
+          "Heart-leaf Aster",
+          "White Wood Aster",
+          "white heart-leaved aster",
+          "Heart-leaved Aster"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        85,
+        180,
+        84,
+        5,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        13,
+        9,
+        4
+      ],
+      "nearbyObservations": 952,
+      "inatTaxonId": 127685,
+      "wikipedia": {
+        "extract": "Eurybia divaricata, the white wood aster, is an herbaceous plant native to eastern North America. It occurs in the eastern United States, primarily in the Appalachian Mountains, though it is also present in southeastern Canada, in the provinces of Ontario, Quebec and Nova Scotia. In the U.S. it is abundant and common, but in Canada it is considered threatened due to its restricted distribution. It has been introduced to a number of countries in Europe. It can be found in dry open woods as well as along wood-edges and clearings. The species is distinguished by its flower heads that have yellow centers and white rays that are arranged in flat-topped corymbiform arrays, emerging in the late summer through fall. Other distinguishing characteristics include its serpentine stems and sharply serrated narrow heart-shaped leaves. The white wood aster is sometimes used in cultivation in both North America and Europe due to it being quite tough and for its showy flowers.",
+        "url": "https://en.wikipedia.org/wiki/Eurybia_divaricata",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Eurybia_divaricata_in_CT.jpg/330px-Eurybia_divaricata_in_CT.jpg"
+      }
+    },
+    "wild-columbine": {
+      "id": "wild-columbine",
+      "scientificName": "Aquilegia canadensis",
+      "fetchedAt": "2026-07-30T05:07:15.705Z",
+      "gbif": {
+        "usageKey": 3033197,
+        "taxonKey": 3033197,
+        "status": "ACCEPTED",
+        "matchedName": "Aquilegia canadensis L.",
+        "acceptedName": null,
+        "family": "Ranunculaceae",
+        "vernacularNames": [
+          "American columbine",
+          "Canada columbine",
+          "Honeysuckle",
+          "Meeting-houses",
+          "Red Columbine",
+          "Red-bell"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        1,
+        0,
+        53,
+        381,
+        192,
+        15,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        21,
+        7,
+        4,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "nearbyObservations": 267,
+      "inatTaxonId": 49868,
+      "wikipedia": {
+        "extract": "Aquilegia canadensis, the Canadian columbine, Canada columbine, eastern red columbine, or wild columbine, is a species of flowering plant in the buttercup family. It is a perennial plant that is native to the woodlands and rocky areas in eastern North America in both the United States and southern Canada. It readily hybridizes with other plants in the columbine genus and is a common garden plant.",
+        "url": "https://en.wikipedia.org/wiki/Aquilegia_canadensis",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Wild_Columbine.jpg/330px-Wild_Columbine.jpg"
+      }
+    },
+    "wild-geranium": {
+      "id": "wild-geranium",
+      "scientificName": "Geranium maculatum",
+      "fetchedAt": "2026-07-30T05:07:34.258Z",
+      "gbif": {
+        "usageKey": 7808016,
+        "taxonKey": 7808016,
+        "status": "ACCEPTED",
+        "matchedName": "Geranium maculatum L.",
+        "acceptedName": null,
+        "family": "Geraniaceae",
+        "vernacularNames": [
+          "Spotted Crane's-bill",
+          "Spotted Geranium",
+          "Wild Crane's-bill",
+          "Wild Geranium"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        1,
+        560,
+        177,
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        0,
+        0,
+        0,
+        0,
+        18,
+        18,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "nearbyObservations": 913,
+      "inatTaxonId": 47699,
+      "wikipedia": {
+        "extract": "Geranium maculatum, the wild geranium, spotted geranium, or wood geranium, is a perennial plant native to woodlands in eastern North America, from southern Manitoba and southwestern Quebec south to Alabama and Georgia and west to Oklahoma and South Dakota.",
+        "url": "https://en.wikipedia.org/wiki/Geranium_maculatum",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Geranium_maculatum_Leatherwood_Lake.jpg/330px-Geranium_maculatum_Leatherwood_Lake.jpg"
+      }
+    },
+    "winterberry-holly": {
+      "id": "winterberry-holly",
+      "scientificName": "Ilex verticillata",
+      "fetchedAt": "2026-07-30T05:09:06.930Z",
+      "gbif": {
+        "usageKey": 5414267,
+        "taxonKey": 5414267,
+        "status": "ACCEPTED",
+        "matchedName": "Ilex verticillata (L.) A.Gray",
+        "acceptedName": null,
+        "family": "Aquifoliaceae",
+        "vernacularNames": [
+          "American winterberry",
+          "Black Alder",
+          "Common Winterberry",
+          "Michigan holly",
+          "Virginia Winterberry",
+          "Winterberry"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        81,
+        33,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "fruitingByMonth": [
+        40,
+        14,
+        14,
+        3,
+        0,
+        2,
+        24,
+        51,
+        251,
+        324,
+        154,
+        65
+      ],
+      "nearbyObservations": 1021,
+      "inatTaxonId": 61119,
+      "wikipedia": {
+        "extract": "Ilex verticillata, the winterberry, is a species of holly native to eastern North America in the United States and southeast Canada, from Newfoundland west to Ontario and Minnesota, and south to Alabama.",
+        "url": "https://en.wikipedia.org/wiki/Ilex_verticillata",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Ilex_verticillata_fruits_and_foliage_1.JPG/330px-Ilex_verticillata_fruits_and_foliage_1.JPG"
+      }
+    },
+    "witch-hazel": {
+      "id": "witch-hazel",
+      "scientificName": "Hamamelis virginiana",
+      "fetchedAt": "2026-07-30T05:10:21.821Z",
+      "gbif": {
+        "usageKey": 3152827,
+        "taxonKey": 3152827,
+        "status": "ACCEPTED",
+        "matchedName": "Hamamelis virginiana L.",
+        "acceptedName": null,
+        "family": "Hamamelidaceae",
+        "vernacularNames": [
+          "American Witchhazel",
+          "American Witchhzel",
+          "American witch-hazel",
+          "Common Witchhazel",
+          "Common Witchhzel",
+          "Snapping Hazelnut"
+        ]
+      },
+      "floweringByMonth": [
+        6,
+        4,
+        9,
+        2,
+        0,
+        0,
+        0,
+        1,
+        19,
+        240,
+        131,
+        15
+      ],
+      "fruitingByMonth": [
+        1,
+        1,
+        1,
+        4,
+        11,
+        39,
+        48,
+        17,
+        12,
+        22,
+        3,
+        2
+      ],
+      "nearbyObservations": 823,
+      "inatTaxonId": 51970,
+      "wikipedia": {
+        "extract": "Hamamelis virginiana, known as witch-hazel, common witch-hazel, American witch-hazel and beadwood, is a species of flowering shrub native to eastern North America, from Nova Scotia west to Minnesota, and south to central Florida to eastern Texas.",
+        "url": "https://en.wikipedia.org/wiki/Hamamelis_virginiana",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Hamamelis_virginiana_FlowersLeaves_BotGardBln0906.JPG/330px-Hamamelis_virginiana_FlowersLeaves_BotGardBln0906.JPG"
+      }
+    },
+    "wrinkle-leaf-goldenrod": {
+      "id": "wrinkle-leaf-goldenrod",
+      "scientificName": "Solidago rugosa",
+      "fetchedAt": "2026-07-30T05:09:00.795Z",
+      "gbif": {
+        "usageKey": 5388967,
+        "taxonKey": 5388967,
+        "status": "ACCEPTED",
+        "matchedName": "Solidago rugosa Mill.",
+        "acceptedName": null,
+        "family": "Asteraceae",
+        "vernacularNames": [
+          "Rough-stem Goldenrod",
+          "Rough-stemmed Goldenrod",
+          "Wrinkle-leaf Goldenrod",
+          "Wrinkleleaf Goldenrod",
+          "common wrinkle-leaved goldenrod",
+          "fireworks goldenrod"
+        ]
+      },
+      "floweringByMonth": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        17,
+        137,
+        53,
+        4,
+        1
+      ],
+      "fruitingByMonth": [
+        3,
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        31,
+        3,
+        2
+      ],
+      "nearbyObservations": 700,
+      "inatTaxonId": 128551,
+      "wikipedia": {
+        "extract": "Solidago rugosa, commonly called the wrinkleleaf goldenrod or rough-stemmed goldenrod, is a species of flowering plant in the family Asteraceae. It is native to North America, where it is widespread across eastern and central Canada and the eastern and central United States. It is usually found in wet to mesic habitats.",
+        "url": "https://en.wikipedia.org/wiki/Solidago_rugosa",
+        "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Solidago_rugosa_var_aspera.jpg/330px-Solidago_rugosa_var_aspera.jpg"
+      }
+    }
+  }
+}
